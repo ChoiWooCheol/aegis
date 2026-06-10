@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #020617; /* Aegis AI의 딥 다크 배경 */
+  color: #f8fafc;
+}
