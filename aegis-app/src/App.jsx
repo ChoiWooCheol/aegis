@@ -145,18 +145,27 @@ export default function App() {
 
   if (!isStarted) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-slate-950 px-6 text-center">
-        {/* 📱 반응형 폰트 사이즈 적용 */}
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-in zoom-in duration-700">
-          Aegis <span className="text-indigo-500">AI</span> V2
-        </h1>
-        <p className="text-lg md:text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed">
-          거시 경제 자금 흐름과 딥러닝 위험도 분석을 결합하여<br className="hidden md:block"/> 최고의 퀀트 추론(Reasoning)을 제공합니다.
-        </p>
-        <button onClick={() => setIsStarted(true)} className="flex items-center gap-3 bg-white text-slate-900 px-6 py-4 md:px-8 rounded-full text-base md:text-lg font-bold shadow-[0_0_40px_rgba(99,102,241,0.3)] hover:scale-105 transition-all">
-          <BrainCircuit size={24} className="text-indigo-600" />
-          엔진 가동 <ChevronRight />
-        </button>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-slate-950 px-6 text-center relative">
+        <div className="flex-1 flex flex-col items-center justify-center">
+          {/* 📱 반응형 폰트 사이즈 적용 */}
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-in zoom-in duration-700">
+            Aegis <span className="text-indigo-500">AI</span> V2
+          </h1>
+          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed">
+            거시 경제 자금 흐름과 딥러닝 위험도 분석을 결합하여<br className="hidden md:block"/> 최고의 퀀트 추론(Reasoning)을 제공합니다.
+          </p>
+          <button onClick={() => setIsStarted(true)} className="flex items-center gap-3 bg-white text-slate-900 px-6 py-4 md:px-8 rounded-full text-base md:text-lg font-bold shadow-[0_0_40px_rgba(99,102,241,0.3)] hover:scale-105 transition-all">
+            <BrainCircuit size={24} className="text-indigo-600" />
+            엔진 가동 <ChevronRight />
+          </button>
+        </div>
+
+        {/* ⚖️ 법적 면책 조항 (Disclaimer) */}
+        <div className="w-full max-w-3xl pb-8 md:pb-12 mt-12">
+          <p className="text-[10px] md:text-xs text-slate-600 leading-relaxed text-center break-keep">
+            <span className="font-bold text-slate-500">⚠️ 투자 유의사항 (Disclaimer):</span> 본 서비스에서 제공하는 AI 퀀트 분석 및 주가 예상 궤적은 투자 판단을 돕기 위한 참고자료일 뿐이며, 특정 종목에 대한 매수/매도 권유를 목적으로 하지 않습니다. 알고리즘 기반의 예측은 과거 데이터를 바탕으로 산출되므로 미래의 수익을 절대 보장하지 않으며, 거시 경제 및 시장 상황에 따라 실제 주가와 크게 다를 수 있습니다. 모든 투자의 최종 결정과 그에 따른 법적·재무적 책임은 전적으로 투자자 본인에게 있습니다.
+          </p>
+        </div>
       </div>
     );
   }
