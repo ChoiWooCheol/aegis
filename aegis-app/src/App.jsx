@@ -18,6 +18,13 @@ function formatPrice(price, market) {
   return '$' + p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
+// 축 라벨용 짧은 가격 표기 (KOSPI: 229만 / 미국: $292)
+function compactPrice(v, market) {
+  const isKR = typeof market === 'string' && market.includes('KOSPI');
+  if (isKR) return new Intl.NumberFormat('ko', { notation: 'compact', maximumFractionDigits: 1 }).format(v);
+  return '$' + new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 2 }).format(v);
+}
+
 // ==========================================
 // 📈 [순수 SVG 차트] 20일 기대 궤적 + 분위수 팬차트(p10~p90)
 // ==========================================
@@ -60,29 +67,42 @@ function PredictiveChart({ data, bands }) {
   }
   const fillPath = bandPath ? null : `${medianLine} L 100,100 L 0,100 Z`;
   const lastVal = median[n - 1];
+  const lastYpct = 100 - ((lastVal - safeMin) / range) * 100;   // 끝점(p50) 세로 위치 %
 
   return (
     <div className="w-full h-full relative">
       <svg className="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 100 100">
         <defs>
-          <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#6366f1" stopOpacity="0.4" />
-            <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
+          <linearGradient id="medGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#a5b4fc" stopOpacity="0.30" />
+            <stop offset="100%" stopColor="#a5b4fc" stopOpacity="0" />
           </linearGradient>
         </defs>
         {safeMin < 0 && safeMax > 0 && (
-          <line x1="0" y1={zeroY} x2="100" y2={zeroY} stroke="#334155" strokeWidth="0.5" strokeDasharray="2 2" />
+          <line x1="0" y1={zeroY} x2="100" y2={zeroY} stroke="#475569" strokeWidth="0.6" strokeDasharray="2 2" vectorEffect="non-scaling-stroke" />
         )}
+        {/* 분위수 밴드는 옅게(맥락만), median 이 눈에 띄도록 */}
+        {bandPath && <path d={bandPath} fill="#6366f1" fillOpacity="0.12" />}
         {bandPath
-          ? <path d={bandPath} fill="#6366f1" fillOpacity="0.18" />
-          : <path d={fillPath} fill="url(#chartGradient)" />}
-        <path d={medianLine} fill="none" stroke="#6366f1" strokeWidth="1.5" vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round" />
+          ? <path d={`${medianLine} L 100,100 L 0,100 Z`} fill="url(#medGrad)" opacity="0.6" />
+          : <path d={fillPath} fill="url(#medGrad)" />}
+        {/* median(p50) — 밝고 굵게 */}
+        <path d={medianLine} fill="none" stroke="#c7d2fe" strokeWidth="2.3" vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none flex justify-between items-end pb-1 px-1">
-        <span className="text-[10px] font-mono text-slate-500">D+1</span>
-        <span className="text-[10px] font-mono text-indigo-400 font-bold">
-          {lastVal > 0 ? '+' : ''}{lastVal.toFixed(2)}%{bandPath ? ' (p50)' : ''}
-        </span>
+      {/* y축 % 라벨 + 끝값 강조 */}
+      <div className="absolute inset-0 pointer-events-none">
+        <span className="absolute top-0.5 left-1 text-[9px] font-mono text-slate-500">{maxVal >= 0 ? '+' : ''}{maxVal.toFixed(1)}%</span>
+        <span className="absolute bottom-4 left-1 text-[9px] font-mono text-slate-500">{minVal >= 0 ? '+' : ''}{minVal.toFixed(1)}%</span>
+        {safeMin < 0 && safeMax > 0 && (
+          <span className="absolute left-1 text-[9px] font-mono text-slate-600 bg-slate-900/60 px-0.5 rounded" style={{ top: `${zeroY}%`, transform: 'translateY(-50%)' }}>0%</span>
+        )}
+        <div className="absolute right-0.5" style={{ top: `${lastYpct}%`, transform: 'translateY(-50%)' }}>
+          <span className={`text-[10px] font-mono font-bold px-1 rounded text-white ${lastVal >= 0 ? 'bg-indigo-500/90' : 'bg-rose-500/90'}`}>
+            {lastVal > 0 ? '+' : ''}{lastVal.toFixed(1)}%{bandPath ? ' p50' : ''}
+          </span>
+        </div>
+        <span className="absolute bottom-0.5 left-1 text-[10px] font-mono text-slate-500">D+1</span>
+        <span className="absolute bottom-0.5 right-1 text-[10px] font-mono text-slate-500">D+20</span>
       </div>
     </div>
   );
@@ -91,7 +111,7 @@ function PredictiveChart({ data, bands }) {
 // ==========================================
 // 🕯️ [순수 SVG 캔들차트] 4시간/일/주/월
 // ==========================================
-function CandleSVG({ candles }) {
+function CandleSVG({ candles, market }) {
   if (!candles || candles.length === 0) {
     return (
       <div className="w-full h-full flex items-center justify-center text-slate-600 text-sm">
@@ -105,24 +125,46 @@ function CandleSVG({ candles }) {
   const step = 6, bodyW = 3.6;
   const W = candles.length * step;
   const y = (p) => 100 - ((p - minP) / range) * 100;
+  const last = candles[candles.length - 1];
+  const lastUp = last.c >= last.o;
+  const lastYpct = 100 - ((last.c - minP) / range) * 100;
 
   return (
-    <svg className="w-full h-full" preserveAspectRatio="none" viewBox={`0 0 ${W} 100`}>
-      {candles.map((c, i) => {
-        const xc = i * step + step / 2;
-        const up = c.c >= c.o;
-        const color = up ? '#10b981' : '#f43f5e';
-        const yO = y(c.o), yC = y(c.c);
-        const bodyY = Math.min(yO, yC);
-        const bodyH = Math.max(Math.abs(yC - yO), 0.4);
-        return (
-          <g key={i}>
-            <line x1={xc} x2={xc} y1={y(c.h)} y2={y(c.l)} stroke={color} strokeWidth="1" vectorEffect="non-scaling-stroke" />
-            <rect x={xc - bodyW / 2} y={bodyY} width={bodyW} height={bodyH} fill={color} />
-          </g>
-        );
-      })}
-    </svg>
+    <div className="relative w-full h-full">
+      <svg className="w-full h-full" preserveAspectRatio="none" viewBox={`0 0 ${W} 100`}>
+        {[0, 50, 100].map(gy => (
+          <line key={gy} x1="0" x2={W} y1={gy} y2={gy} stroke="#1e293b" strokeWidth="0.5" vectorEffect="non-scaling-stroke" />
+        ))}
+        {/* 마지막 종가 기준 가로선 */}
+        <line x1="0" x2={W} y1={y(last.c)} y2={y(last.c)} stroke="#64748b" strokeWidth="0.8" strokeDasharray="3 2" vectorEffect="non-scaling-stroke" />
+        {candles.map((c, i) => {
+          const xc = i * step + step / 2;
+          const up = c.c >= c.o;
+          const color = up ? '#10b981' : '#f43f5e';
+          const yO = y(c.o), yC = y(c.c);
+          const bodyY = Math.min(yO, yC);
+          const bodyH = Math.max(Math.abs(yC - yO), 0.4);
+          return (
+            <g key={i}>
+              <line x1={xc} x2={xc} y1={y(c.h)} y2={y(c.l)} stroke={color} strokeWidth="1" vectorEffect="non-scaling-stroke" />
+              <rect x={xc - bodyW / 2} y={bodyY} width={bodyW} height={bodyH} fill={color} />
+            </g>
+          );
+        })}
+      </svg>
+      {/* 우측 가격 축 (고가 / 중간 / 저가) */}
+      <div className="absolute inset-y-0 right-0 flex flex-col justify-between py-0.5 pointer-events-none text-[9px] font-mono">
+        <span className="bg-slate-900/80 text-slate-400 px-1 rounded leading-tight">{compactPrice(maxP, market)}</span>
+        <span className="bg-slate-900/80 text-slate-500 px-1 rounded leading-tight">{compactPrice((maxP + minP) / 2, market)}</span>
+        <span className="bg-slate-900/80 text-slate-400 px-1 rounded leading-tight">{compactPrice(minP, market)}</span>
+      </div>
+      {/* 마지막 종가 라벨 (가로선 위치) */}
+      <div className="absolute right-0" style={{ top: `${lastYpct}%`, transform: 'translateY(-50%)' }}>
+        <span className={`text-[9px] font-mono font-bold px-1 rounded text-white ${lastUp ? 'bg-emerald-500/90' : 'bg-rose-500/90'}`}>
+          {compactPrice(last.c, market)}
+        </span>
+      </div>
+    </div>
   );
 }
 
@@ -197,7 +239,7 @@ function CandleChart({ tickerId, market }) {
             차트를 불러올 수 없습니다.<br />(로컬 dev에선 `vercel dev`로 /api 함수 실행 필요)
           </div>
         )}
-        {status === 'ok' && <CandleSVG candles={candles} />}
+        {status === 'ok' && <CandleSVG candles={candles} market={market} />}
       </div>
     </div>
   );
