@@ -9,28 +9,57 @@ import {
 } from 'lucide-react';
 
 // ==========================================
-// 📈 [순수 SVG 차트] 
+// 💰 시장/통화 포맷 헬퍼
 // ==========================================
-function PredictiveChart({ data }) {
+function formatPrice(price, market) {
+  const p = Number(price) || 0;
+  const isKR = typeof market === 'string' && market.includes('KOSPI');
+  if (isKR) return '₩' + p.toLocaleString('ko-KR', { maximumFractionDigits: 0 });
+  return '$' + p.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+// ==========================================
+// 📈 [순수 SVG 차트] 20일 기대 궤적 + 분위수 팬차트(p10~p90)
+// ==========================================
+function PredictiveChart({ data, bands }) {
   if (!data || !Array.isArray(data) || data.length === 0) return null;
 
-  const numericData = data.map(d => parseFloat(d) || 0);
-  const minVal = Math.min(...numericData);
-  const maxVal = Math.max(...numericData);
+  const median = data.map(d => parseFloat(d) || 0);
+  const n = median.length;
 
+  // 분위수 밴드(있으면): 최저 분위수=하단, 최고 분위수=상단
+  let lower = null, upper = null;
+  if (bands && Array.isArray(bands.paths) && bands.paths.length >= 2) {
+    const paths = bands.paths.map(p => p.map(v => parseFloat(v) || 0));
+    lower = paths[0];
+    upper = paths[paths.length - 1];
+  }
+
+  const allVals = [...median, ...(lower || []), ...(upper || [])];
+  const minVal = Math.min(...allVals);
+  const maxVal = Math.max(...allVals);
   const safeMin = minVal === maxVal ? minVal - 1 : minVal;
   const safeMax = minVal === maxVal ? maxVal + 1 : maxVal;
   const range = safeMax - safeMin;
 
-  const points = numericData.map((val, i) => {
-    const x = (i / (numericData.length - 1)) * 100;
+  const toXY = (arr) => arr.map((val, i) => {
+    const x = (i / (n - 1)) * 100;
     const y = 100 - ((val - safeMin) / range) * 100;
     return `${x},${y}`;
   });
 
-  const linePath = `M ${points.join(' L ')}`;
-  const fillPath = `${linePath} L 100,100 L 0,100 Z`;
+  const medianPts = toXY(median);
+  const medianLine = `M ${medianPts.join(' L ')}`;
   const zeroY = 100 - ((0 - safeMin) / range) * 100;
+
+  let bandPath = null;
+  if (lower && upper) {
+    const up = toXY(upper);
+    const lo = toXY(lower).reverse();
+    bandPath = `M ${up.join(' L ')} L ${lo.join(' L ')} Z`;
+  }
+  const fillPath = bandPath ? null : `${medianLine} L 100,100 L 0,100 Z`;
+  const lastVal = median[n - 1];
 
   return (
     <div className="w-full h-full relative">
@@ -44,14 +73,131 @@ function PredictiveChart({ data }) {
         {safeMin < 0 && safeMax > 0 && (
           <line x1="0" y1={zeroY} x2="100" y2={zeroY} stroke="#334155" strokeWidth="0.5" strokeDasharray="2 2" />
         )}
-        <path d={fillPath} fill="url(#chartGradient)" />
-        <path d={linePath} fill="none" stroke="#6366f1" strokeWidth="1.5" vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round" />
+        {bandPath
+          ? <path d={bandPath} fill="#6366f1" fillOpacity="0.18" />
+          : <path d={fillPath} fill="url(#chartGradient)" />}
+        <path d={medianLine} fill="none" stroke="#6366f1" strokeWidth="1.5" vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none flex justify-between items-end pb-1 px-1">
         <span className="text-[10px] font-mono text-slate-500">D+1</span>
         <span className="text-[10px] font-mono text-indigo-400 font-bold">
-          {numericData[numericData.length - 1] > 0 ? '+' : ''}{numericData[numericData.length - 1].toFixed(2)}%
+          {lastVal > 0 ? '+' : ''}{lastVal.toFixed(2)}%{bandPath ? ' (p50)' : ''}
         </span>
+      </div>
+    </div>
+  );
+}
+
+// ==========================================
+// 🕯️ [순수 SVG 캔들차트] 4시간/일/주/월
+// ==========================================
+function CandleSVG({ candles }) {
+  if (!candles || candles.length === 0) {
+    return (
+      <div className="w-full h-full flex items-center justify-center text-slate-600 text-sm">
+        해당 주기 데이터가 없습니다.
+      </div>
+    );
+  }
+  const maxP = Math.max(...candles.map(c => c.h));
+  const minP = Math.min(...candles.map(c => c.l));
+  const range = (maxP - minP) || 1;
+  const step = 6, bodyW = 3.6;
+  const W = candles.length * step;
+  const y = (p) => 100 - ((p - minP) / range) * 100;
+
+  return (
+    <svg className="w-full h-full" preserveAspectRatio="none" viewBox={`0 0 ${W} 100`}>
+      {candles.map((c, i) => {
+        const xc = i * step + step / 2;
+        const up = c.c >= c.o;
+        const color = up ? '#10b981' : '#f43f5e';
+        const yO = y(c.o), yC = y(c.c);
+        const bodyY = Math.min(yO, yC);
+        const bodyH = Math.max(Math.abs(yC - yO), 0.4);
+        return (
+          <g key={i}>
+            <line x1={xc} x2={xc} y1={y(c.h)} y2={y(c.l)} stroke={color} strokeWidth="1" vectorEffect="non-scaling-stroke" />
+            <rect x={xc - bodyW / 2} y={bodyY} width={bodyW} height={bodyH} fill={color} />
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+function CandleChart({ tickerId, market }) {
+  const TIMEFRAMES = [
+    { key: '4h', label: '4시간' },
+    { key: '1d', label: '일봉' },
+    { key: '1wk', label: '주봉' },
+    { key: '1mo', label: '월봉' },
+  ];
+  const [tf, setTf] = useState('1d');
+  const [candles, setCandles] = useState([]);
+  const [status, setStatus] = useState('loading'); // loading | ok | error
+
+  useEffect(() => {
+    let alive = true;
+    setStatus('loading');
+    setCandles([]);
+    // 서버리스 함수가 야후에서 실시간 프록시 → git에 캔들 파일 불필요
+    fetch(`/api/ohlc?id=${encodeURIComponent(tickerId)}&tf=${tf}`)
+      .then(r => { if (!r.ok) throw new Error('no data'); return r.json(); })
+      .then(d => { if (alive) { setCandles(Array.isArray(d.candles) ? d.candles : []); setStatus('ok'); } })
+      .catch(() => { if (alive) setStatus('error'); });
+    return () => { alive = false; };
+  }, [tickerId, tf]);
+
+  const last = candles.length ? candles[candles.length - 1] : null;
+  const prev = candles.length > 1 ? candles[candles.length - 2] : null;
+  const changePct = last && prev && prev.c ? ((last.c / prev.c) - 1) * 100 : null;
+
+  return (
+    <div>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+        <div className="flex items-center gap-3">
+          <h4 className="text-white font-bold text-base md:text-lg flex items-center gap-2">
+            <BarChart2 size={18} className="text-indigo-400" /> 가격 차트
+          </h4>
+          {last && (
+            <div className="flex items-baseline gap-2">
+              <span className="text-lg md:text-xl font-bold text-white font-mono">{formatPrice(last.c, market)}</span>
+              {changePct !== null && (
+                <span className={`text-xs md:text-sm font-mono font-bold ${changePct >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                  {changePct >= 0 ? '+' : ''}{changePct.toFixed(2)}%
+                </span>
+              )}
+            </div>
+          )}
+        </div>
+        <div className="flex gap-1 bg-slate-950 p-1 rounded-lg border border-slate-800 w-fit">
+          {TIMEFRAMES.map(t => (
+            <button
+              key={t.key}
+              onClick={() => setTf(t.key)}
+              className={`px-2.5 py-1.5 rounded-md text-xs font-bold transition-all ${
+                tf === t.key ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white hover:bg-slate-800'
+              }`}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full h-48 md:h-64 bg-slate-950/60 rounded-xl border border-slate-800/50 p-2">
+        {status === 'loading' && (
+          <div className="w-full h-full flex items-center justify-center text-slate-500">
+            <Loader2 size={28} className="animate-spin" />
+          </div>
+        )}
+        {status === 'error' && (
+          <div className="w-full h-full flex items-center justify-center text-slate-600 text-sm text-center px-4">
+            차트를 불러올 수 없습니다.<br />(로컬 dev에선 `vercel dev`로 /api 함수 실행 필요)
+          </div>
+        )}
+        {status === 'ok' && <CandleSVG candles={candles} />}
       </div>
     </div>
   );
@@ -290,6 +436,20 @@ export default function App() {
                   <span className="hidden md:block w-1 h-1 bg-slate-700 rounded-full"></span>
                   <span className="text-slate-500 text-xs md:text-sm font-mono">{selectedTicker.market}</span>
                 </div>
+                {selectedTicker.price ? (
+                  <div className="mt-4 flex items-baseline gap-2">
+                    <span className="text-3xl md:text-4xl font-bold text-white font-mono">{formatPrice(selectedTicker.price, selectedTicker.market)}</span>
+                    <span className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold">종가 · Close</span>
+                  </div>
+                ) : null}
+                {selectedTicker.momentum3m != null ? (
+                  <div className="mt-2 flex items-center gap-2">
+                    <span className={`text-sm md:text-base font-mono font-bold ${selectedTicker.momentum3m >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                      {selectedTicker.momentum3m >= 0 ? '+' : ''}{selectedTicker.momentum3m}%
+                    </span>
+                    <span className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold">3M Momentum (신호 근거)</span>
+                  </div>
+                ) : null}
               </div>
               <div className={`text-2xl md:text-4xl font-black px-8 py-3 md:py-4 rounded-2xl md:rounded-3xl border shadow-2xl text-center ${
                 selectedTicker.signal === 'Buy' ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30' :
@@ -319,6 +479,11 @@ export default function App() {
                 <p className="text-2xl md:text-3xl text-indigo-400 font-black">{selectedTicker.positiveScore} <span className="text-xs md:text-sm font-normal text-indigo-500/50">/ 100</span></p>
                 <div className="absolute bottom-0 left-0 h-1 bg-indigo-500" style={{ width: `${selectedTicker.positiveScore}%` }}></div>
               </div>
+            </div>
+
+            {/* 🕯️ 종목별 캔들차트 (4시간/일/주/월) + 시장 종가 */}
+            <div className="bg-slate-900/50 border border-slate-800 p-4 md:p-6 rounded-2xl md:rounded-3xl mb-4">
+              <CandleChart tickerId={selectedTicker.id} market={selectedTicker.market} />
             </div>
 
             <div className="grid grid-cols-1 gap-4">
@@ -353,9 +518,10 @@ export default function App() {
                   <div className="mt-8 md:mt-12 pt-8 md:pt-10 border-t border-slate-800/50">
                     <h5 className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 md:mb-6 flex items-center gap-2">
                       <TrendingUp size={14} className="text-emerald-500 md:w-4 md:h-4" /> 20-Day Estimated Return
+                      {selectedTicker.expectedBands ? <span className="text-indigo-400/70 normal-case tracking-normal">· 팬차트 p10~p90</span> : null}
                     </h5>
                     <div className="w-full h-32 md:h-48">
-                      <PredictiveChart data={selectedTicker.expectedPath} />
+                      <PredictiveChart data={selectedTicker.expectedPath} bands={selectedTicker.expectedBands} />
                     </div>
                   </div>
                 )}
