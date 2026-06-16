@@ -484,12 +484,12 @@ export default function App() {
                     <span className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold">종가 · Close</span>
                   </div>
                 ) : null}
-                {selectedTicker.momentum3m != null ? (
-                  <div className="mt-2 flex items-center gap-2">
-                    <span className={`text-sm md:text-base font-mono font-bold ${selectedTicker.momentum3m >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
-                      {selectedTicker.momentum3m >= 0 ? '+' : ''}{selectedTicker.momentum3m}%
-                    </span>
-                    <span className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold">3M Momentum (신호 근거)</span>
+                {selectedTicker.pBuy != null ? (
+                  <div className="mt-2 flex items-center gap-2 flex-wrap text-xs md:text-sm font-mono font-bold">
+                    <span className="text-emerald-400">매수 {selectedTicker.pBuy}%</span>
+                    <span className="text-amber-400">관망 {selectedTicker.pWait}%</span>
+                    <span className="text-rose-400">매도 {selectedTicker.pSell}%</span>
+                    <span className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest font-bold">AI 확률 (신호 근거)</span>
                   </div>
                 ) : null}
               </div>
@@ -505,12 +505,12 @@ export default function App() {
             {/* 📱 핵심 지표 모바일 2열(grid-cols-2), 데스크탑 4열(lg:grid-cols-4) */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-8 md:mb-10">
               <div className="bg-slate-900 border border-slate-800 p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-lg">
-                <p className="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-2 flex items-center gap-1"><Target size={14}/> Profit Hazard</p>
-                <p className="text-xl md:text-3xl text-white font-mono font-bold">{selectedTicker.profitHazard}</p>
+                <p className="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-2 flex items-center gap-1"><TrendingUp size={14}/> 매수확률 (P Buy)</p>
+                <p className="text-xl md:text-3xl font-mono font-bold text-emerald-400">{selectedTicker.pBuy != null ? `${selectedTicker.pBuy}%` : '—'}</p>
               </div>
               <div className="bg-slate-900 border border-slate-800 p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-lg">
-                <p className="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-2 flex items-center gap-1"><AlertTriangle size={14}/> Stop Hazard</p>
-                <p className="text-xl md:text-3xl text-white font-mono font-bold">{selectedTicker.stopHazard}</p>
+                <p className="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-2 flex items-center gap-1"><TrendingDown size={14}/> 매도확률 (P Sell)</p>
+                <p className="text-xl md:text-3xl font-mono font-bold text-rose-400">{selectedTicker.pSell != null ? `${selectedTicker.pSell}%` : '—'}</p>
               </div>
               <div className="bg-slate-900 border border-slate-800 p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-lg">
                 <p className="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-2 flex items-center gap-1"><BarChart2 size={14}/> Expected Ret</p>
@@ -684,17 +684,26 @@ function TickerCard({ ticker, onClick, isBookmarked, onBookmark }) {
         </div>
       </div>
       
-      <div className="flex justify-between items-end bg-slate-950 p-3 rounded-xl border border-slate-800/50">
-        <div className="space-y-1">
-          <div className="text-slate-500 text-[10px] md:text-[11px] font-bold uppercase tracking-wider">AI Score & Ret</div>
-          <div className="flex items-center gap-2 md:gap-3">
-            <span className="text-white font-mono font-bold text-base md:text-lg">{ticker.positiveScore}</span>
-            <span className={`font-mono font-bold text-xs md:text-sm ${String(ticker.return || '').includes('-') ? 'text-rose-400' : 'text-emerald-400'}`}>{ticker.return}</span>
+      <div className="bg-slate-950 p-3 rounded-xl border border-slate-800/50 space-y-2">
+        <div className="flex justify-between items-end">
+          <div className="space-y-1">
+            <div className="text-slate-500 text-[10px] md:text-[11px] font-bold uppercase tracking-wider flex items-center gap-1"><Zap size={11}/> 매수확률 · 예상수익</div>
+            <div className="flex items-center gap-2 md:gap-3">
+              <span className="font-mono font-bold text-base md:text-lg text-emerald-400">{ticker.pBuy != null ? `${ticker.pBuy}%` : '—'}</span>
+              <span className={`font-mono font-bold text-xs md:text-sm ${String(ticker.return || '').includes('-') ? 'text-rose-400' : 'text-emerald-400'}`}>{ticker.return}</span>
+            </div>
           </div>
+          <span className={`text-[10px] md:text-xs font-bold px-2 py-1 md:px-3 md:py-1.5 rounded-lg bg-${signalColor}-500/10 text-${signalColor}-400 border border-${signalColor}-500/20`}>
+            {ticker.signal}
+          </span>
         </div>
-        <span className={`text-[10px] md:text-xs font-bold px-2 py-1 md:px-3 md:py-1.5 rounded-lg bg-${signalColor}-500/10 text-${signalColor}-400 border border-${signalColor}-500/20`}>
-          {ticker.signal}
-        </span>
+        {ticker.pBuy != null && (
+          <div className="h-1.5 rounded-full bg-slate-800 overflow-hidden flex" title="매수/관망/매도 확률">
+            <div className="h-full bg-emerald-500" style={{ width: `${ticker.pBuy}%` }} />
+            <div className="h-full bg-amber-500/70" style={{ width: `${ticker.pWait}%` }} />
+            <div className="h-full bg-rose-500" style={{ width: `${ticker.pSell}%` }} />
+          </div>
+        )}
       </div>
     </div>
   );
