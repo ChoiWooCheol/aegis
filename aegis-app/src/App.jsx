@@ -278,6 +278,28 @@ export default function App() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // 🔙 브라우저 뒤로가기: 상세화면 → 대시보드 (사이트 이탈 방지)
+  const detailPushedRef = useRef(false);
+  useEffect(() => {
+    const onPop = () => { detailPushedRef.current = false; setSelectedTicker(null); };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+  useEffect(() => {
+    if (selectedTicker && !detailPushedRef.current) {
+      detailPushedRef.current = true;            // 대시보드 → 상세 진입 시 히스토리 1개 추가
+      window.history.pushState({ aegisDetail: true }, "");
+    } else if (!selectedTicker) {
+      detailPushedRef.current = false;
+    }
+  }, [selectedTicker]);
+  // 상세 닫고 대시보드(또는 탭)로 — 푸시했던 히스토리를 소비해 뒤로가기와 동기화
+  const goDashboard = (tab) => {
+    if (tab) setActiveTab(tab);
+    if (detailPushedRef.current) window.history.back();
+    else setSelectedTicker(null);
+  };
+
   const fetchAvailableDates = async () => {
     try {
       const res = await fetch("/available_dates.json");
@@ -365,7 +387,7 @@ export default function App() {
         
         {/* 상단: 로고 및 날짜 선택기 */}
         <div className="flex items-center justify-between w-full lg:w-auto gap-4">
-          <h2 className="text-xl md:text-2xl font-bold text-white cursor-pointer shrink-0" onClick={() => {setSelectedTicker(null); setActiveTab('home');}}>
+          <h2 className="text-xl md:text-2xl font-bold text-white cursor-pointer shrink-0" onClick={() => goDashboard('home')}>
             Aegis <span className="text-indigo-500">Terminal</span>
           </h2>
           
@@ -407,10 +429,10 @@ export default function App() {
         {/* 하단: 메뉴 버튼 및 검색창 */}
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
           <nav className="flex gap-2 bg-slate-900 p-1 rounded-lg border border-slate-800 w-full sm:w-auto">
-            <button onClick={() => {setActiveTab('home'); setSelectedTicker(null);}} className={`flex-1 sm:flex-none px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm font-bold transition-all ${activeTab === 'home' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
+            <button onClick={() => goDashboard('home')} className={`flex-1 sm:flex-none px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm font-bold transition-all ${activeTab === 'home' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
               <Home size={16}/> 마켓 홈
             </button>
-            <button onClick={() => {setActiveTab('watchlist'); setSelectedTicker(null);}} className={`flex-1 sm:flex-none px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm font-bold transition-all ${activeTab === 'watchlist' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
+            <button onClick={() => goDashboard('watchlist')} className={`flex-1 sm:flex-none px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm font-bold transition-all ${activeTab === 'watchlist' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
               <Bookmark size={16}/> 관심종목
             </button>
           </nav>
@@ -454,7 +476,7 @@ export default function App() {
           
           <div className="max-w-5xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 md:mb-8">
-              <button onClick={() => setSelectedTicker(null)} className="flex items-center justify-center gap-2 text-slate-400 hover:text-white bg-slate-900 px-4 py-2 rounded-lg border border-slate-800 transition-colors w-full sm:w-auto">
+              <button onClick={() => goDashboard()} className="flex items-center justify-center gap-2 text-slate-400 hover:text-white bg-slate-900 px-4 py-2 rounded-lg border border-slate-800 transition-colors w-full sm:w-auto">
                 <ArrowLeft size={18} /> 대시보드로 돌아가기
               </button>
               <div className="flex items-center justify-between sm:justify-end gap-2 sm:gap-4 w-full sm:w-auto">
