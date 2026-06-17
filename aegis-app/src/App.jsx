@@ -510,7 +510,7 @@ export default function App() {
               </div>
               <div className="bg-slate-900 border border-slate-800 p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-lg">
                 <p className="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-2 flex items-center gap-1"><Zap size={14}/> 리스크 등급</p>
-                <p className={`text-xl md:text-3xl font-mono font-bold ${selectedTicker.riskGrade === '高' ? 'text-rose-400' : selectedTicker.riskGrade === '低' ? 'text-emerald-400' : 'text-amber-400'}`}>{selectedTicker.riskGrade || '—'}</p>
+                <p className={`text-xl md:text-3xl font-mono font-bold ${selectedTicker.riskGrade === '높음' ? 'text-rose-400' : selectedTicker.riskGrade === '낮음' ? 'text-emerald-400' : 'text-amber-400'}`}>{selectedTicker.riskGrade || '—'}</p>
               </div>
               <div className="bg-slate-900 border border-slate-800 p-4 md:p-6 rounded-2xl md:rounded-3xl shadow-lg">
                 <p className="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-2 flex items-center gap-1"><BarChart2 size={14}/> 진입 타이밍</p>
@@ -690,7 +690,7 @@ function TickerCard({ ticker, onClick, isBookmarked, onBookmark }) {
             <div className="text-slate-500 text-[10px] md:text-[11px] font-bold uppercase tracking-wider flex items-center gap-1"><Zap size={11}/> 모멘텀 · 리스크 · 진입</div>
             <div className="flex items-center gap-2 md:gap-3">
               <span className="font-mono font-bold text-base md:text-lg text-indigo-400">{ticker.momentumScore != null ? ticker.momentumScore : '—'}<span className="text-[10px] text-slate-500">/100</span></span>
-              <span className={`font-mono font-bold text-xs md:text-sm ${ticker.riskGrade === '高' ? 'text-rose-400' : ticker.riskGrade === '低' ? 'text-emerald-400' : 'text-amber-400'}`}>리스크 {ticker.riskGrade || '—'}</span>
+              <span className={`font-mono font-bold text-xs md:text-sm ${ticker.riskGrade === '높음' ? 'text-rose-400' : ticker.riskGrade === '낮음' ? 'text-emerald-400' : 'text-amber-400'}`}>리스크 {ticker.riskGrade || '—'}</span>
               <span className="font-mono text-[10px] md:text-xs text-slate-400">진입 {ticker.entryTiming || '—'}</span>
             </div>
           </div>
