@@ -4,18 +4,18 @@
   "initial": 100000000,
   "asOf": "2026-06-17",
   "startedAt": "2026-06-05",
-  "equity": 105104127,
-  "cash": 18911947,
-  "cashPct": 18.0,
-  "stockValue": 86192180,
-  "returnPct": 5.1,
-  "positionsCount": 10,
+  "equity": 105047582,
+  "cash": 3092508,
+  "cashPct": 2.9,
+  "stockValue": 101955074,
+  "returnPct": 5.05,
+  "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": 3.0,
-    "mdd": -5.2,
-    "trades": 14,
-    "buys": 12,
+    "sharpe": 2.81,
+    "mdd": -5.1,
+    "trades": 16,
+    "buys": 14,
     "sells": 2,
     "winRate": 0
   },
@@ -67,7 +67,7 @@
       "avgCost": 2545100.33,
       "price": 2959668.45,
       "value": 8879005,
-      "weightPct": 8.4,
+      "weightPct": 8.5,
       "plPct": 16.3
     },
     {
@@ -91,6 +91,16 @@
       "plPct": 2.5
     },
     {
+      "ticker": "LITE",
+      "name": "Lumentum",
+      "shares": 6,
+      "avgCost": 1318750.43,
+      "price": 1314504.92,
+      "value": 7887030,
+      "weightPct": 7.5,
+      "plPct": -0.3
+    },
+    {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
@@ -99,6 +109,16 @@
       "value": 7881091,
       "weightPct": 7.5,
       "plPct": 7.9
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "shares": 23,
+      "avgCost": 343779.84,
+      "price": 342428.86,
+      "value": 7875864,
+      "weightPct": 7.5,
+      "plPct": -0.4
     },
     {
       "ticker": "CSCO",
@@ -139,36 +159,47 @@
     },
     {
       "date": "2026-06-10",
-      "equity": 95254154,
-      "cash": 12093494
+      "equity": 95335581,
+      "cash": 4186558
     },
     {
       "date": "2026-06-11",
-      "equity": 102747504,
-      "cash": 18911947
+      "equity": 103284319,
+      "cash": 3092508
     },
     {
       "date": "2026-06-12",
-      "equity": 104952094,
-      "cash": 18911947
+      "equity": 105546245,
+      "cash": 3092508
     },
     {
       "date": "2026-06-15",
-      "equity": 108706805,
-      "cash": 18911947
+      "equity": 109649624,
+      "cash": 3092508
     },
     {
       "date": "2026-06-16",
-      "equity": 104306960,
-      "cash": 18911947
+      "equity": 104479712,
+      "cash": 3092508
     },
     {
       "date": "2026-06-17",
-      "equity": 105104127,
-      "cash": 18911947
+      "equity": 105047582,
+      "cash": 3092508
     }
   ],
   "tradeLog": [
+    {
+      "date": "2026-06-11",
+      "name": "Lumentum",
+      "ticker": "LITE",
+      "type": "매수",
+      "price": 1316118.19,
+      "shares": 6,
+      "amount": 7912503,
+      "pnl": null,
+      "reason": "여유현금 신규매수"
+    },
     {
       "date": "2026-06-11",
       "name": "Western Digital",
@@ -179,6 +210,17 @@
       "amount": 6818453,
       "pnl": -754373,
       "reason": "손절(-10%)"
+    },
+    {
+      "date": "2026-06-10",
+      "name": "Datadog",
+      "ticker": "DDOG",
+      "type": "매수",
+      "price": 343093.65,
+      "shares": 23,
+      "amount": 7906936,
+      "pnl": null,
+      "reason": "여유현금 신규매수"
     },
     {
       "date": "2026-06-10",
