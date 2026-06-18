@@ -694,18 +694,41 @@ function AutoTradeView() {
   const [accts, setAccts] = useState({});
   const [mkt, setMkt] = useState('KOSPI_100');
   const [view, setView] = useState('portfolio');
+  const [live, setLive] = useState({ prices: {}, asOf: null });
   useEffect(() => {
     Promise.all([
       fetch('/autotrade_KOSPI_100.json').then(r => r.json()).catch(() => null),
       fetch('/autotrade_NASDAQ_100.json').then(r => r.json()).catch(() => null),
     ]).then(([k, n]) => setAccts({ KOSPI_100: k, NASDAQ_100: n }));
   }, []);
+  // 보유종목 실시간 시세 폴링(30초) → 실시간 평가. 실패 시 배치 종가로 폴백.
+  useEffect(() => {
+    const acc = accts[mkt];
+    if (!acc || !acc.positions || !acc.positions.length) return;
+    let alive = true;
+    const tk = acc.positions.map(p => p.ticker).join(',');
+    setLive({ prices: {}, asOf: null });
+    const poll = () => fetch(`/api/quotes?tickers=${encodeURIComponent(tk)}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(j => { if (alive && j && j.prices) setLive({ prices: j.prices, asOf: j.asOf }); })
+      .catch(() => {});
+    poll();
+    const id = setInterval(poll, 30000);
+    return () => { alive = false; clearInterval(id); };
+  }, [mkt, accts]);
   const fmt = (v) => Math.round(v || 0).toLocaleString();
   if (accts[mkt] === undefined) return <div className="text-center text-slate-400 py-24 animate-pulse">AI 자동매매 계좌 불러오는 중…</div>;
   const a = accts[mkt];
   if (!a) return <div className="text-center text-slate-400 py-24">자동매매 데이터가 아직 없습니다.</div>;
 
-  const up = a.returnPct >= 0;
+  // 실시간 평가(시세 폴링 성공 시) → 폴백: 배치 종가
+  const lp = live.prices || {};
+  const isLive = live.asOf != null && Object.keys(lp).length > 0;
+  const liveStock = (a.positions || []).reduce((s, p) => s + p.shares * (lp[p.ticker] ?? p.price), 0);
+  const equity = isLive ? Math.round(a.cash + liveStock) : a.equity;
+  const ret = isLive ? +((equity / a.initial - 1) * 100).toFixed(2) : a.returnPct;
+  const cashPct = isLive ? +(a.cash / equity * 100).toFixed(1) : a.cashPct;
+  const up = ret >= 0;
   const eh = a.equityHistory || [];
   const ys = eh.map(p => p.equity);
   const mn = Math.min(...ys), mx = Math.max(...ys);
@@ -724,8 +747,13 @@ function AutoTradeView() {
     <div className="max-w-6xl mx-auto pb-20 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
-          <h1 className="text-2xl md:text-3xl font-black text-white flex items-center gap-2"><BrainCircuit className="text-indigo-400" size={28}/> AI 자동매매</h1>
-          <p className="text-slate-500 text-xs md:text-sm mt-1">{a.rule} · 1억 시작 · {a.startedAt}~{a.asOf}</p>
+          <h1 className="text-2xl md:text-3xl font-black text-white flex items-center gap-2">
+            <BrainCircuit className="text-indigo-400" size={28}/> AI 자동매매
+            <span className={`text-[11px] font-bold px-2 py-1 rounded-full ${isLive ? 'bg-emerald-500/15 text-emerald-400' : 'bg-slate-700/50 text-slate-400'}`}>
+              {isLive ? '● 실시간' : '종가 기준'}
+            </span>
+          </h1>
+          <p className="text-slate-500 text-xs md:text-sm mt-1">{a.rule} · 1억 시작 · {a.startedAt}~{a.asOf} · 다음날 시가 체결</p>
         </div>
         <div className="flex gap-2 bg-slate-900 p-1 rounded-lg border border-slate-800">
           {['KOSPI_100', 'NASDAQ_100'].map(m => (
@@ -737,9 +765,9 @@ function AutoTradeView() {
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-4">
-        <Card label="총자산" value={`${fmt(a.equity)}원`} color="text-cyan-300" sub={`시작 ${fmt(a.initial)}원`} />
-        <Card label="누적 수익률" value={`${up ? '+' : ''}${a.returnPct}%`} color={up ? 'text-emerald-400' : 'text-rose-400'} sub={`평가손익 ${up ? '+' : ''}${fmt(a.equity - a.initial)}원`} />
-        <Card label="현금 비중" value={`${a.cashPct}%`} color="text-amber-400" sub={`${fmt(a.cash)}원`} />
+        <Card label="총자산" value={`${fmt(equity)}원`} color="text-cyan-300" sub={`시작 ${fmt(a.initial)}원`} />
+        <Card label="누적 수익률" value={`${up ? '+' : ''}${ret}%`} color={up ? 'text-emerald-400' : 'text-rose-400'} sub={`평가손익 ${up ? '+' : ''}${fmt(equity - a.initial)}원`} />
+        <Card label="현금 비중" value={`${cashPct}%`} color="text-amber-400" sub={`${fmt(a.cash)}원`} />
         <Card label="보유 종목" value={`${a.positionsCount}종목`} sub={`총 거래 ${a.stats.trades}건`} />
       </div>
       <div className="grid grid-cols-3 gap-3 md:gap-4 mb-6">
@@ -769,16 +797,21 @@ function AutoTradeView() {
               <th className="text-left p-3">종목</th><th className="text-right p-3">비중</th><th className="text-right p-3">평가액</th><th className="text-right p-3">평단</th><th className="text-right p-3">현재가</th><th className="text-right p-3">수익률</th>
             </tr></thead>
             <tbody>
-              {a.positions.map(p => (
+              {a.positions.map(p => {
+                const liveP = lp[p.ticker] ?? p.price;
+                const liveV = p.shares * liveP;
+                const livePl = +((liveP / p.avgCost - 1) * 100).toFixed(1);
+                const liveW = +((liveV / equity) * 100).toFixed(1);
+                return (
                 <tr key={p.ticker} className="border-b border-slate-800/50 hover:bg-slate-800/30">
                   <td className="p-3 text-white font-bold">{p.name}<span className="text-slate-600 text-xs ml-1">{p.ticker.replace('.KS', '').replace('.KQ', '')}</span></td>
-                  <td className="p-3 text-right font-mono text-indigo-300">{p.weightPct}%</td>
-                  <td className="p-3 text-right font-mono text-slate-300">{fmt(p.value)}</td>
+                  <td className="p-3 text-right font-mono text-indigo-300">{liveW}%</td>
+                  <td className="p-3 text-right font-mono text-slate-300">{fmt(liveV)}</td>
                   <td className="p-3 text-right font-mono text-slate-500">{fmt(p.avgCost)}</td>
-                  <td className="p-3 text-right font-mono text-slate-300">{fmt(p.price)}</td>
-                  <td className={`p-3 text-right font-mono font-bold ${p.plPct >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>{p.plPct >= 0 ? '+' : ''}{p.plPct}%</td>
+                  <td className="p-3 text-right font-mono text-slate-300">{fmt(liveP)}</td>
+                  <td className={`p-3 text-right font-mono font-bold ${livePl >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>{livePl >= 0 ? '+' : ''}{livePl}%</td>
                 </tr>
-              ))}
+              );})}
             </tbody>
           </table></div>
         </div>
