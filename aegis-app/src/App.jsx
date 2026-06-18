@@ -264,6 +264,8 @@ export default function App() {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const searchRef = useRef(null);
   const dateRef = useRef(null);
+  const detDateRef = useRef(null);
+  const [detDateOpen, setDetDateOpen] = useState(false);   // 상세화면 날짜 선택기
 
   useEffect(() => {
     if (isStarted) fetchAvailableDates();
@@ -273,6 +275,7 @@ export default function App() {
     const handleClickOutside = (e) => {
       if (searchRef.current && !searchRef.current.contains(e.target)) setIsSearchFocused(false);
       if (dateRef.current && !dateRef.current.contains(e.target)) setIsDateMenuOpen(false);
+      if (detDateRef.current && !detDateRef.current.contains(e.target)) setDetDateOpen(false);
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -318,12 +321,14 @@ export default function App() {
 
   const fetchMarketData = async (date) => {
     setIsLoading(true);
-    setSelectedTicker(null); 
+    const keepId = selectedTicker?.id;   // 상세화면에서 날짜를 바꾸면 같은 종목을 유지하기 위함
     try {
       const targetPath = date ? `/aegis_data_${date}.json` : "/aegis_data.json";
       const res = await fetch(targetPath);
       const data = await res.json();
       setMasterUniverse(data);
+      // 상세화면이면 같은 종목의 '그 날짜' 데이터로 유지(과거 이력 조회), 없으면 대시보드로
+      setSelectedTicker(keepId ? (data.find(t => t.id === keepId) || null) : null);
     } catch (e) {
       alert(`${date} 데이터를 불러올 수 없습니다.`);
     } finally {
@@ -485,9 +490,25 @@ export default function App() {
                 <ArrowLeft size={18} /> 대시보드로 돌아가기
               </button>
               <div className="flex items-center justify-between sm:justify-end gap-2 sm:gap-4 w-full sm:w-auto">
-                <span className="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-widest flex items-center gap-2 bg-slate-900 px-3 py-2 rounded-lg border border-slate-800">
-                  <Calendar size={14}/> {currentDate}
-                </span>
+                <div className="relative" ref={detDateRef}>
+                  <button onClick={() => setDetDateOpen(o => !o)} title="날짜를 바꿔 이 종목의 과거 이력 보기"
+                    className="text-[10px] sm:text-xs font-bold text-slate-400 hover:text-white uppercase tracking-widest flex items-center gap-2 bg-slate-900 px-3 py-2 rounded-lg border border-slate-800 hover:border-indigo-500/50 transition-colors">
+                    <Calendar size={14}/> {currentDate} <ChevronDown size={13} className={`transition-transform ${detDateOpen ? 'rotate-180' : ''}`}/>
+                  </button>
+                  {detDateOpen && (
+                    <div className="absolute right-0 top-12 z-50 bg-slate-800 border border-slate-700 rounded-xl shadow-2xl overflow-hidden min-w-[160px]">
+                      <div className="px-3 py-2 text-[10px] text-slate-500 font-bold border-b border-slate-700/50">과거 이력 조회</div>
+                      <div className="max-h-60 overflow-y-auto custom-scrollbar">
+                        {[...availableDates].reverse().map(date => (
+                          <button key={date} onClick={() => { setCurrentDate(date); fetchMarketData(date); setDetDateOpen(false); }}
+                            className={`w-full text-left px-4 py-2.5 text-sm font-mono transition-colors ${date === currentDate ? 'bg-indigo-600/20 text-indigo-300' : 'text-slate-300 hover:bg-slate-700'}`}>
+                            {date}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
                 <button onClick={(e) => toggleWatchlist(e, selectedTicker.id)} className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold transition-all border ${watchlistIds.includes(selectedTicker.id) ? 'bg-indigo-600/20 text-indigo-400 border-indigo-500/50' : 'bg-slate-900 text-slate-400 border-slate-700 hover:bg-slate-800'}`}>
                   {watchlistIds.includes(selectedTicker.id) ? <Check size={18}/> : <Bookmark size={18}/>}
                 </button>
