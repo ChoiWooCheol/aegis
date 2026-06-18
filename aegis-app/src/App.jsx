@@ -435,6 +435,9 @@ export default function App() {
             <button onClick={() => goDashboard('watchlist')} className={`flex-1 sm:flex-none px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm font-bold transition-all ${activeTab === 'watchlist' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
               <Bookmark size={16}/> 관심종목
             </button>
+            <button onClick={() => goDashboard('autotrade')} className={`flex-1 sm:flex-none px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm font-bold transition-all ${activeTab === 'autotrade' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
+              <BrainCircuit size={16}/> AI 자동매매
+            </button>
           </nav>
 
           <div className="relative w-full sm:w-80" ref={searchRef}>
@@ -472,6 +475,8 @@ export default function App() {
             <Loader2 size={48} className="animate-spin text-indigo-500 mb-6" />
             <p className="text-slate-400 animate-pulse font-bold tracking-widest uppercase text-sm md:text-base">Fetching {currentDate} Data...</p>
           </div>
+        ) : activeTab === 'autotrade' ? (
+          <AutoTradeView />
         ) : selectedTicker ? (
           
           <div className="max-w-5xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20">
@@ -685,6 +690,124 @@ export default function App() {
 }
 
 // 🎯 종목 카드 모바일 최적화
+function AutoTradeView() {
+  const [accts, setAccts] = useState({});
+  const [mkt, setMkt] = useState('KOSPI_100');
+  const [view, setView] = useState('portfolio');
+  useEffect(() => {
+    Promise.all([
+      fetch('/autotrade_KOSPI_100.json').then(r => r.json()).catch(() => null),
+      fetch('/autotrade_NASDAQ_100.json').then(r => r.json()).catch(() => null),
+    ]).then(([k, n]) => setAccts({ KOSPI_100: k, NASDAQ_100: n }));
+  }, []);
+  const fmt = (v) => Math.round(v || 0).toLocaleString();
+  if (accts[mkt] === undefined) return <div className="text-center text-slate-400 py-24 animate-pulse">AI 자동매매 계좌 불러오는 중…</div>;
+  const a = accts[mkt];
+  if (!a) return <div className="text-center text-slate-400 py-24">자동매매 데이터가 아직 없습니다.</div>;
+
+  const up = a.returnPct >= 0;
+  const eh = a.equityHistory || [];
+  const ys = eh.map(p => p.equity);
+  const mn = Math.min(...ys), mx = Math.max(...ys);
+  const pts = eh.map((p, i) => `${(i / (eh.length - 1 || 1)) * 100},${100 - ((p.equity - mn) / ((mx - mn) || 1)) * 100}`).join(' ');
+  const baseY = 100 - ((a.initial - mn) / ((mx - mn) || 1)) * 100;
+
+  const Card = ({ label, value, color = 'text-white', sub }) => (
+    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 md:p-5">
+      <div className="text-slate-500 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-1.5">{label}</div>
+      <div className={`text-lg md:text-2xl font-mono font-bold ${color}`}>{value}</div>
+      {sub && <div className="text-[11px] text-slate-500 mt-0.5">{sub}</div>}
+    </div>
+  );
+
+  return (
+    <div className="max-w-6xl mx-auto pb-20 animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+        <div>
+          <h1 className="text-2xl md:text-3xl font-black text-white flex items-center gap-2"><BrainCircuit className="text-indigo-400" size={28}/> AI 자동매매</h1>
+          <p className="text-slate-500 text-xs md:text-sm mt-1">{a.rule} · 1억 시작 · {a.startedAt}~{a.asOf}</p>
+        </div>
+        <div className="flex gap-2 bg-slate-900 p-1 rounded-lg border border-slate-800">
+          {['KOSPI_100', 'NASDAQ_100'].map(m => (
+            <button key={m} onClick={() => setMkt(m)} className={`px-4 py-2 rounded-md text-sm font-bold transition-all ${mkt === m ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'}`}>
+              {m === 'KOSPI_100' ? '코스피 100' : '나스닥 100'}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-4">
+        <Card label="총자산" value={`${fmt(a.equity)}원`} color="text-cyan-300" sub={`시작 ${fmt(a.initial)}원`} />
+        <Card label="누적 수익률" value={`${up ? '+' : ''}${a.returnPct}%`} color={up ? 'text-emerald-400' : 'text-rose-400'} sub={`평가손익 ${up ? '+' : ''}${fmt(a.equity - a.initial)}원`} />
+        <Card label="현금 비중" value={`${a.cashPct}%`} color="text-amber-400" sub={`${fmt(a.cash)}원`} />
+        <Card label="보유 종목" value={`${a.positionsCount}종목`} sub={`총 거래 ${a.stats.trades}건`} />
+      </div>
+      <div className="grid grid-cols-3 gap-3 md:gap-4 mb-6">
+        <Card label="Sharpe" value={a.stats.sharpe} />
+        <Card label="MDD" value={`${a.stats.mdd}%`} color="text-rose-400" />
+        <Card label="매도 승률" value={`${a.stats.winRate}%`} color="text-emerald-400" />
+      </div>
+
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 md:p-5 mb-6">
+        <div className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-3">자산 곡선</div>
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-32 md:h-40">
+          <line x1="0" y1={baseY} x2="100" y2={baseY} stroke="#475569" strokeWidth="0.3" strokeDasharray="1,1" />
+          <polyline points={pts} fill="none" stroke={up ? '#34d399' : '#fb7185'} strokeWidth="0.8" vectorEffect="non-scaling-stroke" />
+        </svg>
+        <div className="flex justify-between text-[11px] text-slate-500 mt-1"><span>{a.startedAt}</span><span>{a.asOf}</span></div>
+      </div>
+
+      <div className="flex gap-2 mb-4">
+        <button onClick={() => setView('portfolio')} className={`px-4 py-2 rounded-lg text-sm font-bold ${view === 'portfolio' ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-slate-400 border border-slate-800'}`}><Target size={15} className="inline mr-1"/> 포트폴리오</button>
+        <button onClick={() => setView('log')} className={`px-4 py-2 rounded-lg text-sm font-bold ${view === 'log' ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-slate-400 border border-slate-800'}`}><History size={15} className="inline mr-1"/> 거래로그</button>
+      </div>
+
+      {view === 'portfolio' ? (
+        <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+          <div className="overflow-x-auto"><table className="w-full text-sm">
+            <thead><tr className="text-slate-500 text-xs border-b border-slate-800">
+              <th className="text-left p-3">종목</th><th className="text-right p-3">비중</th><th className="text-right p-3">평가액</th><th className="text-right p-3">평단</th><th className="text-right p-3">현재가</th><th className="text-right p-3">수익률</th>
+            </tr></thead>
+            <tbody>
+              {a.positions.map(p => (
+                <tr key={p.ticker} className="border-b border-slate-800/50 hover:bg-slate-800/30">
+                  <td className="p-3 text-white font-bold">{p.name}<span className="text-slate-600 text-xs ml-1">{p.ticker.replace('.KS', '').replace('.KQ', '')}</span></td>
+                  <td className="p-3 text-right font-mono text-indigo-300">{p.weightPct}%</td>
+                  <td className="p-3 text-right font-mono text-slate-300">{fmt(p.value)}</td>
+                  <td className="p-3 text-right font-mono text-slate-500">{fmt(p.avgCost)}</td>
+                  <td className="p-3 text-right font-mono text-slate-300">{fmt(p.price)}</td>
+                  <td className={`p-3 text-right font-mono font-bold ${p.plPct >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>{p.plPct >= 0 ? '+' : ''}{p.plPct}%</td>
+                </tr>
+              ))}
+            </tbody>
+          </table></div>
+        </div>
+      ) : (
+        <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+          <div className="overflow-x-auto max-h-[520px] overflow-y-auto custom-scrollbar"><table className="w-full text-sm">
+            <thead className="sticky top-0 bg-slate-900"><tr className="text-slate-500 text-xs border-b border-slate-800">
+              <th className="text-left p-3">날짜</th><th className="text-left p-3">종목</th><th className="text-center p-3">구분</th><th className="text-right p-3">체결가</th><th className="text-right p-3">수량</th><th className="text-right p-3">금액</th><th className="text-right p-3">실현손익</th>
+            </tr></thead>
+            <tbody>
+              {a.tradeLog.map((l, i) => (
+                <tr key={i} className="border-b border-slate-800/50">
+                  <td className="p-3 text-slate-500 font-mono text-xs">{l.date}</td>
+                  <td className="p-3 text-slate-200">{l.name}</td>
+                  <td className={`p-3 text-center font-bold ${l.type === '매수' ? 'text-emerald-400' : 'text-rose-400'}`}>{l.type}</td>
+                  <td className="p-3 text-right font-mono text-slate-400">{fmt(l.price)}</td>
+                  <td className="p-3 text-right font-mono text-slate-400">{(l.shares || 0).toLocaleString()}</td>
+                  <td className="p-3 text-right font-mono text-slate-300">{fmt(l.amount)}</td>
+                  <td className={`p-3 text-right font-mono ${l.pnl == null ? 'text-slate-600' : l.pnl >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>{l.pnl == null ? '—' : `${l.pnl >= 0 ? '+' : ''}${fmt(l.pnl)}`}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table></div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function TickerCard({ ticker, onClick, isBookmarked, onBookmark }) {
   const signalColor = ticker.signal === 'Buy' ? 'emerald' : ticker.signal === 'Sell' ? 'rose' : 'amber';
   
