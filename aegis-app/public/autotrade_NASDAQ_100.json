@@ -4,19 +4,19 @@
   "initial": 100000000,
   "asOf": "2026-06-17",
   "startedAt": "2026-06-05",
-  "equity": 108194617,
-  "cash": 5745913,
-  "cashPct": 5.3,
-  "stockValue": 102448704,
-  "returnPct": 8.19,
-  "positionsCount": 12,
+  "equity": 105104127,
+  "cash": 18911947,
+  "cashPct": 18.0,
+  "stockValue": 86192180,
+  "returnPct": 5.1,
+  "positionsCount": 10,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": 4.24,
-    "mdd": -5.0,
-    "trades": 12,
+    "sharpe": 3.0,
+    "mdd": -5.2,
+    "trades": 14,
     "buys": 12,
-    "sells": 0,
+    "sells": 2,
     "winRate": 0
   },
   "positions": [
@@ -27,18 +27,8 @@
       "avgCost": 741412.34,
       "price": 895878.35,
       "value": 9854662,
-      "weightPct": 9.1,
+      "weightPct": 9.4,
       "plPct": 20.8
-    },
-    {
-      "ticker": "WDC",
-      "name": "Western Digital",
-      "shares": 9,
-      "avgCost": 841425.16,
-      "price": 1075999.92,
-      "value": 9683999,
-      "weightPct": 9.0,
-      "plPct": 27.9
     },
     {
       "ticker": "STX",
@@ -47,7 +37,7 @@
       "avgCost": 1374914.86,
       "price": 1610789.0,
       "value": 9664734,
-      "weightPct": 8.9,
+      "weightPct": 9.2,
       "plPct": 17.2
     },
     {
@@ -57,7 +47,7 @@
       "avgCost": 316190.55,
       "price": 360711.47,
       "value": 9378498,
-      "weightPct": 8.7,
+      "weightPct": 8.9,
       "plPct": 14.1
     },
     {
@@ -67,7 +57,7 @@
       "avgCost": 495820.66,
       "price": 565370.99,
       "value": 9045936,
-      "weightPct": 8.4,
+      "weightPct": 8.6,
       "plPct": 14.0
     },
     {
@@ -77,7 +67,7 @@
       "avgCost": 2545100.33,
       "price": 2959668.45,
       "value": 8879005,
-      "weightPct": 8.2,
+      "weightPct": 8.4,
       "plPct": 16.3
     },
     {
@@ -87,7 +77,7 @@
       "avgCost": 172892.37,
       "price": 182977.25,
       "value": 8782908,
-      "weightPct": 8.1,
+      "weightPct": 8.4,
       "plPct": 5.8
     },
     {
@@ -97,7 +87,7 @@
       "avgCost": 755430.64,
       "price": 774336.73,
       "value": 8517704,
-      "weightPct": 7.9,
+      "weightPct": 8.1,
       "plPct": 2.5
     },
     {
@@ -107,7 +97,7 @@
       "avgCost": 1461439.01,
       "price": 1576218.23,
       "value": 7881091,
-      "weightPct": 7.3,
+      "weightPct": 7.5,
       "plPct": 7.9
     },
     {
@@ -117,18 +107,8 @@
       "avgCost": 192455.69,
       "price": 177280.93,
       "value": 7623080,
-      "weightPct": 7.0,
+      "weightPct": 7.3,
       "plPct": -7.9
-    },
-    {
-      "ticker": "LITE",
-      "name": "Lumentum",
-      "shares": 5,
-      "avgCost": 1401502.92,
-      "price": 1314504.92,
-      "value": 6572525,
-      "weightPct": 6.1,
-      "plPct": -6.2
     },
     {
       "ticker": "MPWR",
@@ -137,7 +117,7 @@
       "avgCost": 2429324.81,
       "price": 2188187.27,
       "value": 6564562,
-      "weightPct": 6.1,
+      "weightPct": 6.2,
       "plPct": -9.9
     }
   ],
@@ -159,36 +139,58 @@
     },
     {
       "date": "2026-06-10",
-      "equity": 95416137,
-      "cash": 5745913
+      "equity": 95254154,
+      "cash": 12093494
     },
     {
       "date": "2026-06-11",
-      "equity": 103629560,
-      "cash": 5745913
+      "equity": 102747504,
+      "cash": 18911947
     },
     {
       "date": "2026-06-12",
-      "equity": 106465452,
-      "cash": 5745913
+      "equity": 104952094,
+      "cash": 18911947
     },
     {
       "date": "2026-06-15",
-      "equity": 111644072,
-      "cash": 5745913
+      "equity": 108706805,
+      "cash": 18911947
     },
     {
       "date": "2026-06-16",
-      "equity": 107040549,
-      "cash": 5745913
+      "equity": 104306960,
+      "cash": 18911947
     },
     {
       "date": "2026-06-17",
-      "equity": 108194617,
-      "cash": 5745913
+      "equity": 105104127,
+      "cash": 18911947
     }
   ],
   "tradeLog": [
+    {
+      "date": "2026-06-11",
+      "name": "Western Digital",
+      "ticker": "WDC",
+      "type": "매도",
+      "price": 759124.15,
+      "shares": 9,
+      "amount": 6818453,
+      "pnl": -754373,
+      "reason": "손절(-10%)"
+    },
+    {
+      "date": "2026-06-10",
+      "name": "Lumentum",
+      "ticker": "LITE",
+      "type": "매도",
+      "price": 1272060.23,
+      "shares": 5,
+      "amount": 6347581,
+      "pnl": -659934,
+      "reason": "손절(-10%)"
+    },
     {
       "date": "2026-06-08",
       "name": "Cisco",
@@ -198,7 +200,7 @@
       "shares": 43,
       "amount": 8275594,
       "pnl": null,
-      "reason": "Buy신호 진입/추가(시가)"
+      "reason": "Buy신호 진입/추가"
     },
     {
       "date": "2026-06-08",
@@ -209,7 +211,7 @@
       "shares": 26,
       "amount": 8220954,
       "pnl": null,
-      "reason": "Buy신호 진입/추가(시가)"
+      "reason": "Buy신호 진입/추가"
     },
     {
       "date": "2026-06-08",
@@ -220,7 +222,7 @@
       "shares": 3,
       "amount": 7287974,
       "pnl": null,
-      "reason": "Buy신호 진입/추가(시가)"
+      "reason": "Buy신호 진입/추가"
     },
     {
       "date": "2026-06-08",
@@ -231,7 +233,7 @@
       "shares": 11,
       "amount": 8155536,
       "pnl": null,
-      "reason": "Buy신호 진입/추가(시가)"
+      "reason": "Buy신호 진입/추가"
     },
     {
       "date": "2026-06-08",
@@ -242,7 +244,7 @@
       "shares": 16,
       "amount": 7933131,
       "pnl": null,
-      "reason": "Buy신호 진입/추가(시가)"
+      "reason": "Buy신호 진입/추가"
     },
     {
       "date": "2026-06-08",
@@ -253,7 +255,7 @@
       "shares": 5,
       "amount": 7007515,
       "pnl": null,
-      "reason": "Buy신호 진입/추가(시가)"
+      "reason": "Buy신호 진입/추가"
     },
     {
       "date": "2026-06-08",
@@ -264,7 +266,7 @@
       "shares": 48,
       "amount": 8298834,
       "pnl": null,
-      "reason": "Buy신호 진입/추가(시가)"
+      "reason": "Buy신호 진입/추가"
     },
     {
       "date": "2026-06-08",
@@ -275,7 +277,7 @@
       "shares": 11,
       "amount": 8309737,
       "pnl": null,
-      "reason": "Buy신호 진입/추가(시가)"
+      "reason": "Buy신호 진입/추가"
     },
     {
       "date": "2026-06-08",
@@ -286,7 +288,7 @@
       "shares": 9,
       "amount": 7572826,
       "pnl": null,
-      "reason": "Buy신호 진입/추가(시가)"
+      "reason": "Buy신호 진입/추가"
     },
     {
       "date": "2026-06-08",
@@ -297,7 +299,7 @@
       "shares": 6,
       "amount": 8249489,
       "pnl": null,
-      "reason": "Buy신호 진입/추가(시가)"
+      "reason": "Buy신호 진입/추가"
     },
     {
       "date": "2026-06-08",
@@ -308,7 +310,7 @@
       "shares": 5,
       "amount": 7307195,
       "pnl": null,
-      "reason": "Buy신호 진입/추가(시가)"
+      "reason": "Buy신호 진입/추가"
     },
     {
       "date": "2026-06-08",
@@ -319,7 +321,7 @@
       "shares": 3,
       "amount": 7635301,
       "pnl": null,
-      "reason": "Buy신호 진입/추가(시가)"
+      "reason": "Buy신호 진입/추가"
     }
   ]
 }
