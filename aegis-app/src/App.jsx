@@ -750,8 +750,13 @@ function AutoTradeView() {
   const ret = isLive ? +((equity / a.initial - 1) * 100).toFixed(2) : a.returnPct;
   const cashPct = isLive ? +(a.cash / equity * 100).toFixed(1) : a.cashPct;
   const up = ret >= 0;
-  // 야후 marketState='REGULAR' 일 때만 '장중 실시간', 그 외(CLOSED/PRE/POST)는 '장마감·종가'
-  const open = isLive && live.mstate === 'REGULAR';
+  // 야후 marketState 기준: 정규장/프리/애프터 모두 '실시간'(체결 진행), CLOSED 만 종가
+  const ms = live.mstate;
+  const active = isLive && ['REGULAR', 'PRE', 'PREPRE', 'POST', 'POSTPOST'].includes(ms);
+  const sLabel = ms === 'REGULAR' ? '● 실시간'
+    : (ms === 'PRE' || ms === 'PREPRE') ? '● 프리마켓'
+    : (ms === 'POST' || ms === 'POSTPOST') ? '● 애프터마켓'
+    : isLive ? '장마감·종가' : '종가 기준';
   const liveTime = isLive && live.asOf ? new Date(live.asOf).toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : '';
   const eh = a.equityHistory || [];
   const ys = eh.map(p => p.equity);
@@ -773,8 +778,8 @@ function AutoTradeView() {
         <div>
           <h1 className="text-2xl md:text-3xl font-black text-white flex items-center gap-2">
             <BrainCircuit className="text-indigo-400" size={28}/> AI 자동매매
-            <span className={`text-[11px] font-bold px-2 py-1 rounded-full ${open ? 'bg-emerald-500/15 text-emerald-400' : isLive ? 'bg-amber-500/15 text-amber-400' : 'bg-slate-700/50 text-slate-400'}`}>
-              {open ? '● 실시간' : isLive ? '장마감·종가' : '종가 기준'}{liveTime ? ` ${liveTime}` : ''}
+            <span className={`text-[11px] font-bold px-2 py-1 rounded-full ${active ? 'bg-emerald-500/15 text-emerald-400' : isLive ? 'bg-amber-500/15 text-amber-400' : 'bg-slate-700/50 text-slate-400'}`}>
+              {sLabel}{liveTime ? ` ${liveTime}` : ''}
             </span>
           </h1>
           <p className="text-slate-500 text-xs md:text-sm mt-1">{a.rule} · 1억 시작 · {a.startedAt}~{a.asOf} · 다음날 시가 체결</p>

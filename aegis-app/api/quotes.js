@@ -5,10 +5,19 @@ const UA = { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; AegisBot/1.0)' }
 
 async function quote(symbol) {
   try {
-    const r = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=1d&interval=1d`, UA);
+    // 프리/정규/애프터 모두 포함(includePrePost) — 최대 거래 구간 반영
+    const r = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=1d&interval=5m&includePrePost=true`, UA);
     const j = await r.json();
-    const meta = j?.chart?.result?.[0]?.meta;
-    return { p: meta?.regularMarketPrice ?? null, state: meta?.marketState ?? null };
+    const res0 = j?.chart?.result?.[0];
+    const meta = res0?.meta;
+    const state = meta?.marketState ?? null;
+    let p = meta?.regularMarketPrice ?? null;
+    // 정규장 외(프리/애프터)엔 regularMarketPrice가 종가에 고정 → 타임시리즈 마지막 체결가 사용
+    if (state && state !== 'REGULAR') {
+      const c = res0?.indicators?.quote?.[0]?.close;
+      if (Array.isArray(c)) for (let i = c.length - 1; i >= 0; i--) { if (c[i] != null) { p = c[i]; break; } }
+    }
+    return { p, state };
   } catch { return { p: null, state: null }; }
 }
 
