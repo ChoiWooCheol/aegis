@@ -4,15 +4,15 @@
   "initial": 100000000,
   "asOf": "2026-06-18",
   "startedAt": "2026-06-05",
-  "equity": 112015658,
+  "equity": 106023305,
   "cash": 3092508,
-  "cashPct": 2.8,
-  "stockValue": 108923150,
-  "returnPct": 12.02,
+  "cashPct": 2.9,
+  "stockValue": 102930797,
+  "returnPct": 6.02,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": 5.2,
+    "sharpe": 3.1,
     "mdd": -5.1,
     "trades": 16,
     "buys": 14,
@@ -25,120 +25,120 @@
       "name": "Applied Materials",
       "shares": 11,
       "avgCost": 741412.34,
-      "price": 949909.0,
-      "value": 10448999,
-      "weightPct": 9.3,
-      "plPct": 28.1
-    },
-    {
-      "ticker": "KLAC",
-      "name": "KLA Corporation",
-      "shares": 26,
-      "avgCost": 316190.55,
-      "price": 401351.95,
-      "value": 10435151,
-      "weightPct": 9.3,
-      "plPct": 26.9
-    },
-    {
-      "ticker": "SNDK",
-      "name": "Sandisk",
-      "shares": 3,
-      "avgCost": 2545100.33,
-      "price": 3343695.21,
-      "value": 10031086,
-      "weightPct": 9.0,
-      "plPct": 31.4
-    },
-    {
-      "ticker": "INTC",
-      "name": "Intel",
-      "shares": 48,
-      "avgCost": 172892.37,
-      "price": 206821.09,
-      "value": 9927412,
-      "weightPct": 8.9,
-      "plPct": 19.6
+      "price": 904452.03,
+      "value": 9948972,
+      "weightPct": 9.4,
+      "plPct": 22.0
     },
     {
       "ticker": "STX",
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1374914.86,
-      "price": 1637683.22,
-      "value": 9826099,
-      "weightPct": 8.8,
-      "plPct": 19.1
+      "price": 1626204.46,
+      "value": 9757227,
+      "weightPct": 9.2,
+      "plPct": 18.3
+    },
+    {
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
+      "shares": 26,
+      "avgCost": 316190.55,
+      "price": 364163.52,
+      "value": 9468252,
+      "weightPct": 8.9,
+      "plPct": 15.2
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research",
       "shares": 16,
       "avgCost": 495820.66,
-      "price": 607109.06,
-      "value": 9713745,
-      "weightPct": 8.7,
-      "plPct": 22.4
+      "price": 570781.66,
+      "value": 9132507,
+      "weightPct": 8.6,
+      "plPct": 15.1
+    },
+    {
+      "ticker": "SNDK",
+      "name": "Sandisk",
+      "shares": 3,
+      "avgCost": 2545100.33,
+      "price": 2987992.86,
+      "value": 8963979,
+      "weightPct": 8.5,
+      "plPct": 17.4
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "shares": 48,
+      "avgCost": 172892.37,
+      "price": 184728.36,
+      "value": 8866962,
+      "weightPct": 8.4,
+      "plPct": 6.8
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 11,
       "avgCost": 755430.64,
-      "price": 816489.93,
-      "value": 8981389,
-      "weightPct": 8.0,
-      "plPct": 8.1
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron Technology",
-      "shares": 5,
-      "avgCost": 1461439.01,
-      "price": 1763468.97,
-      "value": 8817345,
-      "weightPct": 7.9,
-      "plPct": 20.7
-    },
-    {
-      "ticker": "CSCO",
-      "name": "Cisco",
-      "shares": 43,
-      "avgCost": 192455.69,
-      "price": 184615.43,
-      "value": 7938464,
-      "weightPct": 7.1,
-      "plPct": -4.1
-    },
-    {
-      "ticker": "DDOG",
-      "name": "Datadog",
-      "shares": 23,
-      "avgCost": 343779.84,
-      "price": 341412.09,
-      "value": 7852478,
-      "weightPct": 7.0,
-      "plPct": -0.7
+      "price": 781747.23,
+      "value": 8599220,
+      "weightPct": 8.1,
+      "plPct": 3.5
     },
     {
       "ticker": "LITE",
       "name": "Lumentum",
       "shares": 6,
       "avgCost": 1318750.43,
-      "price": 1290164.59,
-      "value": 7740988,
-      "weightPct": 6.9,
-      "plPct": -2.2
+      "price": 1327084.9,
+      "value": 7962509,
+      "weightPct": 7.5,
+      "plPct": 0.6
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "shares": 5,
+      "avgCost": 1461439.01,
+      "price": 1591302.85,
+      "value": 7956514,
+      "weightPct": 7.5,
+      "plPct": 8.9
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "shares": 23,
+      "avgCost": 343779.84,
+      "price": 345705.95,
+      "value": 7951237,
+      "weightPct": 7.5,
+      "plPct": 0.6
+    },
+    {
+      "ticker": "CSCO",
+      "name": "Cisco",
+      "shares": 43,
+      "avgCost": 192455.69,
+      "price": 178977.54,
+      "value": 7696034,
+      "weightPct": 7.3,
+      "plPct": -7.0
     },
     {
       "ticker": "MPWR",
       "name": "Monolithic Power Systems",
       "shares": 3,
       "avgCost": 2429324.81,
-      "price": 2403331.47,
-      "value": 7209994,
-      "weightPct": 6.4,
-      "plPct": -1.1
+      "price": 2209128.5,
+      "value": 6627386,
+      "weightPct": 6.3,
+      "plPct": -9.1
     }
   ],
   "equityHistory": [
@@ -189,7 +189,7 @@
     },
     {
       "date": "2026-06-18",
-      "equity": 112015658,
+      "equity": 106023305,
       "cash": 3092508
     }
   ],
