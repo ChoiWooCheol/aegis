@@ -3,12 +3,13 @@
 // .KS/.KQ = 원화 그대로, 그 외(미국) = USD×USDKRW 로 원화 환산. (장 마감 시 마지막 종가 반환)
 const UA = { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; AegisBot/1.0)' } };
 
-async function price(symbol) {
+async function quote(symbol) {
   try {
     const r = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=1d&interval=1d`, UA);
     const j = await r.json();
-    return j?.chart?.result?.[0]?.meta?.regularMarketPrice ?? null;
-  } catch { return null; }
+    const meta = j?.chart?.result?.[0]?.meta;
+    return { p: meta?.regularMarketPrice ?? null, state: meta?.marketState ?? null };
+  } catch { return { p: null, state: null }; }
 }
 
 export default async function handler(req, res) {
@@ -17,17 +18,19 @@ export default async function handler(req, res) {
   if (!symbols.length) return res.status(400).json({ error: 'no tickers' });
   try {
     const needFx = symbols.some(s => !(s.endsWith('.KS') || s.endsWith('.KQ')));
-    const fx = needFx ? (await price('KRW=X')) || 1380 : 1;
-    const vals = await Promise.all(symbols.map(price));
+    const fx = needFx ? ((await quote('KRW=X')).p || 1380) : 1;
+    const results = await Promise.all(symbols.map(quote));
     const prices = {};
+    let marketState = null;
     symbols.forEach((s, i) => {
-      const p = vals[i];
+      const { p, state } = results[i];
+      if (state && !marketState) marketState = state;   // 종목 시장의 실제 장 상태(REGULAR/CLOSED/PRE/POST)
       if (p == null) return;
       const isKR = s.endsWith('.KS') || s.endsWith('.KQ');
       prices[s] = isKR ? p : p * fx;   // 원화 환산
     });
     res.setHeader('Cache-Control', 's-maxage=15, stale-while-revalidate=30');
-    return res.status(200).json({ prices, fx, asOf: Date.now() });
+    return res.status(200).json({ prices, fx, asOf: Date.now(), marketState });
   } catch (e) {
     return res.status(500).json({ error: String(e) });
   }
