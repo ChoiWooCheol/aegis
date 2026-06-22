@@ -408,7 +408,7 @@ export default function App() {
             Aegis <span className="text-indigo-500">Terminal</span>
           </h2>
           {visitors != null && (
-            <span className="hidden md:inline-flex items-center gap-1 text-[11px] font-bold text-slate-400 bg-slate-900 border border-slate-800 px-2.5 py-1 rounded-full shrink-0" title="오늘 방문자 수">
+            <span className="inline-flex items-center gap-1 text-[10px] md:text-[11px] font-bold text-slate-400 bg-slate-900 border border-slate-800 px-2 md:px-2.5 py-1 rounded-full shrink-0" title="오늘 방문자 수">
               <Activity size={12} className="text-emerald-400" /> 오늘 {visitors.toLocaleString()}명
             </span>
           )}
