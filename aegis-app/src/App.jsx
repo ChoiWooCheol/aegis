@@ -266,10 +266,22 @@ export default function App() {
   const dateRef = useRef(null);
   const detDateRef = useRef(null);
   const [detDateOpen, setDetDateOpen] = useState(false);   // 상세화면 날짜 선택기
+  const [visitors, setVisitors] = useState(null);          // 오늘 방문자 수
 
   useEffect(() => {
     if (isStarted) fetchAvailableDates();
   }, [isStarted]);
+
+  // 오늘 방문자 카운트 (브라우저당 1일 1회만 증가 → 대략 순방문자). 무료 카운터, 실패 시 표시 생략.
+  useEffect(() => {
+    const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Seoul' });  // YYYY-MM-DD(KST)
+    const flag = `aegis_v_${today}`;
+    const seen = localStorage.getItem(flag);
+    fetch(`https://abacus.jasoncameron.dev/${seen ? 'get' : 'hit'}/aegis-stock/visit-${today}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(j => { if (j && typeof j.value === 'number') { setVisitors(j.value); if (!seen) localStorage.setItem(flag, '1'); } })
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -395,7 +407,12 @@ export default function App() {
           <h2 className="text-xl md:text-2xl font-bold text-white cursor-pointer shrink-0" onClick={() => goDashboard('home')}>
             Aegis <span className="text-indigo-500">Terminal</span>
           </h2>
-          
+          {visitors != null && (
+            <span className="hidden md:inline-flex items-center gap-1 text-[11px] font-bold text-slate-400 bg-slate-900 border border-slate-800 px-2.5 py-1 rounded-full shrink-0" title="오늘 방문자 수">
+              <Activity size={12} className="text-emerald-400" /> 오늘 {visitors.toLocaleString()}명
+            </span>
+          )}
+
           <div className="relative shrink-0" ref={dateRef}>
             <button 
               onClick={() => setIsDateMenuOpen(!isDateMenuOpen)}
@@ -731,7 +748,7 @@ function AutoTradeView() {
     setLive({ prices: {}, asOf: null });
     const poll = () => fetch(`/api/quotes?tickers=${encodeURIComponent(tk)}`)
       .then(r => r.ok ? r.json() : null)
-      .then(j => { if (alive && j && j.prices) setLive({ prices: j.prices, asOf: j.asOf, mstate: j.marketState }); })
+      .then(j => { if (alive && j && j.prices) setLive({ prices: j.prices, asOf: j.asOf }); })
       .catch(() => {});
     poll();
     const id = setInterval(poll, 30000);
@@ -750,13 +767,24 @@ function AutoTradeView() {
   const ret = isLive ? +((equity / a.initial - 1) * 100).toFixed(2) : a.returnPct;
   const cashPct = isLive ? +(a.cash / equity * 100).toFixed(1) : a.cashPct;
   const up = ret >= 0;
-  // 야후 marketState 기준: 정규장/프리/애프터 모두 '실시간'(체결 진행), CLOSED 만 종가
-  const ms = live.mstate;
-  const active = isLive && ['REGULAR', 'PRE', 'PREPRE', 'POST', 'POSTPOST'].includes(ms);
-  const sLabel = ms === 'REGULAR' ? '● 실시간'
-    : (ms === 'PRE' || ms === 'PREPRE') ? '● 프리마켓'
-    : (ms === 'POST' || ms === 'POSTPOST') ? '● 애프터마켓'
-    : isLive ? '장마감·종가' : '종가 기준';
+  // 장 상태는 야후 marketState가 빈 값으로 와서 신뢰 불가 → 시각(KST/ET 장시간) 기반으로 판정
+  const mktState = (() => {
+    const tz = mkt === 'KOSPI_100' ? 'Asia/Seoul' : 'America/New_York';
+    const pr = new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+    const g = t => pr.find(x => x.type === t)?.value;
+    if (g('weekday') === 'Sat' || g('weekday') === 'Sun') return 'CLOSED';
+    let h = +g('hour'); if (h === 24) h = 0;
+    const t = h * 60 + (+g('minute'));
+    if (mkt === 'KOSPI_100')                                          // KST 정규 09:00~15:30, 프리 08~09, 애프터 15:30~18
+      return t >= 540 && t < 930 ? 'REGULAR' : t >= 480 && t < 540 ? 'PRE' : t >= 930 && t < 1080 ? 'POST' : 'CLOSED';
+    return t >= 570 && t < 960 ? 'REGULAR' : t >= 240 && t < 570 ? 'PRE' : t >= 960 && t < 1200 ? 'POST' : 'CLOSED';  // ET 정규 09:30~16, 프리 04~09:30, 애프터 16~20
+  })();
+  const active = isLive && ['REGULAR', 'PRE', 'POST'].includes(mktState);
+  const sLabel = !isLive ? '종가 기준'
+    : mktState === 'REGULAR' ? '● 실시간'
+    : mktState === 'PRE' ? '● 프리마켓'
+    : mktState === 'POST' ? '● 애프터마켓'
+    : '장마감·종가';
   const liveTime = isLive && live.asOf ? new Date(live.asOf).toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : '';
   const eh = a.equityHistory || [];
   const ys = eh.map(p => p.equity);

@@ -5,20 +5,15 @@ const UA = { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; AegisBot/1.0)' }
 
 async function quote(symbol) {
   try {
-    // 프리/정규/애프터 모두 포함(includePrePost) — 최대 거래 구간 반영
+    // 프리/정규/애프터 포함(includePrePost) — 타임시리즈 마지막 체결가 = 최신가(정규/시간외 모두)
     const r = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=1d&interval=5m&includePrePost=true`, UA);
     const j = await r.json();
     const res0 = j?.chart?.result?.[0];
-    const meta = res0?.meta;
-    const state = meta?.marketState ?? null;
-    let p = meta?.regularMarketPrice ?? null;
-    // 정규장 외(프리/애프터)엔 regularMarketPrice가 종가에 고정 → 타임시리즈 마지막 체결가 사용
-    if (state && state !== 'REGULAR') {
-      const c = res0?.indicators?.quote?.[0]?.close;
-      if (Array.isArray(c)) for (let i = c.length - 1; i >= 0; i--) { if (c[i] != null) { p = c[i]; break; } }
-    }
-    return { p, state };
-  } catch { return { p: null, state: null }; }
+    let p = res0?.meta?.regularMarketPrice ?? null;
+    const c = res0?.indicators?.quote?.[0]?.close;
+    if (Array.isArray(c)) for (let i = c.length - 1; i >= 0; i--) { if (c[i] != null) { p = c[i]; break; } }
+    return p;
+  } catch { return null; }
 }
 
 export default async function handler(req, res) {
@@ -27,19 +22,17 @@ export default async function handler(req, res) {
   if (!symbols.length) return res.status(400).json({ error: 'no tickers' });
   try {
     const needFx = symbols.some(s => !(s.endsWith('.KS') || s.endsWith('.KQ')));
-    const fx = needFx ? ((await quote('KRW=X')).p || 1380) : 1;
-    const results = await Promise.all(symbols.map(quote));
+    const fx = needFx ? ((await quote('KRW=X')) || 1380) : 1;
+    const vals = await Promise.all(symbols.map(quote));
     const prices = {};
-    let marketState = null;
     symbols.forEach((s, i) => {
-      const { p, state } = results[i];
-      if (state && !marketState) marketState = state;   // 종목 시장의 실제 장 상태(REGULAR/CLOSED/PRE/POST)
+      const p = vals[i];
       if (p == null) return;
       const isKR = s.endsWith('.KS') || s.endsWith('.KQ');
       prices[s] = isKR ? p : p * fx;   // 원화 환산
     });
     res.setHeader('Cache-Control', 's-maxage=15, stale-while-revalidate=30');
-    return res.status(200).json({ prices, fx, asOf: Date.now(), marketState });
+    return res.status(200).json({ prices, fx, asOf: Date.now() });
   } catch (e) {
     return res.status(500).json({ error: String(e) });
   }
