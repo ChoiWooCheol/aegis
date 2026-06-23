@@ -5,7 +5,7 @@ import {
   Search, TrendingUp, TrendingDown, ChevronRight, BrainCircuit, 
   ArrowLeft, Loader2, Activity, Clock, AlertTriangle, 
   Target, BarChart2, Zap, Bookmark, Home, Check, Globe,
-  Calendar, ChevronDown, History
+  Calendar, ChevronDown, History, BookOpen, X
 } from 'lucide-react';
 
 // ==========================================
@@ -245,6 +245,61 @@ function CandleChart({ tickerId, market }) {
   );
 }
 
+// ==========================================
+// 📖 사용법 모달 (엔진 가동 후 1회 자동 + 헤더 '사용법' 버튼)
+// ==========================================
+function GuideModal({ onClose }) {
+  const Section = ({ icon, title, children }) => (
+    <div className="mb-5">
+      <h3 className="flex items-center gap-2 text-white font-bold text-sm mb-2">{icon}{title}</h3>
+      <div className="text-slate-300 text-[13px] leading-relaxed">{children}</div>
+    </div>
+  );
+  return (
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 animate-in fade-in duration-200" onClick={onClose}>
+      <div className="bg-slate-900 border border-slate-700 rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto custom-scrollbar p-6 md:p-8 shadow-2xl animate-in zoom-in-95 duration-200" onClick={e => e.stopPropagation()}>
+        <div className="flex items-center justify-between mb-5">
+          <h2 className="text-xl font-black text-white flex items-center gap-2"><BookOpen className="text-indigo-400" size={22}/> 사용법</h2>
+          <button onClick={onClose} className="text-slate-400 hover:text-white"><X size={22}/></button>
+        </div>
+
+        <Section icon={<Activity size={15} className="text-indigo-400"/>} title="이 앱은?">
+          KOSPI·NASDAQ 종목을 <b className="text-white">횡단면 모멘텀 + AI</b>로 분석해 보여주는 <b className="text-white">참고용 대시보드</b>입니다. 미래를 예측하는 도구가 아니라, 의사결정을 돕는 정보입니다.
+        </Section>
+
+        <Section icon={<Target size={15} className="text-emerald-400"/>} title="시그널 (Buy · Wait · Sell)">
+          같은 시장 종목들 사이의 <b className="text-white">상대 모멘텀 순위</b>입니다. 상위 1/3 = <span className="text-emerald-400 font-bold">Buy</span>, 중간 = <span className="text-amber-400 font-bold">Wait</span>, 하위 1/3 = <span className="text-rose-400 font-bold">Sell</span>. <b className="text-white">절대적인 등락 예측이 아닙니다.</b>
+        </Section>
+
+        <Section icon={<BarChart2 size={15} className="text-indigo-400"/>} title="보조 지표">
+          · <b className="text-white">모멘텀 점수(0~100)</b> — 시장 내 상대 순위<br/>
+          · <b className="text-white">리스크 등급</b> — 변동성(높을수록 가격이 크게 출렁임)<br/>
+          · <b className="text-white">진입 타이밍</b> — 단기 진입 적합도 참고치
+        </Section>
+
+        <Section icon={<BrainCircuit size={15} className="text-indigo-400"/>} title="AI 자동매매 & 브리핑">
+          AI가 자체 규칙으로 운용하는 <b className="text-white">가상(페이퍼) 계좌</b>입니다. 매매는 <b className="text-white">다음날 시가 체결</b>, 잔고는 실시간 시세로 평가됩니다. AI 브리핑은 LLM이 생성한 <b className="text-white">참고용 해설</b>로 부정확할 수 있습니다.
+        </Section>
+
+        <Section icon={<Clock size={15} className="text-indigo-400"/>} title="데이터 갱신 시점 (한국시간)">
+          매일 <b className="text-white">밤 12시 30분경</b> 자동 갱신이 시작되어, 분석·빌드·배포에 약 2시간이 걸립니다. → <b className="text-white">새벽 2~3시경</b> 최신 데이터로 업데이트됩니다. 데이터는 <b className="text-white">전 거래일 종가</b> 기준입니다.
+        </Section>
+
+        <Section icon={<Calendar size={15} className="text-indigo-400"/>} title="과거 이력 보기">
+          상단 <b className="text-white">날짜 선택기</b>로 과거 날짜의 리포트를 볼 수 있습니다. 종목 상세에서도 날짜를 바꿔 그 종목의 과거 평가를 확인할 수 있습니다.
+        </Section>
+
+        <div className="mt-6 p-4 bg-amber-500/10 border border-amber-500/30 rounded-xl text-amber-200/90 text-[12px] leading-relaxed flex gap-2">
+          <AlertTriangle size={16} className="text-amber-400 shrink-0 mt-0.5"/>
+          <div><b className="text-amber-300">투자 유의</b> — 본 서비스의 모든 정보(시그널·AI 브리핑·자동매매 포함)는 <b>투자 권유가 아닌 참고용</b>입니다. 투자 판단과 그 결과에 대한 책임은 <b>전적으로 이용자 본인</b>에게 있습니다.</div>
+        </div>
+
+        <button onClick={onClose} className="mt-6 w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-xl transition-colors">확인했습니다</button>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [isStarted, setIsStarted] = useState(false);
   const [masterUniverse, setMasterUniverse] = useState([]);
@@ -267,9 +322,16 @@ export default function App() {
   const detDateRef = useRef(null);
   const [detDateOpen, setDetDateOpen] = useState(false);   // 상세화면 날짜 선택기
   const [visitors, setVisitors] = useState(null);          // 오늘 방문자 수
+  const [showGuide, setShowGuide] = useState(false);       // 사용법 모달
 
   useEffect(() => {
-    if (isStarted) fetchAvailableDates();
+    if (isStarted) {
+      fetchAvailableDates();
+      if (!localStorage.getItem('aegis_guide_seen')) {     // 첫 가동 시 사용법 1회 자동 표시
+        setShowGuide(true);
+        localStorage.setItem('aegis_guide_seen', '1');
+      }
+    }
   }, [isStarted]);
 
   // 오늘 방문자 카운트 (브라우저당 1일 1회만 증가 → 대략 순방문자). 무료 카운터, 실패 시 표시 생략.
@@ -460,6 +522,9 @@ export default function App() {
             <button onClick={() => goDashboard('autotrade')} className={`flex-1 sm:flex-none px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm font-bold transition-all ${activeTab === 'autotrade' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
               <BrainCircuit size={16}/> AI 자동매매
             </button>
+            <button onClick={() => setShowGuide(true)} className="flex-1 sm:flex-none px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition-all" title="사용법">
+              <BookOpen size={16}/> 사용법
+            </button>
           </nav>
 
           <div className="relative w-full sm:w-80" ref={searchRef}>
@@ -489,6 +554,8 @@ export default function App() {
           </div>
         </div>
       </header>
+
+      {showGuide && <GuideModal onClose={() => setShowGuide(false)} />}
 
       {/* 📱 모바일 여백(padding) 조정: p-4 */}
       <main className="flex-1 p-4 md:p-8 overflow-y-auto custom-scrollbar relative bg-slate-950">
