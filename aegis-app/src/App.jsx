@@ -513,17 +513,17 @@ export default function App() {
         {/* 하단: 메뉴 버튼 및 검색창 */}
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
           <nav className="flex gap-2 bg-slate-900 p-1 rounded-lg border border-slate-800 w-full sm:w-auto">
-            <button onClick={() => goDashboard('home')} className={`flex-1 sm:flex-none px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm font-bold transition-all ${activeTab === 'home' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
-              <Home size={16}/> 마켓 홈
+            <button onClick={() => goDashboard('home')} className={`flex-1 sm:flex-none px-1.5 sm:px-4 py-2 rounded-md flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-sm font-bold whitespace-nowrap transition-all ${activeTab === 'home' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
+              <Home size={16} className="hidden sm:block"/> 마켓 홈
             </button>
-            <button onClick={() => goDashboard('watchlist')} className={`flex-1 sm:flex-none px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm font-bold transition-all ${activeTab === 'watchlist' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
-              <Bookmark size={16}/> 관심종목
+            <button onClick={() => goDashboard('watchlist')} className={`flex-1 sm:flex-none px-1.5 sm:px-4 py-2 rounded-md flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-sm font-bold whitespace-nowrap transition-all ${activeTab === 'watchlist' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
+              <Bookmark size={16} className="hidden sm:block"/> 관심종목
             </button>
-            <button onClick={() => goDashboard('autotrade')} className={`flex-1 sm:flex-none px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm font-bold transition-all ${activeTab === 'autotrade' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
-              <BrainCircuit size={16}/> AI 자동매매
+            <button onClick={() => goDashboard('autotrade')} className={`flex-1 sm:flex-none px-1.5 sm:px-4 py-2 rounded-md flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-sm font-bold whitespace-nowrap transition-all ${activeTab === 'autotrade' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'}`}>
+              <BrainCircuit size={16} className="hidden sm:block"/> AI 자동매매
             </button>
-            <button onClick={() => setShowGuide(true)} className="flex-1 sm:flex-none px-4 py-2 rounded-md flex items-center justify-center gap-2 text-sm font-bold text-slate-400 hover:text-white hover:bg-slate-800 transition-all" title="사용법">
-              <BookOpen size={16}/> 사용법
+            <button onClick={() => setShowGuide(true)} className="flex-1 sm:flex-none px-1.5 sm:px-4 py-2 rounded-md flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-sm font-bold whitespace-nowrap text-slate-400 hover:text-white hover:bg-slate-800 transition-all" title="사용법">
+              <BookOpen size={16} className="hidden sm:block"/> 사용법
             </button>
           </nav>
 
