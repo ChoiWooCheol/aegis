@@ -16,16 +16,6 @@ After the markets settle, a batch job scores the whole universe overnight and du
 
 There's also a paper-trading "AI auto-trade" account you can watch live, and you can scroll back through earlier days to see how a stock was read at the time.
 
-## The honest part
-
-I set out to make a deep model *predict direction* — will this stock beat the market or not. I threw a lot at it: survival/hazard targets, cross-sectional return regression, a three-class setup classifier, barrier and horizon sweeps.
-
-It didn't work. Out of sample, the fancy model never beat plain momentum at calling direction — a dumb gradient-boosted tree landed on the exact same ~0.55 AUC. That told me the ceiling wasn't the model, it was the inputs. Everything I was feeding it came from price (OHLCV and technical indicators), and you can't squeeze real direction edge out of that beyond what momentum already gives you. (This matches the literature — Gu, Kelly & Xiu found the actual signal lives in non-price characteristics.)
-
-So I stopped pretending. **Direction comes from a momentum factor.** The deep model earns its keep where it's genuinely good: predicting *volatility / risk* (that part holds up, ~0.78 AUC out of sample) and drawing the forecast chart. The LLM just explains things in human words.
-
-If I ever want real direction edge, the next step is non-price data — foreign and institutional flows, fundamentals — not a bigger network. That's a known to-do, not a solved problem.
-
 ## How it flows
 
 ```
