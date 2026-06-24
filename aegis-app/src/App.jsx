@@ -688,32 +688,46 @@ export default function App() {
                   ))}
                 </ul>
 
-                {(selectedTicker.target || selectedTicker.stop) && (
-                  <div className="mt-6 md:mt-8 relative z-10">
-                    <div className="grid grid-cols-2 gap-3 md:gap-4">
-                      {[
-                        { label: '목표가 · Target', val: selectedTicker.target, em: true },
-                        { label: '손절가 · Stop', val: selectedTicker.stop, em: false },
-                      ].map(({ label, val, em }) => {
-                        const cur = Number(selectedTicker.price) || 0;
-                        const p = (val && cur) ? (val / cur - 1) * 100 : null;
-                        return (
-                          <div key={label} className={em ? 'bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-4 md:p-5' : 'bg-rose-500/10 border border-rose-500/30 rounded-2xl p-4 md:p-5'}>
-                            <div className={`text-[10px] md:text-xs font-bold uppercase tracking-widest mb-1 ${em ? 'text-emerald-400/80' : 'text-rose-400/80'}`}>{label}</div>
-                            <div className={`text-lg md:text-2xl font-mono font-bold ${em ? 'text-emerald-400' : 'text-rose-400'}`}>{val ? formatPrice(val, selectedTicker.market) : '—'}</div>
-                            {p != null && (
-                              <div className={`text-[11px] md:text-xs font-bold mt-1 ${p >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>{p >= 0 ? '▲' : '▼'} {Math.abs(p).toFixed(1)}% <span className="text-slate-500 font-normal">현재가 대비</span></div>
-                            )}
-                          </div>
-                        );
-                      })}
+                {(selectedTicker.target || selectedTicker.stop) && (() => {
+                  const tgt = selectedTicker.target, stp = selectedTicker.stop, cur = Number(selectedTicker.price) || 0;
+                  const bearish = tgt != null && stp != null && tgt < stp;   // 목표가<손절가 = 약세(하락) 관점
+                  const renderPct = (v) => {
+                    const p = (v && cur) ? (v / cur - 1) * 100 : null;
+                    if (p == null) return null;
+                    return <div className={`text-[11px] md:text-xs font-bold mt-1 ${p >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>{p >= 0 ? '▲' : '▼'} {Math.abs(p).toFixed(1)}% <span className="text-slate-500 font-normal">현재가 대비</span></div>;
+                  };
+                  return (
+                    <div className="mt-6 md:mt-8 relative z-10">
+                      <div className="grid grid-cols-2 gap-3 md:gap-4">
+                        {/* 목표가 — 약세면 빨강(하락 목표) */}
+                        <div className={bearish ? 'bg-rose-500/10 border border-rose-500/30 rounded-2xl p-4 md:p-5' : 'bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-4 md:p-5'}>
+                          <div className={`text-[10px] md:text-xs font-bold uppercase tracking-widest mb-1 ${bearish ? 'text-rose-400/80' : 'text-emerald-400/80'}`}>목표가 · Target</div>
+                          <div className={`text-lg md:text-2xl font-mono font-bold ${bearish ? 'text-rose-400' : 'text-emerald-400'}`}>{tgt ? formatPrice(tgt, selectedTicker.market) : '—'}</div>
+                          {renderPct(tgt)}
+                        </div>
+                        {/* 손절가 — 약세면 미적용('—') */}
+                        <div className={bearish ? 'bg-slate-800/40 border border-slate-700/50 rounded-2xl p-4 md:p-5' : 'bg-rose-500/10 border border-rose-500/30 rounded-2xl p-4 md:p-5'}>
+                          <div className={`text-[10px] md:text-xs font-bold uppercase tracking-widest mb-1 ${bearish ? 'text-slate-500' : 'text-rose-400/80'}`}>손절가 · Stop</div>
+                          {bearish ? (
+                            <>
+                              <div className="text-lg md:text-2xl font-mono font-bold text-slate-500">—</div>
+                              <div className="text-[11px] md:text-xs text-slate-500 mt-1">약세 관점 — 미적용</div>
+                            </>
+                          ) : (
+                            <>
+                              <div className="text-lg md:text-2xl font-mono font-bold text-rose-400">{stp ? formatPrice(stp, selectedTicker.market) : '—'}</div>
+                              {renderPct(stp)}
+                            </>
+                          )}
+                        </div>
+                      </div>
+                      <div className="mt-2 text-[11px] text-slate-500 flex items-start gap-1.5">
+                        <AlertTriangle size={12} className="text-amber-500 shrink-0 mt-0.5"/>
+                        <span>AI 추정 참고용 — 불확실하며 투자 권유가 아닙니다.</span>
+                      </div>
                     </div>
-                    <div className="mt-2 text-[11px] text-slate-500 flex items-start gap-1.5">
-                      <AlertTriangle size={12} className="text-amber-500 shrink-0 mt-0.5"/>
-                      <span>AI 추정 참고용 — 목표가가 손절가보다 낮으면 약세(하락) 관점입니다. 불확실하며 투자 권유가 아닙니다.</span>
-                    </div>
-                  </div>
-                )}
+                  );
+                })()}
 
                 {Array.isArray(selectedTicker.expectedPath) && selectedTicker.expectedPath.length > 0 && (
                   <div className="mt-8 md:mt-12 pt-8 md:pt-10 border-t border-slate-800/50">
