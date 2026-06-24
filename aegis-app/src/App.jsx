@@ -688,6 +688,24 @@ export default function App() {
                   ))}
                 </ul>
 
+                {(selectedTicker.target || selectedTicker.stop) && (
+                  <div className="mt-6 md:mt-8 relative z-10">
+                    <div className="grid grid-cols-2 gap-3 md:gap-4">
+                      <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-4 md:p-5">
+                        <div className="text-[10px] md:text-xs font-bold text-emerald-400/80 uppercase tracking-widest mb-1">목표가 · Target</div>
+                        <div className="text-lg md:text-2xl font-mono font-bold text-emerald-400">{selectedTicker.target ? formatPrice(selectedTicker.target, selectedTicker.market) : '—'}</div>
+                      </div>
+                      <div className="bg-rose-500/10 border border-rose-500/30 rounded-2xl p-4 md:p-5">
+                        <div className="text-[10px] md:text-xs font-bold text-rose-400/80 uppercase tracking-widest mb-1">손절가 · Stop</div>
+                        <div className="text-lg md:text-2xl font-mono font-bold text-rose-400">{selectedTicker.stop ? formatPrice(selectedTicker.stop, selectedTicker.market) : '—'}</div>
+                      </div>
+                    </div>
+                    <div className="mt-2 text-[11px] text-slate-500 flex items-center gap-1.5">
+                      <AlertTriangle size={12} className="text-amber-500 shrink-0"/> AI가 추정한 참고용 수치입니다. 불확실하며 투자 권유가 아닙니다.
+                    </div>
+                  </div>
+                )}
+
                 {Array.isArray(selectedTicker.expectedPath) && selectedTicker.expectedPath.length > 0 && (
                   <div className="mt-8 md:mt-12 pt-8 md:pt-10 border-t border-slate-800/50">
                     <h5 className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 md:mb-6 flex items-center gap-2">
