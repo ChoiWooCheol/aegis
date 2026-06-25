@@ -4,15 +4,15 @@
   "initial": 100000000,
   "asOf": "2026-06-24",
   "startedAt": "2026-06-05",
-  "equity": 114482797,
+  "equity": 114646797,
   "cash": 722997,
   "cashPct": 0.6,
-  "stockValue": 113759800,
-  "returnPct": 14.48,
+  "stockValue": 113923800,
+  "returnPct": 14.65,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": 4.35,
+    "sharpe": 4.39,
     "mdd": -9.3,
     "trades": 14,
     "buys": 13,
@@ -35,10 +35,10 @@
       "name": "SK하이닉스",
       "shares": 4,
       "avgCost": 1859712.0,
-      "price": 2580000.0,
-      "value": 10320000,
-      "weightPct": 9.0,
-      "plPct": 38.7
+      "price": 2621000.0,
+      "value": 10484000,
+      "weightPct": 9.1,
+      "plPct": 40.9
     },
     {
       "ticker": "034730.KS",
@@ -209,7 +209,7 @@
     },
     {
       "date": "2026-06-24",
-      "equity": 114482797,
+      "equity": 114646797,
       "cash": 722997
     }
   ],

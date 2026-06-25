@@ -2,18 +2,18 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-06-23",
+  "asOf": "2026-06-25",
   "startedAt": "2026-06-05",
-  "equity": 107306265,
-  "cash": 3092508,
-  "cashPct": 2.9,
-  "stockValue": 104213757,
-  "returnPct": 7.31,
+  "equity": 113415861,
+  "cash": 3098386,
+  "cashPct": 2.7,
+  "stockValue": 110317475,
+  "returnPct": 13.42,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": 2.67,
-    "mdd": -6.8,
+    "sharpe": 3.89,
+    "mdd": -7.5,
     "trades": 16,
     "buys": 14,
     "sells": 2,
@@ -25,120 +25,120 @@
       "name": "Applied Materials",
       "shares": 11,
       "avgCost": 741412.34,
-      "price": 901698.65,
-      "value": 9918685,
-      "weightPct": 9.2,
-      "plPct": 21.6
-    },
-    {
-      "ticker": "KLAC",
-      "name": "KLA Corporation",
-      "shares": 26,
-      "avgCost": 316190.55,
-      "price": 376282.35,
-      "value": 9783341,
-      "weightPct": 9.1,
-      "plPct": 19.0
-    },
-    {
-      "ticker": "INTC",
-      "name": "Intel",
-      "shares": 48,
-      "avgCost": 172892.37,
-      "price": 203585.54,
-      "value": 9772106,
-      "weightPct": 9.1,
-      "plPct": 17.8
-    },
-    {
-      "ticker": "STX",
-      "name": "Seagate Technology",
-      "shares": 6,
-      "avgCost": 1374914.86,
-      "price": 1598441.94,
-      "value": 9590652,
-      "weightPct": 8.9,
-      "plPct": 16.3
-    },
-    {
-      "ticker": "LRCX",
-      "name": "Lam Research",
-      "shares": 16,
-      "avgCost": 495820.66,
-      "price": 571495.43,
-      "value": 9143927,
-      "weightPct": 8.5,
-      "plPct": 15.3
+      "price": 1012968.98,
+      "value": 11142659,
+      "weightPct": 9.8,
+      "plPct": 36.6
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2545100.33,
-      "price": 3022078.64,
-      "value": 9066236,
-      "weightPct": 8.4,
-      "plPct": 18.7
+      "price": 3564132.93,
+      "value": 10692399,
+      "weightPct": 9.4,
+      "plPct": 40.0
     },
     {
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "shares": 11,
-      "avgCost": 755430.64,
-      "price": 800075.13,
-      "value": 8800826,
-      "weightPct": 8.2,
-      "plPct": 5.9
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
+      "shares": 26,
+      "avgCost": 316190.55,
+      "price": 401856.16,
+      "value": 10448260,
+      "weightPct": 9.2,
+      "plPct": 27.1
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "shares": 48,
+      "avgCost": 172892.37,
+      "price": 203992.45,
+      "value": 9791637,
+      "weightPct": 8.6,
+      "plPct": 18.0
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research",
+      "shares": 16,
+      "avgCost": 495820.66,
+      "price": 611707.18,
+      "value": 9787315,
+      "weightPct": 8.6,
+      "plPct": 23.4
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1461439.01,
-      "price": 1618726.7,
-      "value": 8093633,
-      "weightPct": 7.5,
-      "plPct": 10.8
+      "price": 1905100.11,
+      "value": 9525501,
+      "weightPct": 8.4,
+      "plPct": 30.4
+    },
+    {
+      "ticker": "STX",
+      "name": "Seagate Technology",
+      "shares": 6,
+      "avgCost": 1373935.24,
+      "price": 1586321.39,
+      "value": 9517928,
+      "weightPct": 8.4,
+      "plPct": 15.5
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "shares": 11,
+      "avgCost": 755430.64,
+      "price": 816896.01,
+      "value": 8985856,
+      "weightPct": 7.9,
+      "plPct": 8.1
     },
     {
       "ticker": "CSCO",
       "name": "Cisco",
       "shares": 43,
       "avgCost": 192455.69,
-      "price": 186455.92,
-      "value": 8017604,
-      "weightPct": 7.5,
-      "plPct": -3.1
-    },
-    {
-      "ticker": "DDOG",
-      "name": "Datadog",
-      "shares": 23,
-      "avgCost": 343779.84,
-      "price": 339468.28,
-      "value": 7807770,
-      "weightPct": 7.3,
-      "plPct": -1.3
+      "price": 184448.45,
+      "value": 7931283,
+      "weightPct": 7.0,
+      "plPct": -4.2
     },
     {
       "ticker": "LITE",
       "name": "Lumentum",
       "shares": 6,
       "avgCost": 1318750.43,
-      "price": 1274210.29,
-      "value": 7645262,
-      "weightPct": 7.1,
-      "plPct": -3.4
+      "price": 1316865.92,
+      "value": 7901196,
+      "weightPct": 7.0,
+      "plPct": -0.1
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "shares": 23,
+      "avgCost": 343779.84,
+      "price": 340815.9,
+      "value": 7838766,
+      "weightPct": 6.9,
+      "plPct": -0.9
     },
     {
       "ticker": "MPWR",
       "name": "Monolithic Power Systems",
       "shares": 3,
       "avgCost": 2429324.81,
-      "price": 2191237.91,
-      "value": 6573714,
-      "weightPct": 6.1,
-      "plPct": -9.8
+      "price": 2251558.52,
+      "value": 6754676,
+      "weightPct": 6.0,
+      "plPct": -7.3
     }
   ],
   "equityHistory": [
@@ -149,58 +149,68 @@
     },
     {
       "date": "2026-06-08",
-      "equity": 100471792,
-      "cash": 5745913
+      "equity": 100471843,
+      "cash": 5751791
     },
     {
       "date": "2026-06-09",
-      "equity": 97371917,
-      "cash": 5745913
+      "equity": 97372265,
+      "cash": 5751791
     },
     {
       "date": "2026-06-10",
-      "equity": 95335581,
-      "cash": 4186558
+      "equity": 95336136,
+      "cash": 4192435
     },
     {
       "date": "2026-06-11",
-      "equity": 103284319,
-      "cash": 3092508
+      "equity": 103284537,
+      "cash": 3098386
     },
     {
       "date": "2026-06-12",
-      "equity": 105546245,
-      "cash": 3092508
+      "equity": 105546084,
+      "cash": 3098386
     },
     {
       "date": "2026-06-15",
-      "equity": 109649624,
-      "cash": 3092508
+      "equity": 109648927,
+      "cash": 3098386
     },
     {
       "date": "2026-06-16",
-      "equity": 104479712,
-      "cash": 3092508
+      "equity": 104478918,
+      "cash": 3098386
     },
     {
       "date": "2026-06-17",
-      "equity": 105047582,
-      "cash": 3092508
+      "equity": 105046573,
+      "cash": 3098386
     },
     {
       "date": "2026-06-18",
-      "equity": 111107349,
-      "cash": 3092508
+      "equity": 111106247,
+      "cash": 3098386
     },
     {
       "date": "2026-06-22",
-      "equity": 115128712,
-      "cash": 3092508
+      "equity": 115127427,
+      "cash": 3098386
     },
     {
       "date": "2026-06-23",
-      "equity": 107306265,
-      "cash": 3092508
+      "equity": 107305309,
+      "cash": 3098386
+    },
+    {
+      "date": "2026-06-24",
+      "equity": 106480722,
+      "cash": 3098386
+    },
+    {
+      "date": "2026-06-25",
+      "equity": 113415861,
+      "cash": 3098386
     }
   ],
   "tradeLog": [
@@ -352,9 +362,9 @@
       "name": "Seagate Technology",
       "ticker": "STX",
       "type": "매수",
-      "price": 1372170.52,
+      "price": 1371192.86,
       "shares": 6,
-      "amount": 8249489,
+      "amount": 8243611,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
