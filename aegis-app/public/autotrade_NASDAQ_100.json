@@ -2,17 +2,17 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-06-25",
+  "asOf": "2026-06-26",
   "startedAt": "2026-06-05",
-  "equity": 113415861,
+  "equity": 108828564,
   "cash": 3098386,
-  "cashPct": 2.7,
-  "stockValue": 110317475,
-  "returnPct": 13.42,
+  "cashPct": 2.8,
+  "stockValue": 105730178,
+  "returnPct": 8.83,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": 3.89,
+    "sharpe": 2.52,
     "mdd": -7.5,
     "trades": 16,
     "buys": 14,
@@ -25,120 +25,120 @@
       "name": "Applied Materials",
       "shares": 11,
       "avgCost": 741412.34,
-      "price": 1012968.98,
-      "value": 11142659,
-      "weightPct": 9.8,
-      "plPct": 36.6
+      "price": 998050.08,
+      "value": 10978551,
+      "weightPct": 10.1,
+      "plPct": 34.6
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2545100.33,
-      "price": 3564132.93,
-      "value": 10692399,
-      "weightPct": 9.4,
-      "plPct": 40.0
+      "price": 3309697.0,
+      "value": 9929091,
+      "weightPct": 9.1,
+      "plPct": 30.0
     },
     {
       "ticker": "KLAC",
       "name": "KLA Corporation",
       "shares": 26,
       "avgCost": 316190.55,
-      "price": 401856.16,
-      "value": 10448260,
-      "weightPct": 9.2,
-      "plPct": 27.1
+      "price": 379408.26,
+      "value": 9864615,
+      "weightPct": 9.1,
+      "plPct": 20.0
     },
     {
       "ticker": "INTC",
       "name": "Intel",
       "shares": 48,
       "avgCost": 172892.37,
-      "price": 203992.45,
-      "value": 9791637,
-      "weightPct": 8.6,
-      "plPct": 18.0
+      "price": 198163.76,
+      "value": 9511860,
+      "weightPct": 8.7,
+      "plPct": 14.6
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research",
       "shares": 16,
       "avgCost": 495820.66,
-      "price": 611707.18,
-      "value": 9787315,
+      "price": 587505.54,
+      "value": 9400089,
       "weightPct": 8.6,
-      "plPct": 23.4
+      "plPct": 18.5
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1461439.01,
-      "price": 1905100.11,
-      "value": 9525501,
-      "weightPct": 8.4,
-      "plPct": 30.4
-    },
-    {
-      "ticker": "STX",
-      "name": "Seagate Technology",
-      "shares": 6,
-      "avgCost": 1373935.24,
-      "price": 1586321.39,
-      "value": 9517928,
-      "weightPct": 8.4,
-      "plPct": 15.5
+      "price": 1799164.83,
+      "value": 8995824,
+      "weightPct": 8.3,
+      "plPct": 23.1
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 11,
       "avgCost": 755430.64,
-      "price": 816896.01,
-      "value": 8985856,
-      "weightPct": 7.9,
-      "plPct": 8.1
+      "price": 802435.01,
+      "value": 8826785,
+      "weightPct": 8.1,
+      "plPct": 6.2
     },
     {
-      "ticker": "CSCO",
-      "name": "Cisco",
-      "shares": 43,
-      "avgCost": 192455.69,
-      "price": 184448.45,
-      "value": 7931283,
-      "weightPct": 7.0,
-      "plPct": -4.2
-    },
-    {
-      "ticker": "LITE",
-      "name": "Lumentum",
+      "ticker": "STX",
+      "name": "Seagate Technology",
       "shares": 6,
-      "avgCost": 1318750.43,
-      "price": 1316865.92,
-      "value": 7901196,
-      "weightPct": 7.0,
-      "plPct": -0.1
+      "avgCost": 1373935.24,
+      "price": 1445112.22,
+      "value": 8670673,
+      "weightPct": 8.0,
+      "plPct": 5.2
     },
     {
       "ticker": "DDOG",
       "name": "Datadog",
       "shares": 23,
       "avgCost": 343779.84,
-      "price": 340815.9,
-      "value": 7838766,
+      "price": 357046.32,
+      "value": 8212065,
+      "weightPct": 7.5,
+      "plPct": 3.9
+    },
+    {
+      "ticker": "CSCO",
+      "name": "Cisco",
+      "shares": 43,
+      "avgCost": 192455.69,
+      "price": 177805.4,
+      "value": 7645632,
+      "weightPct": 7.0,
+      "plPct": -7.6
+    },
+    {
+      "ticker": "LITE",
+      "name": "Lumentum",
+      "shares": 6,
+      "avgCost": 1318750.43,
+      "price": 1247785.18,
+      "value": 7486711,
       "weightPct": 6.9,
-      "plPct": -0.9
+      "plPct": -5.4
     },
     {
       "ticker": "MPWR",
       "name": "Monolithic Power Systems",
       "shares": 3,
       "avgCost": 2429324.81,
-      "price": 2251558.52,
-      "value": 6754676,
-      "weightPct": 6.0,
-      "plPct": -7.3
+      "price": 2069427.06,
+      "value": 6208281,
+      "weightPct": 5.7,
+      "plPct": -14.8
     }
   ],
   "equityHistory": [
@@ -209,7 +209,12 @@
     },
     {
       "date": "2026-06-25",
-      "equity": 113415861,
+      "equity": 113638621,
+      "cash": 3098386
+    },
+    {
+      "date": "2026-06-26",
+      "equity": 108828564,
       "cash": 3098386
     }
   ],
