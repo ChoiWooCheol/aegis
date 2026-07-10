@@ -2,143 +2,143 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-07-08",
+  "asOf": "2026-07-10",
   "startedAt": "2026-06-05",
-  "equity": 94888647,
-  "cash": 194178,
-  "cashPct": 0.2,
-  "stockValue": 94694469,
-  "returnPct": -5.11,
+  "equity": 99612735,
+  "cash": 524677,
+  "cashPct": 0.5,
+  "stockValue": 99088058,
+  "returnPct": -0.39,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -0.46,
-    "mdd": -19.8,
-    "trades": 24,
-    "buys": 18,
-    "sells": 6,
-    "winRate": 0
+    "sharpe": 0.3,
+    "mdd": -18.5,
+    "trades": 31,
+    "buys": 21,
+    "sells": 10,
+    "winRate": 30
   },
   "positions": [
-    {
-      "ticker": "AMAT",
-      "name": "Applied Materials",
-      "shares": 11,
-      "avgCost": 741412.34,
-      "price": 862542.94,
-      "value": 9487972,
-      "weightPct": 10.0,
-      "plPct": 16.3
-    },
-    {
-      "ticker": "DDOG",
-      "name": "Datadog",
-      "shares": 23,
-      "avgCost": 343779.84,
-      "price": 387416.69,
-      "value": 8910584,
-      "weightPct": 9.4,
-      "plPct": 12.7
-    },
-    {
-      "ticker": "KLAC",
-      "name": "KLA Corporation",
-      "shares": 26,
-      "avgCost": 316190.55,
-      "price": 333664.05,
-      "value": 8675265,
-      "weightPct": 9.1,
-      "plPct": 5.5
-    },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 11,
       "avgCost": 755430.64,
-      "price": 771323.17,
-      "value": 8484555,
-      "weightPct": 8.9,
-      "plPct": 2.1
-    },
-    {
-      "ticker": "LRCX",
-      "name": "Lam Research",
-      "shares": 16,
-      "avgCost": 495820.66,
-      "price": 502635.36,
-      "value": 8042166,
-      "weightPct": 8.5,
-      "plPct": 1.4
-    },
-    {
-      "ticker": "INTC",
-      "name": "Intel",
-      "shares": 48,
-      "avgCost": 172892.37,
-      "price": 161845.45,
-      "value": 7768581,
-      "weightPct": 8.2,
-      "plPct": -6.4
-    },
-    {
-      "ticker": "STX",
-      "name": "Seagate Technology",
-      "shares": 6,
-      "avgCost": 1373935.24,
-      "price": 1254411.47,
-      "value": 7526469,
-      "weightPct": 7.9,
-      "plPct": -8.7
-    },
-    {
-      "ticker": "FTNT",
-      "name": "Fortinet",
-      "shares": 32,
-      "avgCost": 236989.14,
-      "price": 235130.11,
-      "value": 7524163,
-      "weightPct": 7.9,
-      "plPct": -0.8
+      "price": 838819.58,
+      "value": 9227015,
+      "weightPct": 9.3,
+      "plPct": 11.0
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2545100.33,
-      "price": 2502992.53,
-      "value": 7508978,
-      "weightPct": 7.9,
-      "plPct": -1.7
+      "price": 2913928.69,
+      "value": 8741786,
+      "weightPct": 8.8,
+      "plPct": 14.5
     },
     {
-      "ticker": "CRWD",
-      "name": "CrowdStrike",
-      "shares": 26,
-      "avgCost": 290720.08,
-      "price": 285696.46,
-      "value": 7428108,
-      "weightPct": 7.8,
-      "plPct": -1.7
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "shares": 22,
+      "avgCost": 343779.84,
+      "price": 390111.61,
+      "value": 8582455,
+      "weightPct": 8.6,
+      "plPct": 13.5
+    },
+    {
+      "ticker": "FTNT",
+      "name": "Fortinet",
+      "shares": 36,
+      "avgCost": 238182.37,
+      "price": 236998.3,
+      "value": 8531939,
+      "weightPct": 8.6,
+      "plPct": -0.5
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research",
+      "shares": 16,
+      "avgCost": 495820.66,
+      "price": 530362.86,
+      "value": 8485806,
+      "weightPct": 8.5,
+      "plPct": 7.0
+    },
+    {
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
+      "shares": 24,
+      "avgCost": 316190.55,
+      "price": 347087.92,
+      "value": 8330110,
+      "weightPct": 8.4,
+      "plPct": 9.8
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "shares": 17,
+      "avgCost": 505058.71,
+      "price": 489088.66,
+      "value": 8314507,
+      "weightPct": 8.3,
+      "plPct": -3.2
+    },
+    {
+      "ticker": "STX",
+      "name": "Seagate Technology",
+      "shares": 6,
+      "avgCost": 1373935.24,
+      "price": 1381308.69,
+      "value": 8287852,
+      "weightPct": 8.3,
+      "plPct": 0.5
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials",
+      "shares": 9,
+      "avgCost": 741412.34,
+      "price": 910165.36,
+      "value": 8191488,
+      "weightPct": 8.2,
+      "plPct": 22.8
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "shares": 48,
+      "avgCost": 172892.37,
+      "price": 165472.47,
+      "value": 7942679,
+      "weightPct": 8.0,
+      "plPct": -4.3
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1461214.24,
-      "price": 1408264.83,
-      "value": 7041324,
-      "weightPct": 7.4,
-      "plPct": -3.6
+      "price": 1490707.5,
+      "value": 7453537,
+      "weightPct": 7.5,
+      "plPct": 2.0
     },
     {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "shares": 13,
-      "avgCost": 508407.72,
-      "price": 484331.11,
-      "value": 6296304,
-      "weightPct": 6.6,
-      "plPct": -4.7
+      "ticker": "WDC",
+      "name": "Western Digital",
+      "shares": 8,
+      "avgCost": 894986.78,
+      "price": 874860.38,
+      "value": 6998883,
+      "weightPct": 7.0,
+      "plPct": -2.2
     }
   ],
   "equityHistory": [
@@ -249,19 +249,106 @@
     },
     {
       "date": "2026-07-08",
-      "equity": 94888647,
-      "cash": 194178
+      "equity": 96829318,
+      "cash": 193809
+    },
+    {
+      "date": "2026-07-09",
+      "equity": 99647275,
+      "cash": 524677
+    },
+    {
+      "date": "2026-07-10",
+      "equity": 99612735,
+      "cash": 524677
     }
   ],
   "tradeLog": [
+    {
+      "date": "2026-07-09",
+      "name": "Palo Alto Networks",
+      "ticker": "PANW",
+      "type": "매수",
+      "price": 478576.43,
+      "shares": 4,
+      "amount": 1918134,
+      "pnl": null,
+      "reason": "Buy신호 진입/추가"
+    },
+    {
+      "date": "2026-07-09",
+      "name": "Fortinet",
+      "ticker": "FTNT",
+      "type": "매수",
+      "price": 230418.46,
+      "shares": 4,
+      "amount": 923517,
+      "pnl": null,
+      "reason": "Buy신호 진입/추가"
+    },
+    {
+      "date": "2026-07-09",
+      "name": "KLA Corporation",
+      "ticker": "KLAC",
+      "type": "매도",
+      "price": 359330.72,
+      "shares": 2,
+      "amount": 717224,
+      "pnl": 84843,
+      "reason": "비중 조절"
+    },
+    {
+      "date": "2026-07-09",
+      "name": "Datadog",
+      "ticker": "DDOG",
+      "type": "매도",
+      "price": 388029.64,
+      "shares": 1,
+      "amount": 387254,
+      "pnl": 43474,
+      "reason": "비중 조절"
+    },
+    {
+      "date": "2026-07-09",
+      "name": "Applied Materials",
+      "ticker": "AMAT",
+      "type": "매도",
+      "price": 943066.47,
+      "shares": 2,
+      "amount": 1882361,
+      "pnl": 399536,
+      "reason": "비중 조절"
+    },
+    {
+      "date": "2026-07-09",
+      "name": "Western Digital",
+      "ticker": "WDC",
+      "type": "매수",
+      "price": 893200.38,
+      "shares": 8,
+      "amount": 7159894,
+      "pnl": null,
+      "reason": "Buy신호 진입/추가"
+    },
+    {
+      "date": "2026-07-09",
+      "name": "CrowdStrike",
+      "ticker": "CRWD",
+      "type": "매도",
+      "price": 283088.31,
+      "shares": 26,
+      "amount": 7345575,
+      "pnl": -213147,
+      "reason": "Buy신호 이탈"
+    },
     {
       "date": "2026-07-08",
       "name": "Palo Alto Networks",
       "ticker": "PANW",
       "type": "매수",
-      "price": 507392.94,
+      "price": 511888.82,
       "shares": 13,
-      "amount": 6609300,
+      "amount": 6667864,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -270,9 +357,9 @@
       "name": "Fortinet",
       "ticker": "FTNT",
       "type": "매수",
-      "price": 236516.1,
+      "price": 238618.02,
       "shares": 32,
-      "amount": 7583652,
+      "amount": 7651048,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -281,10 +368,10 @@
       "name": "Western Digital",
       "ticker": "WDC",
       "type": "매도",
-      "price": 792617.85,
+      "price": 799446.35,
       "shares": 9,
-      "amount": 7119293,
-      "pnl": -1195336,
+      "amount": 7180627,
+      "pnl": -1134002,
       "reason": "손절(-10%)"
     },
     {
@@ -292,10 +379,10 @@
       "name": "Cisco",
       "ticker": "CSCO",
       "type": "매도",
-      "price": 168240.63,
+      "price": 169737.96,
       "shares": 43,
-      "amount": 7219878,
-      "pnl": -1024873,
+      "amount": 7284135,
+      "pnl": -960616,
       "reason": "손절(-10%)"
     },
     {
