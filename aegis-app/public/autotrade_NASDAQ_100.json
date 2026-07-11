@@ -4,15 +4,15 @@
   "initial": 100000000,
   "asOf": "2026-07-10",
   "startedAt": "2026-06-05",
-  "equity": 99612735,
+  "equity": 98906157,
   "cash": 524677,
   "cashPct": 0.5,
-  "stockValue": 99088058,
-  "returnPct": -0.39,
+  "stockValue": 98381480,
+  "returnPct": -1.09,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": 0.3,
+    "sharpe": 0.2,
     "mdd": -18.5,
     "trades": 31,
     "buys": 21,
@@ -25,120 +25,120 @@
       "name": "Advanced Micro Devices",
       "shares": 11,
       "avgCost": 755430.64,
-      "price": 838819.58,
-      "value": 9227015,
+      "price": 836204.6,
+      "value": 9198251,
       "weightPct": 9.3,
-      "plPct": 11.0
+      "plPct": 10.7
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2545100.33,
-      "price": 2913928.69,
-      "value": 8741786,
-      "weightPct": 8.8,
-      "plPct": 14.5
-    },
-    {
-      "ticker": "DDOG",
-      "name": "Datadog",
-      "shares": 22,
-      "avgCost": 343779.84,
-      "price": 390111.61,
-      "value": 8582455,
-      "weightPct": 8.6,
-      "plPct": 13.5
+      "price": 2871715.07,
+      "value": 8615145,
+      "weightPct": 8.7,
+      "plPct": 12.8
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 36,
       "avgCost": 238182.37,
-      "price": 236998.3,
-      "value": 8531939,
+      "price": 236087.0,
+      "value": 8499132,
       "weightPct": 8.6,
-      "plPct": -0.5
+      "plPct": -0.9
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "shares": 22,
+      "avgCost": 343779.84,
+      "price": 386018.99,
+      "value": 8492418,
+      "weightPct": 8.6,
+      "plPct": 12.3
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research",
       "shares": 16,
       "avgCost": 495820.66,
-      "price": 530362.86,
-      "value": 8485806,
+      "price": 525099.11,
+      "value": 8401586,
       "weightPct": 8.5,
-      "plPct": 7.0
+      "plPct": 5.9
     },
     {
       "ticker": "KLAC",
       "name": "KLA Corporation",
       "shares": 24,
       "avgCost": 316190.55,
-      "price": 347087.92,
-      "value": 8330110,
+      "price": 347018.39,
+      "value": 8328441,
       "weightPct": 8.4,
-      "plPct": 9.8
+      "plPct": 9.7
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "shares": 17,
       "avgCost": 505058.71,
-      "price": 489088.66,
-      "value": 8314507,
-      "weightPct": 8.3,
-      "plPct": -3.2
+      "price": 488496.73,
+      "value": 8304444,
+      "weightPct": 8.4,
+      "plPct": -3.3
     },
     {
       "ticker": "STX",
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1373935.24,
-      "price": 1381308.69,
-      "value": 8287852,
+      "price": 1364481.35,
+      "value": 8186888,
       "weightPct": 8.3,
-      "plPct": 0.5
+      "plPct": -0.7
     },
     {
       "ticker": "AMAT",
       "name": "Applied Materials",
       "shares": 9,
       "avgCost": 741412.34,
-      "price": 910165.36,
-      "value": 8191488,
+      "price": 903069.17,
+      "value": 8127623,
       "weightPct": 8.2,
-      "plPct": 22.8
+      "plPct": 21.8
     },
     {
       "ticker": "INTC",
       "name": "Intel",
       "shares": 48,
       "avgCost": 172892.37,
-      "price": 165472.47,
-      "value": 7942679,
+      "price": 164635.87,
+      "value": 7902522,
       "weightPct": 8.0,
-      "plPct": -4.3
+      "plPct": -4.8
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1461214.24,
-      "price": 1490707.5,
-      "value": 7453537,
-      "weightPct": 7.5,
-      "plPct": 2.0
+      "price": 1467843.37,
+      "value": 7339217,
+      "weightPct": 7.4,
+      "plPct": 0.5
     },
     {
       "ticker": "WDC",
       "name": "Western Digital",
       "shares": 8,
       "avgCost": 894986.78,
-      "price": 874860.38,
-      "value": 6998883,
-      "weightPct": 7.0,
-      "plPct": -2.2
+      "price": 873226.71,
+      "value": 6985814,
+      "weightPct": 7.1,
+      "plPct": -2.4
     }
   ],
   "equityHistory": [
@@ -259,7 +259,7 @@
     },
     {
       "date": "2026-07-10",
-      "equity": 99612735,
+      "equity": 98906157,
       "cash": 524677
     }
   ],

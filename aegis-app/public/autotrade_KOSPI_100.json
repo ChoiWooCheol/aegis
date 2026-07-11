@@ -4,15 +4,15 @@
   "initial": 100000000,
   "asOf": "2026-07-10",
   "startedAt": "2026-06-05",
-  "equity": 91481461,
-  "cash": 736461,
+  "equity": 95928895,
+  "cash": 749795,
   "cashPct": 0.8,
-  "stockValue": 90745000,
-  "returnPct": -8.52,
+  "stockValue": 95179100,
+  "returnPct": -4.07,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -0.92,
+    "sharpe": -0.22,
     "mdd": -27.1,
     "trades": 38,
     "buys": 25,
@@ -21,63 +21,83 @@
   },
   "positions": [
     {
-      "ticker": "000660.KS",
-      "name": "SK하이닉스",
-      "shares": 4,
-      "avgCost": 1859712.0,
-      "price": 2186000.0,
-      "value": 8744000,
-      "weightPct": 9.6,
-      "plPct": 17.5
-    },
-    {
       "ticker": "034730.KS",
       "name": "SK",
       "shares": 14,
       "avgCost": 564126.0,
-      "price": 610000.0,
-      "value": 8540000,
-      "weightPct": 9.3,
-      "plPct": 8.1
+      "price": 657000.0,
+      "value": 9198000,
+      "weightPct": 9.6,
+      "plPct": 16.5
     },
     {
-      "ticker": "066570.KS",
-      "name": "LG전자",
-      "shares": 46,
-      "avgCost": 184847.22,
-      "price": 178000.0,
-      "value": 8188000,
-      "weightPct": 9.0,
-      "plPct": -3.7
-    },
-    {
-      "ticker": "000990.KS",
-      "name": "DB하이텍",
-      "shares": 69,
-      "avgCost": 112123.8,
-      "price": 116700.0,
-      "value": 8052300,
-      "weightPct": 8.8,
-      "plPct": 4.1
+      "ticker": "000660.KS",
+      "name": "SK하이닉스",
+      "shares": 4,
+      "avgCost": 1859712.0,
+      "price": 2180000.0,
+      "value": 8720000,
+      "weightPct": 9.1,
+      "plPct": 17.2
     },
     {
       "ticker": "402340.KS",
       "name": "SK스퀘어",
       "shares": 6,
       "avgCost": 1112220.0,
-      "price": 1327000.0,
-      "value": 7962000,
+      "price": 1409000.0,
+      "value": 8454000,
+      "weightPct": 8.8,
+      "plPct": 26.7
+    },
+    {
+      "ticker": "000990.KS",
+      "name": "DB하이텍",
+      "shares": 69,
+      "avgCost": 112123.8,
+      "price": 121900.0,
+      "value": 8411100,
+      "weightPct": 8.8,
+      "plPct": 8.7
+    },
+    {
+      "ticker": "066570.KS",
+      "name": "LG전자",
+      "shares": 46,
+      "avgCost": 184847.22,
+      "price": 182400.0,
+      "value": 8390400,
       "weightPct": 8.7,
-      "plPct": 19.3
+      "plPct": -1.3
+    },
+    {
+      "ticker": "000150.KS",
+      "name": "두산",
+      "shares": 6,
+      "avgCost": 1287570.0,
+      "price": 1382000.0,
+      "value": 8292000,
+      "weightPct": 8.6,
+      "plPct": 7.3
     },
     {
       "ticker": "005935.KS",
       "name": "삼성전자우",
       "shares": 42,
       "avgCost": 181362.0,
-      "price": 185600.0,
-      "value": 7795200,
+      "price": 194300.0,
+      "value": 8160600,
       "weightPct": 8.5,
+      "plPct": 7.1
+    },
+    {
+      "ticker": "010120.KS",
+      "name": "LS ELECTRIC",
+      "shares": 40,
+      "avgCost": 197995.2,
+      "price": 202500.0,
+      "value": 8100000,
+      "weightPct": 8.4,
       "plPct": 2.3
     },
     {
@@ -85,60 +105,40 @@
       "name": "삼성전자",
       "shares": 28,
       "avgCost": 293586.0,
-      "price": 278000.0,
-      "value": 7784000,
-      "weightPct": 8.5,
-      "plPct": -5.3
-    },
-    {
-      "ticker": "010120.KS",
-      "name": "LS ELECTRIC",
-      "shares": 40,
-      "avgCost": 197995.2,
-      "price": 189400.0,
-      "value": 7576000,
+      "price": 285000.0,
+      "value": 7980000,
       "weightPct": 8.3,
-      "plPct": -4.3
+      "plPct": -2.9
     },
     {
       "ticker": "009150.KS",
       "name": "삼성전기",
       "shares": 5,
       "avgCost": 1559112.0,
-      "price": 1493000.0,
-      "value": 7465000,
-      "weightPct": 8.2,
-      "plPct": -4.2
-    },
-    {
-      "ticker": "000150.KS",
-      "name": "두산",
-      "shares": 6,
-      "avgCost": 1287570.0,
-      "price": 1203000.0,
-      "value": 7218000,
-      "weightPct": 7.9,
-      "plPct": -6.6
+      "price": 1584000.0,
+      "value": 7920000,
+      "weightPct": 8.3,
+      "plPct": 1.6
     },
     {
       "ticker": "011070.KS",
       "name": "LG이노텍",
       "shares": 9,
-      "avgCost": 764526.0,
-      "price": 741000.0,
-      "value": 6669000,
-      "weightPct": 7.3,
-      "plPct": -3.1
+      "avgCost": 754506.0,
+      "price": 742000.0,
+      "value": 6678000,
+      "weightPct": 7.0,
+      "plPct": -1.7
     },
     {
       "ticker": "278470.KS",
       "name": "에이피알",
       "shares": 13,
       "avgCost": 398796.0,
-      "price": 365500.0,
-      "value": 4751500,
-      "weightPct": 5.2,
-      "plPct": -8.3
+      "price": 375000.0,
+      "value": 4875000,
+      "weightPct": 5.1,
+      "plPct": -6.0
     }
   ],
   "equityHistory": [
@@ -269,8 +269,8 @@
     },
     {
       "date": "2026-07-10",
-      "equity": 91481461,
-      "cash": 736461
+      "equity": 95928895,
+      "cash": 749795
     }
   ],
   "tradeLog": [
@@ -279,9 +279,9 @@
       "name": "LG이노텍",
       "ticker": "011070.KS",
       "type": "매수",
-      "price": 763000.0,
+      "price": 753000.0,
       "shares": 9,
-      "amount": 6880734,
+      "amount": 6790554,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -290,10 +290,10 @@
       "name": "삼성생명",
       "ticker": "032830.KS",
       "type": "매도",
-      "price": 336000.0,
+      "price": 332500.0,
       "shares": 22,
-      "amount": 7377216,
-      "pnl": -797100,
+      "amount": 7300370,
+      "pnl": -873946,
       "reason": "손절(-10%)"
     },
     {
