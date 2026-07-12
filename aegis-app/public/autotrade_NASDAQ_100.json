@@ -4,15 +4,15 @@
   "initial": 100000000,
   "asOf": "2026-07-10",
   "startedAt": "2026-06-05",
-  "equity": 98906157,
+  "equity": 99368245,
   "cash": 524677,
   "cashPct": 0.5,
-  "stockValue": 98381480,
-  "returnPct": -1.09,
+  "stockValue": 98843568,
+  "returnPct": -0.63,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": 0.2,
+    "sharpe": 0.27,
     "mdd": -18.5,
     "trades": 31,
     "buys": 21,
@@ -25,120 +25,120 @@
       "name": "Advanced Micro Devices",
       "shares": 11,
       "avgCost": 755430.64,
-      "price": 836204.6,
-      "value": 9198251,
+      "price": 840132.17,
+      "value": 9241454,
       "weightPct": 9.3,
-      "plPct": 10.7
+      "plPct": 11.2
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2545100.33,
-      "price": 2871715.07,
-      "value": 8615145,
+      "price": 2885203.22,
+      "value": 8655610,
       "weightPct": 8.7,
-      "plPct": 12.8
+      "plPct": 13.4
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 36,
       "avgCost": 238182.37,
-      "price": 236087.0,
-      "value": 8499132,
+      "price": 237195.88,
+      "value": 8539052,
       "weightPct": 8.6,
-      "plPct": -0.9
+      "plPct": -0.4
     },
     {
       "ticker": "DDOG",
       "name": "Datadog",
       "shares": 22,
       "avgCost": 343779.84,
-      "price": 386018.99,
-      "value": 8492418,
+      "price": 387832.08,
+      "value": 8532306,
       "weightPct": 8.6,
-      "plPct": 12.3
+      "plPct": 12.8
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research",
       "shares": 16,
       "avgCost": 495820.66,
-      "price": 525099.11,
-      "value": 8401586,
+      "price": 527565.44,
+      "value": 8441047,
       "weightPct": 8.5,
-      "plPct": 5.9
+      "plPct": 6.4
     },
     {
       "ticker": "KLAC",
       "name": "KLA Corporation",
       "shares": 24,
       "avgCost": 316190.55,
-      "price": 347018.39,
-      "value": 8328441,
+      "price": 348648.3,
+      "value": 8367559,
       "weightPct": 8.4,
-      "plPct": 9.7
+      "plPct": 10.3
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "shares": 17,
       "avgCost": 505058.71,
-      "price": 488496.73,
-      "value": 8304444,
+      "price": 490791.14,
+      "value": 8343449,
       "weightPct": 8.4,
-      "plPct": -3.3
+      "plPct": -2.8
     },
     {
       "ticker": "STX",
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1373935.24,
-      "price": 1364481.35,
-      "value": 8186888,
+      "price": 1370890.18,
+      "value": 8225341,
       "weightPct": 8.3,
-      "plPct": -0.7
+      "plPct": -0.2
     },
     {
       "ticker": "AMAT",
       "name": "Applied Materials",
       "shares": 9,
       "avgCost": 741412.34,
-      "price": 903069.17,
-      "value": 8127623,
+      "price": 907310.8,
+      "value": 8165797,
       "weightPct": 8.2,
-      "plPct": 21.8
+      "plPct": 22.4
     },
     {
       "ticker": "INTC",
       "name": "Intel",
       "shares": 48,
       "avgCost": 172892.37,
-      "price": 164635.87,
-      "value": 7902522,
+      "price": 165409.15,
+      "value": 7939639,
       "weightPct": 8.0,
-      "plPct": -4.8
+      "plPct": -4.3
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1461214.24,
-      "price": 1467843.37,
-      "value": 7339217,
+      "price": 1474737.68,
+      "value": 7373688,
       "weightPct": 7.4,
-      "plPct": 0.5
+      "plPct": 0.9
     },
     {
       "ticker": "WDC",
       "name": "Western Digital",
       "shares": 8,
       "avgCost": 894986.78,
-      "price": 873226.71,
-      "value": 6985814,
+      "price": 877328.17,
+      "value": 7018625,
       "weightPct": 7.1,
-      "plPct": -2.4
+      "plPct": -2.0
     }
   ],
   "equityHistory": [
@@ -259,7 +259,7 @@
     },
     {
       "date": "2026-07-10",
-      "equity": 98906157,
+      "equity": 99368245,
       "cash": 524677
     }
   ],
