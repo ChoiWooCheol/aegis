@@ -2,17 +2,17 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-08-03",
+  "asOf": "2026-08-04",
   "startedAt": "2026-06-05",
-  "equity": 83129018,
-  "cash": 236812,
+  "equity": 87173408,
+  "cash": 235264,
   "cashPct": 0.3,
-  "stockValue": 82892206,
-  "returnPct": -16.87,
+  "stockValue": 86938144,
+  "returnPct": -12.83,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.53,
+    "sharpe": -1.01,
     "mdd": -33.4,
     "trades": 59,
     "buys": 35,
@@ -25,120 +25,120 @@
       "name": "Datadog",
       "shares": 22,
       "avgCost": 343779.84,
-      "price": 394985.76,
-      "value": 8689687,
-      "weightPct": 10.5,
-      "plPct": 14.9
-    },
-    {
-      "ticker": "FTNT",
-      "name": "Fortinet",
-      "shares": 36,
-      "avgCost": 238182.37,
-      "price": 234406.69,
-      "value": 8438641,
-      "weightPct": 10.2,
-      "plPct": -1.6
+      "price": 411639.65,
+      "value": 9056072,
+      "weightPct": 10.4,
+      "plPct": 19.7
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "shares": 17,
       "avgCost": 505058.71,
-      "price": 494110.4,
-      "value": 8399877,
-      "weightPct": 10.1,
-      "plPct": -2.2
+      "price": 515206.26,
+      "value": 8758506,
+      "weightPct": 10.0,
+      "plPct": 2.0
+    },
+    {
+      "ticker": "FTNT",
+      "name": "Fortinet",
+      "shares": 36,
+      "avgCost": 238182.37,
+      "price": 239994.66,
+      "value": 8639808,
+      "weightPct": 9.9,
+      "plPct": 0.8
     },
     {
       "ticker": "CSCO",
       "name": "Cisco",
       "shares": 45,
       "avgCost": 179708.27,
-      "price": 165637.12,
-      "value": 7453670,
-      "weightPct": 9.0,
-      "plPct": -7.8
+      "price": 172815.57,
+      "value": 7776701,
+      "weightPct": 8.9,
+      "plPct": -3.8
     },
     {
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "shares": 25,
       "avgCost": 266077.99,
-      "price": 287680.62,
-      "value": 7192015,
-      "weightPct": 8.7,
-      "plPct": 8.1
+      "price": 299101.12,
+      "value": 7477528,
+      "weightPct": 8.6,
+      "plPct": 12.4
     },
     {
       "ticker": "STX",
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1068294.43,
-      "price": 1186421.77,
-      "value": 7118531,
+      "price": 1242827.3,
+      "value": 7456964,
       "weightPct": 8.6,
-      "plPct": 11.1
-    },
-    {
-      "ticker": "MNST",
-      "name": "Monster Beverage",
-      "shares": 47,
-      "avgCost": 141893.66,
-      "price": 133559.88,
-      "value": 6277314,
-      "weightPct": 7.6,
-      "plPct": -5.9
-    },
-    {
-      "ticker": "WDC",
-      "name": "Western Digital",
-      "shares": 8,
-      "avgCost": 668487.9,
-      "price": 762016.45,
-      "value": 6096132,
-      "weightPct": 7.3,
-      "plPct": 14.0
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron Technology",
-      "shares": 5,
-      "avgCost": 1146217.86,
-      "price": 1183085.51,
-      "value": 5915428,
-      "weightPct": 7.1,
-      "plPct": 3.2
-    },
-    {
-      "ticker": "AMAT",
-      "name": "Applied Materials",
-      "shares": 8,
-      "avgCost": 714211.66,
-      "price": 737319.16,
-      "value": 5898553,
-      "weightPct": 7.1,
-      "plPct": 3.2
+      "plPct": 16.3
     },
     {
       "ticker": "INTC",
       "name": "Intel",
       "shares": 45,
       "avgCost": 126051.66,
-      "price": 129980.52,
-      "value": 5849123,
-      "weightPct": 7.0,
-      "plPct": 3.1
+      "price": 143592.81,
+      "value": 6461676,
+      "weightPct": 7.4,
+      "plPct": 13.9
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "shares": 5,
+      "avgCost": 1146217.86,
+      "price": 1277402.05,
+      "value": 6387010,
+      "weightPct": 7.3,
+      "plPct": 11.4
+    },
+    {
+      "ticker": "WDC",
+      "name": "Western Digital",
+      "shares": 8,
+      "avgCost": 668487.9,
+      "price": 793586.9,
+      "value": 6348695,
+      "weightPct": 7.3,
+      "plPct": 18.7
+    },
+    {
+      "ticker": "MNST",
+      "name": "Monster Beverage",
+      "shares": 47,
+      "avgCost": 141893.66,
+      "price": 134008.44,
+      "value": 6298397,
+      "weightPct": 7.2,
+      "plPct": -5.6
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials",
+      "shares": 8,
+      "avgCost": 717645.68,
+      "price": 781353.05,
+      "value": 6250824,
+      "weightPct": 7.2,
+      "plPct": 8.9
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 8,
       "avgCost": 664775.71,
-      "price": 695404.41,
-      "value": 5563235,
-      "weightPct": 6.7,
-      "plPct": 4.6
+      "price": 753245.18,
+      "value": 6025961,
+      "weightPct": 6.9,
+      "plPct": 13.3
     }
   ],
   "equityHistory": [
@@ -339,8 +339,13 @@
     },
     {
       "date": "2026-08-03",
-      "equity": 83129018,
-      "cash": 236812
+      "equity": 83418916,
+      "cash": 235264
+    },
+    {
+      "date": "2026-08-04",
+      "equity": 87173408,
+      "cash": 235264
     }
   ],
   "tradeLog": [
@@ -349,9 +354,9 @@
       "name": "Applied Materials",
       "ticker": "AMAT",
       "type": "매수",
-      "price": 712786.09,
+      "price": 716213.26,
       "shares": 8,
-      "amount": 5713693,
+      "amount": 5741165,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -360,10 +365,10 @@
       "name": "Apple Inc.",
       "ticker": "AAPL",
       "type": "매도",
-      "price": 442465.79,
+      "price": 444463.97,
       "shares": 13,
-      "amount": 5740551,
-      "pnl": -690152,
+      "amount": 5766476,
+      "pnl": -664227,
       "reason": "손절(-10%)"
     },
     {
