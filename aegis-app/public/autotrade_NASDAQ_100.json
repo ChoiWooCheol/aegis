@@ -2,17 +2,17 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-08-04",
+  "asOf": "2026-08-05",
   "startedAt": "2026-06-05",
-  "equity": 87173408,
+  "equity": 86860200,
   "cash": 235264,
   "cashPct": 0.3,
-  "stockValue": 86938144,
-  "returnPct": -12.83,
+  "stockValue": 86624936,
+  "returnPct": -13.14,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.01,
+    "sharpe": -1.04,
     "mdd": -33.4,
     "trades": 59,
     "buys": 35,
@@ -25,120 +25,120 @@
       "name": "Datadog",
       "shares": 22,
       "avgCost": 343779.84,
-      "price": 411639.65,
-      "value": 9056072,
+      "price": 410221.46,
+      "value": 9024872,
       "weightPct": 10.4,
-      "plPct": 19.7
+      "plPct": 19.3
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "shares": 17,
       "avgCost": 505058.71,
-      "price": 515206.26,
-      "value": 8758506,
-      "weightPct": 10.0,
-      "plPct": 2.0
+      "price": 520754.27,
+      "value": 8852823,
+      "weightPct": 10.2,
+      "plPct": 3.1
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 36,
       "avgCost": 238182.37,
-      "price": 239994.66,
-      "value": 8639808,
-      "weightPct": 9.9,
-      "plPct": 0.8
+      "price": 235648.38,
+      "value": 8483342,
+      "weightPct": 9.8,
+      "plPct": -1.1
     },
     {
       "ticker": "CSCO",
       "name": "Cisco",
       "shares": 45,
       "avgCost": 179708.27,
-      "price": 172815.57,
-      "value": 7776701,
-      "weightPct": 8.9,
-      "plPct": -3.8
+      "price": 174494.85,
+      "value": 7852268,
+      "weightPct": 9.0,
+      "plPct": -2.9
     },
     {
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "shares": 25,
       "avgCost": 266077.99,
-      "price": 299101.12,
-      "value": 7477528,
-      "weightPct": 8.6,
-      "plPct": 12.4
+      "price": 303499.59,
+      "value": 7587490,
+      "weightPct": 8.7,
+      "plPct": 14.1
     },
     {
       "ticker": "STX",
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1068294.43,
-      "price": 1242827.3,
-      "value": 7456964,
+      "price": 1246378.23,
+      "value": 7478269,
       "weightPct": 8.6,
-      "plPct": 16.3
-    },
-    {
-      "ticker": "INTC",
-      "name": "Intel",
-      "shares": 45,
-      "avgCost": 126051.66,
-      "price": 143592.81,
-      "value": 6461676,
-      "weightPct": 7.4,
-      "plPct": 13.9
+      "plPct": 16.7
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1146217.86,
-      "price": 1277402.05,
-      "value": 6387010,
-      "weightPct": 7.3,
-      "plPct": 11.4
+      "price": 1311221.25,
+      "value": 6556106,
+      "weightPct": 7.5,
+      "plPct": 14.4
     },
     {
-      "ticker": "WDC",
-      "name": "Western Digital",
-      "shares": 8,
-      "avgCost": 668487.9,
-      "price": 793586.9,
-      "value": 6348695,
-      "weightPct": 7.3,
-      "plPct": 18.7
+      "ticker": "INTC",
+      "name": "Intel",
+      "shares": 45,
+      "avgCost": 126051.66,
+      "price": 144675.3,
+      "value": 6510388,
+      "weightPct": 7.5,
+      "plPct": 14.8
     },
     {
       "ticker": "MNST",
       "name": "Monster Beverage",
       "shares": 47,
       "avgCost": 141893.66,
-      "price": 134008.44,
-      "value": 6298397,
+      "price": 134792.33,
+      "value": 6335240,
+      "weightPct": 7.3,
+      "plPct": -5.0
+    },
+    {
+      "ticker": "WDC",
+      "name": "Western Digital",
+      "shares": 8,
+      "avgCost": 668487.9,
+      "price": 781731.34,
+      "value": 6253851,
       "weightPct": 7.2,
-      "plPct": -5.6
+      "plPct": 16.9
     },
     {
       "ticker": "AMAT",
       "name": "Applied Materials",
       "shares": 8,
       "avgCost": 717645.68,
-      "price": 781353.05,
-      "value": 6250824,
-      "weightPct": 7.2,
-      "plPct": 8.9
+      "price": 768923.44,
+      "value": 6151388,
+      "weightPct": 7.1,
+      "plPct": 7.1
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 8,
       "avgCost": 664775.71,
-      "price": 753245.18,
-      "value": 6025961,
-      "weightPct": 6.9,
-      "plPct": 13.3
+      "price": 692362.47,
+      "value": 5538900,
+      "weightPct": 6.4,
+      "plPct": 4.1
     }
   ],
   "equityHistory": [
@@ -344,7 +344,12 @@
     },
     {
       "date": "2026-08-04",
-      "equity": 87173408,
+      "equity": 87080935,
+      "cash": 235264
+    },
+    {
+      "date": "2026-08-05",
+      "equity": 86860200,
       "cash": 235264
     }
   ],
