@@ -2,17 +2,17 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-08-14",
+  "asOf": "2026-08-17",
   "startedAt": "2026-06-05",
-  "equity": 85417460,
+  "equity": 86296165,
   "cash": 565843,
   "cashPct": 0.7,
-  "stockValue": 84851617,
-  "returnPct": -14.58,
+  "stockValue": 85730322,
+  "returnPct": -13.7,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.08,
+    "sharpe": -0.98,
     "mdd": -33.4,
     "trades": 74,
     "buys": 41,
@@ -25,120 +25,120 @@
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1068294.43,
-      "price": 1379218.44,
-      "value": 8275311,
+      "price": 1401937.58,
+      "value": 8411625,
       "weightPct": 9.7,
-      "plPct": 29.1
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "shares": 14,
-      "avgCost": 505058.71,
-      "price": 544452.92,
-      "value": 7622341,
-      "weightPct": 8.9,
-      "plPct": 7.8
-    },
-    {
-      "ticker": "DDOG",
-      "name": "Datadog",
-      "shares": 21,
-      "avgCost": 343779.84,
-      "price": 361948.5,
-      "value": 7600919,
-      "weightPct": 8.9,
-      "plPct": 5.3
-    },
-    {
-      "ticker": "CRWD",
-      "name": "CrowdStrike",
-      "shares": 23,
-      "avgCost": 266077.99,
-      "price": 307385.6,
-      "value": 7069869,
-      "weightPct": 8.3,
-      "plPct": 15.5
-    },
-    {
-      "ticker": "LRCX",
-      "name": "Lam Research",
-      "shares": 15,
-      "avgCost": 444459.85,
-      "price": 470904.24,
-      "value": 7063564,
-      "weightPct": 8.3,
-      "plPct": 5.9
+      "plPct": 31.2
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2338119.71,
-      "price": 2325206.64,
-      "value": 6975620,
-      "weightPct": 8.2,
-      "plPct": -0.6
+      "price": 2534620.04,
+      "value": 7603860,
+      "weightPct": 8.8,
+      "plPct": 8.4
     },
     {
-      "ticker": "KLAC",
-      "name": "KLA Corporation",
-      "shares": 24,
-      "avgCost": 282150.13,
-      "price": 288640.68,
-      "value": 6927376,
-      "weightPct": 8.1,
-      "plPct": 2.3
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "shares": 21,
+      "avgCost": 343779.84,
+      "price": 353592.04,
+      "value": 7425433,
+      "weightPct": 8.6,
+      "plPct": 2.9
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "shares": 14,
+      "avgCost": 505058.71,
+      "price": 529738.26,
+      "value": 7416336,
+      "weightPct": 8.6,
+      "plPct": 4.9
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1146217.86,
-      "price": 1376696.41,
-      "value": 6883482,
+      "price": 1454301.28,
+      "value": 7271506,
+      "weightPct": 8.4,
+      "plPct": 26.9
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research",
+      "shares": 15,
+      "avgCost": 444459.85,
+      "price": 483830.06,
+      "value": 7257451,
+      "weightPct": 8.4,
+      "plPct": 8.9
+    },
+    {
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
+      "shares": 24,
+      "avgCost": 282150.13,
+      "price": 292611.81,
+      "value": 7022683,
       "weightPct": 8.1,
-      "plPct": 20.1
+      "plPct": 3.7
     },
     {
-      "ticker": "FTNT",
-      "name": "Fortinet",
-      "shares": 30,
-      "avgCost": 238182.37,
-      "price": 226710.16,
-      "value": 6801305,
-      "weightPct": 8.0,
-      "plPct": -4.8
-    },
-    {
-      "ticker": "ROST",
-      "name": "Ross Stores",
-      "shares": 19,
-      "avgCost": 361074.65,
-      "price": 347638.31,
-      "value": 6605128,
-      "weightPct": 7.7,
-      "plPct": -3.7
-    },
-    {
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "shares": 9,
-      "avgCost": 669760.25,
-      "price": 728813.48,
-      "value": 6559321,
-      "weightPct": 7.7,
-      "plPct": 8.8
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "shares": 23,
+      "avgCost": 266077.99,
+      "price": 302612.74,
+      "value": 6960093,
+      "weightPct": 8.1,
+      "plPct": 13.7
     },
     {
       "ticker": "AMAT",
       "name": "Applied Materials",
       "shares": 9,
       "avgCost": 723351.03,
-      "price": 718597.96,
-      "value": 6467382,
-      "weightPct": 7.6,
-      "plPct": -0.7
+      "price": 756920.27,
+      "value": 6812282,
+      "weightPct": 7.9,
+      "plPct": 4.6
+    },
+    {
+      "ticker": "FTNT",
+      "name": "Fortinet",
+      "shares": 30,
+      "avgCost": 238182.37,
+      "price": 221962.77,
+      "value": 6658883,
+      "weightPct": 7.7,
+      "plPct": -6.8
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "shares": 9,
+      "avgCost": 669760.25,
+      "price": 722418.51,
+      "value": 6501767,
+      "weightPct": 7.5,
+      "plPct": 7.9
+    },
+    {
+      "ticker": "ROST",
+      "name": "Ross Stores",
+      "shares": 19,
+      "avgCost": 361074.65,
+      "price": 336231.67,
+      "value": 6388402,
+      "weightPct": 7.4,
+      "plPct": -6.9
     }
   ],
   "equityHistory": [
@@ -385,6 +385,11 @@
     {
       "date": "2026-08-14",
       "equity": 85417460,
+      "cash": 565843
+    },
+    {
+      "date": "2026-08-17",
+      "equity": 86296165,
       "cash": 565843
     }
   ],
