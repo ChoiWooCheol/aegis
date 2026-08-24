@@ -2,17 +2,17 @@
   "market": "KOSPI_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-08-21",
+  "asOf": "2026-08-24",
   "startedAt": "2026-06-05",
-  "equity": 75137965,
-  "cash": 1225365,
-  "cashPct": 1.6,
-  "stockValue": 73912600,
-  "returnPct": -24.86,
+  "equity": 75161145,
+  "cash": 1141045,
+  "cashPct": 1.5,
+  "stockValue": 74020100,
+  "returnPct": -24.84,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.41,
+    "sharpe": -1.4,
     "mdd": -46.6,
     "trades": 109,
     "buys": 61,
@@ -81,6 +81,16 @@
       "plPct": 10.2
     },
     {
+      "ticker": "010950.KS",
+      "name": "S-Oil",
+      "shares": 42,
+      "avgCost": 135399.75,
+      "price": 140300.0,
+      "value": 5892600,
+      "weightPct": 7.8,
+      "plPct": 3.6
+    },
+    {
       "ticker": "034730.KS",
       "name": "SK",
       "shares": 10,
@@ -99,16 +109,6 @@
       "value": 5840800,
       "weightPct": 7.8,
       "plPct": 6.0
-    },
-    {
-      "ticker": "010950.KS",
-      "name": "S-Oil",
-      "shares": 41,
-      "avgCost": 136171.8,
-      "price": 141100.0,
-      "value": 5785100,
-      "weightPct": 7.7,
-      "plPct": 3.6
     },
     {
       "ticker": "011070.KS",
@@ -319,98 +319,103 @@
     },
     {
       "date": "2026-07-27",
-      "equity": 82543258,
-      "cash": 33726
+      "equity": 82546188,
+      "cash": 73003
     },
     {
       "date": "2026-07-28",
-      "equity": 72179745,
-      "cash": 33726
+      "equity": 72184513,
+      "cash": 73003
     },
     {
       "date": "2026-07-29",
-      "equity": 69103931,
-      "cash": 18918
+      "equity": 69112251,
+      "cash": 299634
     },
     {
       "date": "2026-07-30",
-      "equity": 68843329,
-      "cash": 68843329
+      "equity": 68861862,
+      "cash": 68861862
     },
     {
       "date": "2026-07-31",
-      "equity": 68843329,
-      "cash": 68843329
+      "equity": 68861862,
+      "cash": 68861862
     },
     {
       "date": "2026-08-03",
-      "equity": 66996002,
-      "cash": 3048020
+      "equity": 67015723,
+      "cash": 3098791
     },
     {
       "date": "2026-08-04",
-      "equity": 67465374,
-      "cash": 3048020
+      "equity": 67484049,
+      "cash": 3098791
     },
     {
       "date": "2026-08-05",
-      "equity": 71913794,
-      "cash": 3048020
+      "equity": 71933310,
+      "cash": 3098791
     },
     {
       "date": "2026-08-06",
-      "equity": 67682290,
-      "cash": 2808689
+      "equity": 67701716,
+      "cash": 2828114
     },
     {
       "date": "2026-08-07",
-      "equity": 67804001,
-      "cash": 2808689
+      "equity": 67823426,
+      "cash": 2828114
     },
     {
       "date": "2026-08-10",
-      "equity": 68500174,
-      "cash": 1225365
+      "equity": 68522211,
+      "cash": 1141045
     },
     {
       "date": "2026-08-11",
-      "equity": 69055151,
-      "cash": 1225365
+      "equity": 69078713,
+      "cash": 1141045
     },
     {
       "date": "2026-08-12",
-      "equity": 72214982,
-      "cash": 1225365
+      "equity": 72238467,
+      "cash": 1141045
     },
     {
       "date": "2026-08-13",
-      "equity": 73944265,
-      "cash": 1225365
+      "equity": 73967293,
+      "cash": 1141045
     },
     {
       "date": "2026-08-14",
-      "equity": 77075765,
-      "cash": 1225365
+      "equity": 77103897,
+      "cash": 1141045
     },
     {
       "date": "2026-08-18",
-      "equity": 76408465,
-      "cash": 1225365
+      "equity": 76441168,
+      "cash": 1141045
     },
     {
       "date": "2026-08-19",
-      "equity": 72898265,
-      "cash": 1225365
+      "equity": 72929445,
+      "cash": 1141045
     },
     {
       "date": "2026-08-20",
-      "equity": 74267365,
-      "cash": 1225365
+      "equity": 74291688,
+      "cash": 1141045
     },
     {
       "date": "2026-08-21",
-      "equity": 75137965,
-      "cash": 1225365
+      "equity": 75161145,
+      "cash": 1141045
+    },
+    {
+      "date": "2026-08-24",
+      "equity": 75161145,
+      "cash": 1141045
     }
   ],
   "tradeLog": [
@@ -430,9 +435,9 @@
       "name": "S-Oil",
       "ticker": "010950.KS",
       "type": "매수",
-      "price": 135900.0,
-      "shares": 41,
-      "amount": 5583044,
+      "price": 135129.49,
+      "shares": 42,
+      "amount": 5686790,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -551,10 +556,10 @@
       "name": "S-Oil",
       "ticker": "010950.KS",
       "type": "매도",
-      "price": 123100.0,
+      "price": 122402.06,
       "shares": 45,
-      "amount": 5528421,
-      "pnl": -157428,
+      "amount": 5497076,
+      "pnl": -156535,
       "reason": "Buy신호 이탈"
     },
     {
@@ -573,9 +578,9 @@
       "name": "S-Oil",
       "ticker": "010950.KS",
       "type": "매수",
-      "price": 126100.0,
+      "price": 125385.05,
       "shares": 45,
-      "amount": 5685849,
+      "amount": 5653612,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -695,9 +700,9 @@
       "ticker": "278470.KS",
       "type": "매도",
       "price": 313492.06,
-      "shares": 17,
-      "amount": 5318706,
-      "pnl": -241002,
+      "shares": 16,
+      "amount": 5005841,
+      "pnl": -226825,
       "reason": "레짐 현금화(약세장)"
     },
     {
@@ -705,10 +710,10 @@
       "name": "한국타이어앤테크놀로지",
       "ticker": "161390.KS",
       "type": "매도",
-      "price": 66900.0,
-      "shares": 89,
-      "amount": 5942192,
-      "pnl": -59488,
+      "price": 65987.73,
+      "shares": 91,
+      "amount": 5992873,
+      "pnl": -59995,
       "reason": "레짐 현금화(약세장)"
     },
     {
@@ -827,8 +832,8 @@
       "ticker": "278470.KS",
       "type": "매수",
       "price": 326388.88,
-      "shares": 17,
-      "amount": 5559708,
+      "shares": 16,
+      "amount": 5232667,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -837,9 +842,9 @@
       "name": "한국타이어앤테크놀로지",
       "ticker": "161390.KS",
       "type": "매수",
-      "price": 67300.0,
-      "shares": 89,
-      "amount": 6001679,
+      "price": 66382.27,
+      "shares": 91,
+      "amount": 6052868,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -936,10 +941,10 @@
       "name": "S-Oil",
       "ticker": "010950.KS",
       "type": "매도",
-      "price": 129400.0,
+      "price": 128666.34,
       "shares": 47,
-      "amount": 6069636,
-      "pnl": -857891,
+      "amount": 6035223,
+      "pnl": -853027,
       "reason": "손절(-10%)"
     },
     {
@@ -1046,9 +1051,9 @@
       "name": "S-Oil",
       "ticker": "010950.KS",
       "type": "매수",
-      "price": 147100.0,
+      "price": 146265.99,
       "shares": 47,
-      "amount": 6927527,
+      "amount": 6888251,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
