@@ -2,17 +2,17 @@
   "market": "KOSPI_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-08-26",
+  "asOf": "2026-08-28",
   "startedAt": "2026-06-05",
-  "equity": 74011445,
-  "cash": 1141045,
+  "equity": 75411077,
+  "cash": 1130877,
   "cashPct": 1.5,
-  "stockValue": 72870400,
-  "returnPct": -25.99,
+  "stockValue": 74280200,
+  "returnPct": -24.59,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.45,
+    "sharpe": -1.31,
     "mdd": -46.6,
     "trades": 109,
     "buys": 61,
@@ -25,120 +25,120 @@
       "name": "GS",
       "shares": 61,
       "avgCost": 96392.4,
-      "price": 121800.0,
-      "value": 7429800,
-      "weightPct": 10.0,
-      "plPct": 26.4
+      "price": 126900.0,
+      "value": 7740900,
+      "weightPct": 10.3,
+      "plPct": 31.6
     },
     {
       "ticker": "066570.KS",
       "name": "LG전자",
       "shares": 34,
       "avgCost": 158080.2,
-      "price": 200500.0,
-      "value": 6817000,
-      "weightPct": 9.2,
-      "plPct": 26.8
+      "price": 198600.0,
+      "value": 6752400,
+      "weightPct": 9.0,
+      "plPct": 25.6
     },
     {
       "ticker": "028260.KS",
       "name": "삼성물산",
       "shares": 17,
       "avgCost": 347458.24,
-      "price": 367000.0,
-      "value": 6239000,
+      "price": 373500.0,
+      "value": 6349500,
       "weightPct": 8.4,
-      "plPct": 5.6
-    },
-    {
-      "ticker": "005935.KS",
-      "name": "삼성전자우",
-      "shares": 32,
-      "avgCost": 183275.19,
-      "price": 194500.0,
-      "value": 6224000,
-      "weightPct": 8.4,
-      "plPct": 6.1
-    },
-    {
-      "ticker": "353200.KS",
-      "name": "대덕전자",
-      "shares": 56,
-      "avgCost": 98396.4,
-      "price": 110800.0,
-      "value": 6204800,
-      "weightPct": 8.4,
-      "plPct": 12.6
+      "plPct": 7.5
     },
     {
       "ticker": "005930.KS",
       "name": "삼성전자",
       "shares": 24,
       "avgCost": 248224.62,
-      "price": 257000.0,
-      "value": 6168000,
-      "weightPct": 8.3,
-      "plPct": 3.5
+      "price": 264000.0,
+      "value": 6336000,
+      "weightPct": 8.4,
+      "plPct": 6.4
     },
     {
-      "ticker": "011070.KS",
-      "name": "LG이노텍",
-      "shares": 10,
-      "avgCost": 498996.0,
-      "price": 602000.0,
-      "value": 6020000,
-      "weightPct": 8.1,
-      "plPct": 20.6
+      "ticker": "353200.KS",
+      "name": "대덕전자",
+      "shares": 56,
+      "avgCost": 98396.4,
+      "price": 111500.0,
+      "value": 6244000,
+      "weightPct": 8.3,
+      "plPct": 13.3
     },
     {
       "ticker": "010950.KS",
       "name": "S-Oil",
       "shares": 42,
       "avgCost": 135399.75,
-      "price": 139900.0,
-      "value": 5875800,
-      "weightPct": 7.9,
-      "plPct": 3.3
+      "price": 147700.0,
+      "value": 6203400,
+      "weightPct": 8.2,
+      "plPct": 9.1
+    },
+    {
+      "ticker": "005935.KS",
+      "name": "삼성전자우",
+      "shares": 32,
+      "avgCost": 183275.19,
+      "price": 191000.0,
+      "value": 6112000,
+      "weightPct": 8.1,
+      "plPct": 4.2
     },
     {
       "ticker": "032830.KS",
       "name": "삼성생명",
       "shares": 20,
       "avgCost": 298095.0,
-      "price": 285000.0,
-      "value": 5700000,
-      "weightPct": 7.7,
-      "plPct": -4.4
+      "price": 304000.0,
+      "value": 6080000,
+      "weightPct": 8.1,
+      "plPct": 2.0
     },
     {
-      "ticker": "034730.KS",
-      "name": "SK",
+      "ticker": "011070.KS",
+      "name": "LG이노텍",
       "shares": 10,
-      "avgCost": 539612.33,
-      "price": 556000.0,
-      "value": 5560000,
-      "weightPct": 7.5,
-      "plPct": 3.0
+      "avgCost": 498996.0,
+      "price": 604000.0,
+      "value": 6040000,
+      "weightPct": 8.0,
+      "plPct": 21.0
     },
     {
       "ticker": "009150.KS",
       "name": "삼성전기",
       "shares": 4,
       "avgCost": 1223442.0,
-      "price": 1362000.0,
-      "value": 5448000,
-      "weightPct": 7.4,
-      "plPct": 11.3
+      "price": 1433000.0,
+      "value": 5732000,
+      "weightPct": 7.6,
+      "plPct": 17.1
+    },
+    {
+      "ticker": "034730.KS",
+      "name": "SK",
+      "shares": 10,
+      "avgCost": 539612.33,
+      "price": 537000.0,
+      "value": 5370000,
+      "weightPct": 7.1,
+      "plPct": -0.5
     },
     {
       "ticker": "000810.KS",
       "name": "삼성화재",
       "shares": 8,
       "avgCost": 633264.0,
-      "price": 648000.0,
-      "value": 5184000,
-      "weightPct": 7.0,
-      "plPct": 2.3
+      "price": 665000.0,
+      "value": 5320000,
+      "weightPct": 7.1,
+      "plPct": 5.0
     }
   ],
   "equityHistory": [
@@ -149,283 +149,293 @@
     },
     {
       "date": "2026-06-08",
-      "equity": 104563500,
-      "cash": 3766057
+      "equity": 104563456,
+      "cash": 3767669
     },
     {
       "date": "2026-06-09",
-      "equity": 111737190,
-      "cash": 3766057
+      "equity": 111736881,
+      "cash": 3767669
     },
     {
       "date": "2026-06-10",
-      "equity": 107319297,
-      "cash": 3766057
+      "equity": 107319134,
+      "cash": 3767669
     },
     {
       "date": "2026-06-11",
-      "equity": 108145601,
-      "cash": 3766057
+      "equity": 108145392,
+      "cash": 3767669
     },
     {
       "date": "2026-06-12",
-      "equity": 111619739,
-      "cash": 3766057
+      "equity": 111619487,
+      "cash": 3767669
     },
     {
       "date": "2026-06-15",
-      "equity": 118978177,
-      "cash": 3766057
+      "equity": 118977805,
+      "cash": 3767669
     },
     {
       "date": "2026-06-16",
-      "equity": 122935643,
-      "cash": 3766057
+      "equity": 122935190,
+      "cash": 3767669
     },
     {
       "date": "2026-06-17",
-      "equity": 123652410,
-      "cash": 3766057
+      "equity": 123651836,
+      "cash": 3767669
     },
     {
       "date": "2026-06-18",
-      "equity": 124176257,
-      "cash": 3766057
+      "equity": 124175542,
+      "cash": 3767669
     },
     {
       "date": "2026-06-19",
-      "equity": 123570123,
-      "cash": 3766057
+      "equity": 123569338,
+      "cash": 3767669
     },
     {
       "date": "2026-06-22",
-      "equity": 125466954,
-      "cash": 3766057
+      "equity": 125466036,
+      "cash": 3767669
     },
     {
       "date": "2026-06-23",
-      "equity": 113774131,
-      "cash": 586265
+      "equity": 113773527,
+      "cash": 587877
     },
     {
       "date": "2026-06-24",
-      "equity": 114669366,
-      "cash": 586265
+      "equity": 114668705,
+      "cash": 587877
     },
     {
       "date": "2026-06-25",
-      "equity": 120487489,
-      "cash": 586265
+      "equity": 120486572,
+      "cash": 587877
     },
     {
       "date": "2026-06-26",
-      "equity": 114534139,
-      "cash": 586265
+      "equity": 114533433,
+      "cash": 587877
     },
     {
       "date": "2026-06-29",
-      "equity": 112765454,
-      "cash": 586265
+      "equity": 112764788,
+      "cash": 587877
     },
     {
       "date": "2026-06-30",
-      "equity": 116707674,
-      "cash": 141545
+      "equity": 116706988,
+      "cash": 143157
     },
     {
       "date": "2026-07-01",
-      "equity": 115073170,
-      "cash": 141545
+      "equity": 115072562,
+      "cash": 143157
     },
     {
       "date": "2026-07-02",
-      "equity": 104301099,
-      "cash": 15044
+      "equity": 104300816,
+      "cash": 16657
     },
     {
       "date": "2026-07-03",
-      "equity": 107540342,
-      "cash": 97317
+      "equity": 107539852,
+      "cash": 98930
     },
     {
       "date": "2026-07-06",
-      "equity": 104749570,
-      "cash": 97317
+      "equity": 104749150,
+      "cash": 98930
     },
     {
       "date": "2026-07-07",
-      "equity": 98303459,
-      "cash": 307967
+      "equity": 98303162,
+      "cash": 309580
     },
     {
       "date": "2026-07-08",
-      "equity": 92061150,
-      "cash": 307967
+      "equity": 92060962,
+      "cash": 309580
     },
     {
       "date": "2026-07-09",
-      "equity": 91539373,
-      "cash": 380508
+      "equity": 91539089,
+      "cash": 382121
     },
     {
       "date": "2026-07-10",
-      "equity": 95963609,
-      "cash": 135818
+      "equity": 95963332,
+      "cash": 137431
     },
     {
       "date": "2026-07-13",
-      "equity": 86087784,
-      "cash": 135818
+      "equity": 86087796,
+      "cash": 137431
     },
     {
       "date": "2026-07-14",
-      "equity": 86329398,
-      "cash": 103594
+      "equity": 86329352,
+      "cash": 105207
     },
     {
       "date": "2026-07-15",
-      "equity": 93552099,
-      "cash": 103594
+      "equity": 93551906,
+      "cash": 105207
     },
     {
       "date": "2026-07-16",
-      "equity": 87054039,
-      "cash": 103594
+      "equity": 87054054,
+      "cash": 105207
     },
     {
       "date": "2026-07-20",
-      "equity": 82064146,
-      "cash": 103594
+      "equity": 82064229,
+      "cash": 105207
     },
     {
       "date": "2026-07-21",
-      "equity": 84909204,
-      "cash": 48920
+      "equity": 84909224,
+      "cash": 50532
     },
     {
       "date": "2026-07-22",
-      "equity": 86124212,
-      "cash": 48920
+      "equity": 86124238,
+      "cash": 50532
     },
     {
       "date": "2026-07-23",
-      "equity": 90208060,
-      "cash": 68167
+      "equity": 90208008,
+      "cash": 69780
     },
     {
       "date": "2026-07-24",
-      "equity": 83015726,
-      "cash": 68167
+      "equity": 83015813,
+      "cash": 69780
     },
     {
       "date": "2026-07-27",
-      "equity": 82546188,
-      "cash": 73003
+      "equity": 82546226,
+      "cash": 74615
     },
     {
       "date": "2026-07-28",
-      "equity": 72184513,
-      "cash": 73003
+      "equity": 72184782,
+      "cash": 74615
     },
     {
       "date": "2026-07-29",
-      "equity": 69112251,
-      "cash": 299634
+      "equity": 69110371,
+      "cash": 23391
     },
     {
       "date": "2026-07-30",
-      "equity": 68861862,
-      "cash": 68861862
+      "equity": 68851560,
+      "cash": 68851560
     },
     {
       "date": "2026-07-31",
-      "equity": 68861862,
-      "cash": 68861862
+      "equity": 68851560,
+      "cash": 68851560
     },
     {
       "date": "2026-08-03",
-      "equity": 67015723,
-      "cash": 3098791
+      "equity": 67005472,
+      "cash": 3089559
     },
     {
       "date": "2026-08-04",
-      "equity": 67484049,
-      "cash": 3098791
+      "equity": 67473792,
+      "cash": 3089559
     },
     {
       "date": "2026-08-05",
-      "equity": 71933310,
-      "cash": 3098791
+      "equity": 71922994,
+      "cash": 3089559
     },
     {
       "date": "2026-08-06",
-      "equity": 67701716,
-      "cash": 2828114
+      "equity": 67691513,
+      "cash": 2818883
     },
     {
       "date": "2026-08-07",
-      "equity": 67823426,
-      "cash": 2828114
+      "equity": 67813270,
+      "cash": 2818883
     },
     {
       "date": "2026-08-10",
-      "equity": 68522211,
-      "cash": 1141045
+      "equity": 68512043,
+      "cash": 1130877
     },
     {
       "date": "2026-08-11",
-      "equity": 69078713,
-      "cash": 1141045
+      "equity": 69068545,
+      "cash": 1130877
     },
     {
       "date": "2026-08-12",
-      "equity": 72238467,
-      "cash": 1141045
+      "equity": 72228299,
+      "cash": 1130877
     },
     {
       "date": "2026-08-13",
-      "equity": 73967293,
-      "cash": 1141045
+      "equity": 73957125,
+      "cash": 1130877
     },
     {
       "date": "2026-08-14",
-      "equity": 77103897,
-      "cash": 1141045
+      "equity": 77093729,
+      "cash": 1130877
     },
     {
       "date": "2026-08-18",
-      "equity": 76441168,
-      "cash": 1141045
+      "equity": 76431000,
+      "cash": 1130877
     },
     {
       "date": "2026-08-19",
-      "equity": 72929445,
-      "cash": 1141045
+      "equity": 72919277,
+      "cash": 1130877
     },
     {
       "date": "2026-08-20",
-      "equity": 74291688,
-      "cash": 1141045
+      "equity": 74281520,
+      "cash": 1130877
     },
     {
       "date": "2026-08-21",
-      "equity": 75161145,
-      "cash": 1141045
+      "equity": 75150977,
+      "cash": 1130877
     },
     {
       "date": "2026-08-24",
-      "equity": 72394945,
-      "cash": 1141045
+      "equity": 72384777,
+      "cash": 1130877
     },
     {
       "date": "2026-08-25",
-      "equity": 74011445,
-      "cash": 1141045
+      "equity": 74001277,
+      "cash": 1130877
     },
     {
       "date": "2026-08-26",
-      "equity": 74011445,
-      "cash": 1141045
+      "equity": 75132677,
+      "cash": 1130877
+    },
+    {
+      "date": "2026-08-27",
+      "equity": 75013577,
+      "cash": 1130877
+    },
+    {
+      "date": "2026-08-28",
+      "equity": 75411077,
+      "cash": 1130877
     }
   ],
   "tradeLog": [
@@ -456,10 +466,10 @@
       "name": "SK하이닉스",
       "ticker": "000660.KS",
       "type": "매도",
-      "price": 1443000.0,
+      "price": 1442687.14,
       "shares": 3,
-      "amount": 4320342,
-      "pnl": -615510,
+      "amount": 4319405,
+      "pnl": -615377,
       "reason": "손절(-10%)"
     },
     {
@@ -676,9 +686,9 @@
       "name": "SK하이닉스",
       "ticker": "000660.KS",
       "type": "매수",
-      "price": 1642000.0,
+      "price": 1641643.99,
       "shares": 3,
-      "amount": 4935852,
+      "amount": 4934782,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -710,9 +720,9 @@
       "ticker": "278470.KS",
       "type": "매도",
       "price": 313492.06,
-      "shares": 16,
-      "amount": 5005841,
-      "pnl": -226825,
+      "shares": 17,
+      "amount": 5318706,
+      "pnl": -241002,
       "reason": "레짐 현금화(약세장)"
     },
     {
@@ -731,10 +741,10 @@
       "name": "SK텔레콤",
       "ticker": "017670.KS",
       "type": "매도",
-      "price": 76900.0,
+      "price": 76255.93,
       "shares": 73,
-      "amount": 5602473,
-      "pnl": -432072,
+      "amount": 5555550,
+      "pnl": -428454,
       "reason": "레짐 현금화(약세장)"
     },
     {
@@ -842,8 +852,8 @@
       "ticker": "278470.KS",
       "type": "매수",
       "price": 326388.88,
-      "shares": 16,
-      "amount": 5232667,
+      "shares": 17,
+      "amount": 5559708,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -863,9 +873,9 @@
       "name": "SK텔레콤",
       "ticker": "017670.KS",
       "type": "매수",
-      "price": 82500.0,
+      "price": 81809.03,
       "shares": 73,
-      "amount": 6034545,
+      "amount": 5984003,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -1039,10 +1049,10 @@
       "name": "SK하이닉스",
       "ticker": "000660.KS",
       "type": "매도",
-      "price": 1567000.0,
+      "price": 1566660.26,
       "shares": 4,
-      "amount": 6255464,
-      "pnl": -1183384,
+      "amount": 6254108,
+      "pnl": -1183128,
       "reason": "손절(-10%)"
     },
     {
@@ -1578,9 +1588,9 @@
       "name": "SK하이닉스",
       "ticker": "000660.KS",
       "type": "매수",
-      "price": 1856000.0,
+      "price": 1855597.67,
       "shares": 4,
-      "amount": 7438848,
+      "amount": 7437235,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
