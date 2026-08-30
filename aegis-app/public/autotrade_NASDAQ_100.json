@@ -4,15 +4,15 @@
   "initial": 100000000,
   "asOf": "2026-08-28",
   "startedAt": "2026-06-05",
-  "equity": 80025032,
+  "equity": 78383194,
   "cash": 1009168,
   "cashPct": 1.3,
-  "stockValue": 79015864,
-  "returnPct": -19.97,
+  "stockValue": 77374026,
+  "returnPct": -21.62,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.31,
+    "sharpe": -1.45,
     "mdd": -35.4,
     "trades": 84,
     "buys": 46,
@@ -25,89 +25,89 @@
       "name": "CrowdStrike",
       "shares": 24,
       "avgCost": 266077.99,
-      "price": 314687.38,
-      "value": 7552497,
-      "weightPct": 9.4,
-      "plPct": 18.3
+      "price": 301490.26,
+      "value": 7235766,
+      "weightPct": 9.2,
+      "plPct": 13.3
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "shares": 14,
       "avgCost": 505058.71,
-      "price": 528505.27,
-      "value": 7399074,
+      "price": 512961.39,
+      "value": 7181459,
       "weightPct": 9.2,
-      "plPct": 4.6
+      "plPct": 1.6
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 30,
       "avgCost": 211485.1,
-      "price": 238514.14,
-      "value": 7155424,
-      "weightPct": 8.9,
-      "plPct": 12.8
+      "price": 229154.69,
+      "value": 6874641,
+      "weightPct": 8.8,
+      "plPct": 8.4
     },
     {
       "ticker": "STX",
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1068294.43,
-      "price": 1169517.22,
-      "value": 7017103,
+      "price": 1145442.16,
+      "value": 6872653,
       "weightPct": 8.8,
-      "plPct": 9.5
-    },
-    {
-      "ticker": "LRCX",
-      "name": "Lam Research",
-      "shares": 15,
-      "avgCost": 444459.85,
-      "price": 439783.73,
-      "value": 6596756,
-      "weightPct": 8.2,
-      "plPct": -1.1
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron Technology",
-      "shares": 5,
-      "avgCost": 1146217.86,
-      "price": 1291259.1,
-      "value": 6456296,
-      "weightPct": 8.1,
-      "plPct": 12.7
-    },
-    {
-      "ticker": "WDC",
-      "name": "Western Digital",
-      "shares": 10,
-      "avgCost": 665109.91,
-      "price": 637767.88,
-      "value": 6377679,
-      "weightPct": 8.0,
-      "plPct": -4.1
+      "plPct": 7.2
     },
     {
       "ticker": "ABNB",
       "name": "Airbnb",
       "shares": 25,
       "avgCost": 260792.99,
-      "price": 254554.96,
-      "value": 6363874,
+      "price": 261498.62,
+      "value": 6537466,
+      "weightPct": 8.3,
+      "plPct": 0.3
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "shares": 5,
+      "avgCost": 1146217.86,
+      "price": 1287766.52,
+      "value": 6438833,
+      "weightPct": 8.2,
+      "plPct": 12.3
+    },
+    {
+      "ticker": "WDC",
+      "name": "Western Digital",
+      "shares": 10,
+      "avgCost": 665109.91,
+      "price": 634247.75,
+      "value": 6342477,
+      "weightPct": 8.1,
+      "plPct": -4.6
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research",
+      "shares": 15,
+      "avgCost": 444459.85,
+      "price": 416757.83,
+      "value": 6251367,
       "weightPct": 8.0,
-      "plPct": -2.4
+      "plPct": -6.2
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2014877.02,
-      "price": 2049899.09,
-      "value": 6149697,
-      "weightPct": 7.7,
+      "price": 2049940.54,
+      "value": 6149822,
+      "weightPct": 7.8,
       "plPct": 1.7
     },
     {
@@ -115,30 +115,30 @@
       "name": "Amgen",
       "shares": 10,
       "avgCost": 613259.77,
-      "price": 603242.81,
-      "value": 6032428,
-      "weightPct": 7.5,
-      "plPct": -1.6
-    },
-    {
-      "ticker": "AMAT",
-      "name": "Applied Materials",
-      "shares": 9,
-      "avgCost": 716879.13,
-      "price": 665873.82,
-      "value": 5992864,
-      "weightPct": 7.5,
-      "plPct": -7.1
+      "price": 596934.19,
+      "value": 5969342,
+      "weightPct": 7.6,
+      "plPct": -2.7
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 9,
       "avgCost": 669760.25,
-      "price": 658019.1,
-      "value": 5922172,
+      "price": 642709.87,
+      "value": 5784389,
       "weightPct": 7.4,
-      "plPct": -1.8
+      "plPct": -4.0
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials",
+      "shares": 9,
+      "avgCost": 716879.13,
+      "price": 637312.35,
+      "value": 5735811,
+      "weightPct": 7.3,
+      "plPct": -11.1
     }
   ],
   "equityHistory": [
@@ -434,7 +434,7 @@
     },
     {
       "date": "2026-08-28",
-      "equity": 80025032,
+      "equity": 78383194,
       "cash": 1009168
     }
   ],
