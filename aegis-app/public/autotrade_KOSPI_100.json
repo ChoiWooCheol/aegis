@@ -4,15 +4,15 @@
   "initial": 100000000,
   "asOf": "2026-08-31",
   "startedAt": "2026-06-05",
-  "equity": 76128877,
+  "equity": 76610877,
   "cash": 1130877,
   "cashPct": 1.5,
-  "stockValue": 74998000,
-  "returnPct": -23.87,
+  "stockValue": 75480000,
+  "returnPct": -23.39,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.24,
+    "sharpe": -1.2,
     "mdd": -46.6,
     "trades": 109,
     "buys": 61,
@@ -27,7 +27,7 @@
       "avgCost": 96392.4,
       "price": 127100.0,
       "value": 7753100,
-      "weightPct": 10.2,
+      "weightPct": 10.1,
       "plPct": 31.9
     },
     {
@@ -35,10 +35,10 @@
       "name": "LG전자",
       "shares": 34,
       "avgCost": 158080.2,
-      "price": 201500.0,
-      "value": 6851000,
-      "weightPct": 9.0,
-      "plPct": 27.5
+      "price": 216500.0,
+      "value": 7361000,
+      "weightPct": 9.6,
+      "plPct": 37.0
     },
     {
       "ticker": "011070.KS",
@@ -67,7 +67,7 @@
       "avgCost": 98396.4,
       "price": 112700.0,
       "value": 6311200,
-      "weightPct": 8.3,
+      "weightPct": 8.2,
       "plPct": 14.5
     },
     {
@@ -77,7 +77,7 @@
       "avgCost": 135399.75,
       "price": 150100.0,
       "value": 6304200,
-      "weightPct": 8.3,
+      "weightPct": 8.2,
       "plPct": 10.9
     },
     {
@@ -87,7 +87,7 @@
       "avgCost": 248224.62,
       "price": 260000.0,
       "value": 6240000,
-      "weightPct": 8.2,
+      "weightPct": 8.1,
       "plPct": 4.7
     },
     {
@@ -115,20 +115,10 @@
       "name": "삼성전기",
       "shares": 4,
       "avgCost": 1223442.0,
-      "price": 1421000.0,
-      "value": 5684000,
-      "weightPct": 7.5,
-      "plPct": 16.1
-    },
-    {
-      "ticker": "000810.KS",
-      "name": "삼성화재",
-      "shares": 8,
-      "avgCost": 633264.0,
-      "price": 687000.0,
-      "value": 5496000,
-      "weightPct": 7.2,
-      "plPct": 8.5
+      "price": 1458000.0,
+      "value": 5832000,
+      "weightPct": 7.6,
+      "plPct": 19.2
     },
     {
       "ticker": "034730.KS",
@@ -137,8 +127,18 @@
       "avgCost": 539612.33,
       "price": 545000.0,
       "value": 5450000,
-      "weightPct": 7.2,
+      "weightPct": 7.1,
       "plPct": 1.0
+    },
+    {
+      "ticker": "000810.KS",
+      "name": "삼성화재",
+      "shares": 8,
+      "avgCost": 633264.0,
+      "price": 665000.0,
+      "value": 5320000,
+      "weightPct": 6.9,
+      "plPct": 5.0
     }
   ],
   "equityHistory": [
@@ -439,7 +439,7 @@
     },
     {
       "date": "2026-08-31",
-      "equity": 76128877,
+      "equity": 76610877,
       "cash": 1130877
     }
   ],
