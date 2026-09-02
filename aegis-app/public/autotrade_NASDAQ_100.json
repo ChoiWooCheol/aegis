@@ -2,21 +2,21 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-09-01",
+  "asOf": "2026-09-02",
   "startedAt": "2026-06-05",
-  "equity": 76755871,
-  "cash": 556816,
-  "cashPct": 0.7,
-  "stockValue": 76199055,
-  "returnPct": -23.24,
+  "equity": 74510240,
+  "cash": 83422,
+  "cashPct": 0.1,
+  "stockValue": 74426818,
+  "returnPct": -25.49,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.56,
-    "mdd": -35.4,
-    "trades": 86,
-    "buys": 47,
-    "sells": 39,
+    "sharpe": -1.76,
+    "mdd": -37.0,
+    "trades": 88,
+    "buys": 48,
+    "sells": 40,
     "winRate": 18
   },
   "positions": [
@@ -25,120 +25,120 @@
       "name": "CrowdStrike",
       "shares": 24,
       "avgCost": 266077.99,
-      "price": 294167.78,
-      "value": 7060027,
-      "weightPct": 9.2,
-      "plPct": 10.6
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "shares": 14,
-      "avgCost": 505058.71,
-      "price": 494811.01,
-      "value": 6927354,
-      "weightPct": 9.0,
-      "plPct": -2.0
+      "price": 276585.79,
+      "value": 6638059,
+      "weightPct": 8.9,
+      "plPct": 3.9
     },
     {
       "ticker": "STX",
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1068294.43,
-      "price": 1121210.06,
-      "value": 6727260,
+      "price": 1092442.48,
+      "value": 6554655,
       "weightPct": 8.8,
-      "plPct": 5.0
-    },
-    {
-      "ticker": "FTNT",
-      "name": "Fortinet",
-      "shares": 30,
-      "avgCost": 211485.1,
-      "price": 221020.63,
-      "value": 6630619,
-      "weightPct": 8.6,
-      "plPct": 4.5
+      "plPct": 2.3
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1146217.86,
-      "price": 1279189.8,
-      "value": 6395949,
-      "weightPct": 8.3,
-      "plPct": 11.6
+      "price": 1293030.1,
+      "value": 6465151,
+      "weightPct": 8.7,
+      "plPct": 12.8
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2014877.02,
-      "price": 2114965.16,
-      "value": 6344895,
-      "weightPct": 8.3,
-      "plPct": 5.0
+      "price": 2093416.75,
+      "value": 6280250,
+      "weightPct": 8.4,
+      "plPct": 3.9
+    },
+    {
+      "ticker": "FTNT",
+      "name": "Fortinet",
+      "shares": 30,
+      "avgCost": 211485.1,
+      "price": 209306.61,
+      "value": 6279198,
+      "weightPct": 8.4,
+      "plPct": -1.0
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "shares": 14,
+      "avgCost": 505058.71,
+      "price": 444473.58,
+      "value": 6222630,
+      "weightPct": 8.4,
+      "plPct": -12.0
     },
     {
       "ticker": "ABNB",
       "name": "Airbnb",
       "shares": 25,
       "avgCost": 260792.99,
-      "price": 251147.3,
-      "value": 6278683,
+      "price": 248484.24,
+      "value": 6212106,
+      "weightPct": 8.3,
+      "plPct": -4.7
+    },
+    {
+      "ticker": "CSX",
+      "name": "CSX Corporation",
+      "shares": 93,
+      "avgCost": 68618.29,
+      "price": 65949.85,
+      "value": 6133336,
       "weightPct": 8.2,
-      "plPct": -3.7
+      "plPct": -3.9
     },
     {
       "ticker": "WDC",
       "name": "Western Digital",
       "shares": 10,
       "avgCost": 665109.91,
-      "price": 624476.61,
-      "value": 6244766,
+      "price": 606708.69,
+      "value": 6067087,
       "weightPct": 8.1,
-      "plPct": -6.1
+      "plPct": -8.8
     },
     {
       "ticker": "AMGN",
       "name": "Amgen",
       "shares": 10,
       "avgCost": 613259.77,
-      "price": 599265.78,
-      "value": 5992658,
-      "weightPct": 7.8,
-      "plPct": -2.3
+      "price": 599982.56,
+      "value": 5999826,
+      "weightPct": 8.1,
+      "plPct": -2.2
     },
     {
-      "ticker": "LITE",
-      "name": "Lumentum",
-      "shares": 5,
-      "avgCost": 1234398.94,
-      "price": 1195579.28,
-      "value": 5977896,
-      "weightPct": 7.8,
-      "plPct": -3.1
-    },
-    {
-      "ticker": "LRCX",
-      "name": "Lam Research",
-      "shares": 15,
-      "avgCost": 444459.85,
-      "price": 396816.85,
-      "value": 5952253,
-      "weightPct": 7.8,
-      "plPct": -10.7
+      "ticker": "DXCM",
+      "name": "Dexcom",
+      "shares": 49,
+      "avgCost": 122578.34,
+      "price": 122197.79,
+      "value": 5987692,
+      "weightPct": 8.0,
+      "plPct": -0.3
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 9,
       "avgCost": 669760.25,
-      "price": 629632.76,
-      "value": 5666695,
-      "weightPct": 7.4,
-      "plPct": -6.0
+      "price": 620758.78,
+      "value": 5586829,
+      "weightPct": 7.5,
+      "plPct": -7.3
     }
   ],
   "equityHistory": [
@@ -434,41 +434,68 @@
     },
     {
       "date": "2026-08-28",
-      "equity": 78383194,
+      "equity": 79553180,
       "cash": 1009168
     },
     {
       "date": "2026-08-31",
-      "equity": 79331886,
-      "cash": 556816
+      "equity": 79166893,
+      "cash": 1009168
     },
     {
       "date": "2026-09-01",
-      "equity": 76755871,
-      "cash": 556816
+      "equity": 76324583,
+      "cash": 160246
+    },
+    {
+      "date": "2026-09-02",
+      "equity": 74510240,
+      "cash": 83422
     }
   ],
   "tradeLog": [
     {
-      "date": "2026-08-31",
-      "name": "Lumentum",
-      "ticker": "LITE",
+      "date": "2026-09-02",
+      "name": "Dexcom",
+      "ticker": "DXCM",
       "type": "매수",
-      "price": 1231935.07,
-      "shares": 5,
-      "amount": 6171995,
+      "price": 122333.67,
+      "shares": 49,
+      "amount": 6006338,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
     {
-      "date": "2026-08-31",
+      "date": "2026-09-02",
+      "name": "Lam Research",
+      "ticker": "LRCX",
+      "type": "매도",
+      "price": 396093.13,
+      "shares": 15,
+      "amount": 5929514,
+      "pnl": -737384,
+      "reason": "손절(-10%)"
+    },
+    {
+      "date": "2026-09-01",
+      "name": "CSX Corporation",
+      "ticker": "CSX",
+      "type": "매수",
+      "price": 68481.33,
+      "shares": 93,
+      "amount": 6381501,
+      "pnl": null,
+      "reason": "여유현금 신규매수"
+    },
+    {
+      "date": "2026-09-01",
       "name": "Applied Materials",
       "ticker": "AMAT",
       "type": "매도",
-      "price": 636789.43,
+      "price": 615962.97,
       "shares": 9,
-      "amount": 5719643,
-      "pnl": -732269,
+      "amount": 5532579,
+      "pnl": -919333,
       "reason": "손절(-10%)"
     },
     {
