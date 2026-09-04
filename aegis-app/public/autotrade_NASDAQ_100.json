@@ -2,143 +2,143 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-09-03",
+  "asOf": "2026-09-04",
   "startedAt": "2026-06-05",
-  "equity": 74659479,
-  "cash": 467197,
-  "cashPct": 0.6,
-  "stockValue": 74192282,
-  "returnPct": -25.34,
+  "equity": 75232483,
+  "cash": 723442,
+  "cashPct": 1.0,
+  "stockValue": 74509041,
+  "returnPct": -24.77,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.72,
-    "mdd": -36.9,
+    "sharpe": -1.78,
+    "mdd": -37.1,
     "trades": 90,
     "buys": 49,
     "sells": 41,
-    "winRate": 17
+    "winRate": 15
   },
   "positions": [
     {
-      "ticker": "CRWD",
-      "name": "CrowdStrike",
-      "shares": 24,
-      "avgCost": 266077.99,
-      "price": 289441.84,
-      "value": 6946604,
-      "weightPct": 9.3,
-      "plPct": 8.8
+      "ticker": "SNDK",
+      "name": "Sandisk",
+      "shares": 3,
+      "avgCost": 2014877.02,
+      "price": 2313022.64,
+      "value": 6939068,
+      "weightPct": 9.2,
+      "plPct": 14.8
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1146217.86,
-      "price": 1286143.03,
-      "value": 6430715,
-      "weightPct": 8.6,
-      "plPct": 12.2
+      "price": 1353169.05,
+      "value": 6765845,
+      "weightPct": 9.0,
+      "plPct": 18.1
     },
     {
       "ticker": "STX",
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1068294.43,
-      "price": 1071153.11,
-      "value": 6426919,
-      "weightPct": 8.6,
-      "plPct": 0.3
+      "price": 1125701.15,
+      "value": 6754207,
+      "weightPct": 9.0,
+      "plPct": 5.4
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "shares": 23,
+      "avgCost": 266077.99,
+      "price": 287970.22,
+      "value": 6623315,
+      "weightPct": 8.8,
+      "plPct": 8.2
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 30,
       "avgCost": 211485.1,
-      "price": 211451.04,
-      "value": 6343531,
-      "weightPct": 8.5,
-      "plPct": -0.0
-    },
-    {
-      "ticker": "SNDK",
-      "name": "Sandisk",
-      "shares": 3,
-      "avgCost": 2014877.02,
-      "price": 2088775.71,
-      "value": 6266327,
+      "price": 211646.92,
+      "value": 6349408,
       "weightPct": 8.4,
-      "plPct": 3.7
+      "plPct": 0.1
     },
     {
       "ticker": "ABNB",
       "name": "Airbnb",
       "shares": 25,
       "avgCost": 260792.99,
-      "price": 250297.3,
-      "value": 6257433,
-      "weightPct": 8.4,
-      "plPct": -4.0
+      "price": 246171.57,
+      "value": 6154289,
+      "weightPct": 8.2,
+      "plPct": -5.6
     },
     {
       "ticker": "DXCM",
       "name": "Dexcom",
-      "shares": 51,
+      "shares": 50,
       "avgCost": 123845.78,
-      "price": 121297.92,
-      "value": 6186194,
-      "weightPct": 8.3,
-      "plPct": -2.1
+      "price": 119024.46,
+      "value": 5951223,
+      "weightPct": 7.9,
+      "plPct": -3.9
     },
     {
       "ticker": "VRTX",
       "name": "Vertex Pharmaceuticals",
       "shares": 8,
-      "avgCost": 759458.4,
-      "price": 755339.23,
-      "value": 6042714,
-      "weightPct": 8.1,
-      "plPct": -0.5
-    },
-    {
-      "ticker": "AMGN",
-      "name": "Amgen",
-      "shares": 10,
-      "avgCost": 613259.77,
-      "price": 601371.11,
-      "value": 6013711,
-      "weightPct": 8.1,
-      "plPct": -1.9
-    },
-    {
-      "ticker": "WDC",
-      "name": "Western Digital",
-      "shares": 10,
-      "avgCost": 665109.91,
-      "price": 596130.61,
-      "value": 5961306,
-      "weightPct": 8.0,
-      "plPct": -10.4
+      "avgCost": 760858.7,
+      "price": 736500.88,
+      "value": 5892007,
+      "weightPct": 7.8,
+      "plPct": -3.2
     },
     {
       "ticker": "LITE",
       "name": "Lumentum",
       "shares": 5,
       "avgCost": 1234398.94,
-      "price": 1149523.54,
-      "value": 5747618,
-      "weightPct": 7.7,
-      "plPct": -6.9
+      "price": 1177164.84,
+      "value": 5885824,
+      "weightPct": 7.8,
+      "plPct": -4.6
+    },
+    {
+      "ticker": "AMGN",
+      "name": "Amgen",
+      "shares": 10,
+      "avgCost": 613259.77,
+      "price": 588488.12,
+      "value": 5884881,
+      "weightPct": 7.8,
+      "plPct": -4.0
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 9,
       "avgCost": 669760.25,
-      "price": 618801.09,
-      "value": 5569210,
-      "weightPct": 7.5,
-      "plPct": -7.6
+      "price": 636166.58,
+      "value": 5725499,
+      "weightPct": 7.6,
+      "plPct": -5.0
+    },
+    {
+      "ticker": "WDC",
+      "name": "Western Digital",
+      "shares": 9,
+      "avgCost": 665109.91,
+      "price": 620386.02,
+      "value": 5583474,
+      "weightPct": 7.4,
+      "plPct": -6.7
     }
   ],
   "equityHistory": [
@@ -334,128 +334,133 @@
     },
     {
       "date": "2026-07-31",
-      "equity": 78511745,
+      "equity": 81729304,
       "cash": 217011
     },
     {
       "date": "2026-08-03",
-      "equity": 84232514,
-      "cash": 1076904
+      "equity": 83420779,
+      "cash": 243485
     },
     {
       "date": "2026-08-04",
-      "equity": 88490782,
-      "cash": 1076904
+      "equity": 87082484,
+      "cash": 243485
     },
     {
       "date": "2026-08-05",
-      "equity": 86670624,
-      "cash": 1076904
+      "equity": 85629298,
+      "cash": 243485
     },
     {
       "date": "2026-08-06",
-      "equity": 82942697,
-      "cash": 1076904
+      "equity": 82283888,
+      "cash": 243485
     },
     {
       "date": "2026-08-07",
-      "equity": 83662202,
-      "cash": 823813
+      "equity": 82748966,
+      "cash": 1056774
     },
     {
       "date": "2026-08-10",
-      "equity": 83737353,
-      "cash": 823813
+      "equity": 82784674,
+      "cash": 1056774
     },
     {
       "date": "2026-08-11",
-      "equity": 84169934,
-      "cash": 823813
+      "equity": 83225375,
+      "cash": 1056774
     },
     {
       "date": "2026-08-12",
-      "equity": 85575704,
-      "cash": 823813
+      "equity": 84634374,
+      "cash": 1056774
     },
     {
       "date": "2026-08-13",
-      "equity": 86738940,
-      "cash": 823813
+      "equity": 85764591,
+      "cash": 1056774
     },
     {
       "date": "2026-08-14",
-      "equity": 86370243,
-      "cash": 348997
+      "equity": 85418845,
+      "cash": 581958
     },
     {
       "date": "2026-08-17",
-      "equity": 86960064,
-      "cash": 348997
+      "equity": 86028416,
+      "cash": 581958
     },
     {
       "date": "2026-08-18",
-      "equity": 83711785,
-      "cash": 348997
+      "equity": 82796382,
+      "cash": 581958
     },
     {
       "date": "2026-08-19",
-      "equity": 80281318,
-      "cash": 348997
+      "equity": 79418374,
+      "cash": 581958
     },
     {
       "date": "2026-08-20",
-      "equity": 78674797,
-      "cash": 348997
+      "equity": 77852453,
+      "cash": 581958
     },
     {
       "date": "2026-08-21",
-      "equity": 79141151,
-      "cash": 144917
+      "equity": 78338848,
+      "cash": 832150
     },
     {
       "date": "2026-08-24",
-      "equity": 76352859,
-      "cash": 144917
+      "equity": 75608854,
+      "cash": 832150
     },
     {
       "date": "2026-08-25",
-      "equity": 76810445,
-      "cash": 366808
+      "equity": 76057089,
+      "cash": 799689
     },
     {
       "date": "2026-08-26",
-      "equity": 77569340,
-      "cash": 1009168
+      "equity": 76789165,
+      "cash": 1138096
     },
     {
       "date": "2026-08-27",
-      "equity": 80199042,
-      "cash": 1009168
+      "equity": 79373417,
+      "cash": 1138096
     },
     {
       "date": "2026-08-28",
-      "equity": 78383194,
-      "cash": 1009168
+      "equity": 77576384,
+      "cash": 1138096
     },
     {
       "date": "2026-08-31",
-      "equity": 79331886,
-      "cash": 556816
+      "equity": 78522244,
+      "cash": 685744
     },
     {
       "date": "2026-09-01",
-      "equity": 76469216,
-      "cash": 556816
+      "equity": 75688645,
+      "cash": 685744
     },
     {
       "date": "2026-09-02",
-      "equity": 75667924,
-      "cash": 231506
+      "equity": 74902022,
+      "cash": 484280
     },
     {
       "date": "2026-09-03",
-      "equity": 74659479,
-      "cash": 467197
+      "equity": 74376150,
+      "cash": 723442
+    },
+    {
+      "date": "2026-09-04",
+      "equity": 75232483,
+      "cash": 723442
     }
   ],
   "tradeLog": [
@@ -464,9 +469,9 @@
       "name": "Vertex Pharmaceuticals",
       "ticker": "VRTX",
       "type": "매수",
-      "price": 757942.52,
+      "price": 759340.02,
       "shares": 8,
-      "amount": 6075667,
+      "amount": 6086870,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -475,10 +480,10 @@
       "name": "Palo Alto Networks",
       "ticker": "PANW",
       "type": "매도",
-      "price": 451714.75,
+      "price": 452764.97,
       "shares": 14,
-      "amount": 6311358,
-      "pnl": -759464,
+      "amount": 6326032,
+      "pnl": -744790,
       "reason": "손절(-10%)"
     },
     {
@@ -487,8 +492,8 @@
       "ticker": "DXCM",
       "type": "매수",
       "price": 123598.58,
-      "shares": 51,
-      "amount": 6316135,
+      "shares": 50,
+      "amount": 6192289,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -522,7 +527,7 @@
       "price": 636789.43,
       "shares": 9,
       "amount": 5719643,
-      "pnl": -732269,
+      "pnl": -783563,
       "reason": "손절(-10%)"
     },
     {
@@ -542,9 +547,9 @@
       "ticker": "DDOG",
       "type": "매도",
       "price": 304563.29,
-      "shares": 22,
-      "amount": 6686992,
-      "pnl": -876165,
+      "shares": 21,
+      "amount": 6383037,
+      "pnl": -836339,
       "reason": "손절(-10%)"
     },
     {
@@ -586,9 +591,9 @@
       "ticker": "KLAC",
       "type": "매도",
       "price": 254860.69,
-      "shares": 25,
-      "amount": 6358774,
-      "pnl": -687016,
+      "shares": 24,
+      "amount": 6104423,
+      "pnl": -659535,
       "reason": "손절(-10%)"
     },
     {
@@ -608,8 +613,8 @@
       "ticker": "WDC",
       "type": "매수",
       "price": 663782.35,
-      "shares": 10,
-      "amount": 6651099,
+      "shares": 9,
+      "amount": 5985989,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -630,9 +635,9 @@
       "ticker": "FTNT",
       "type": "매도",
       "price": 211261.0,
-      "shares": 31,
-      "amount": 6535993,
-      "pnl": -847661,
+      "shares": 30,
+      "amount": 6325154,
+      "pnl": -820317,
       "reason": "손절(-10%)"
     },
     {
@@ -685,8 +690,8 @@
       "ticker": "KLAC",
       "type": "매수",
       "price": 281269.05,
-      "shares": 25,
-      "amount": 7045790,
+      "shares": 24,
+      "amount": 6763958,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
@@ -703,13 +708,24 @@
     },
     {
       "date": "2026-08-07",
+      "name": "Applied Materials",
+      "ticker": "AMAT",
+      "type": "매수",
+      "price": 766639.18,
+      "shares": 1,
+      "amount": 768172,
+      "pnl": null,
+      "reason": "Buy신호 진입/추가"
+    },
+    {
+      "date": "2026-08-07",
       "name": "Fortinet",
       "ticker": "FTNT",
       "type": "매도",
       "price": 234707.96,
-      "shares": 5,
-      "amount": 1171193,
-      "pnl": -19719,
+      "shares": 6,
+      "amount": 1405431,
+      "pnl": -23663,
       "reason": "비중 조절"
     },
     {
@@ -729,9 +745,20 @@
       "ticker": "CRWD",
       "type": "매도",
       "price": 304123.3,
+      "shares": 2,
+      "amount": 607030,
+      "pnl": 74874,
+      "reason": "비중 조절"
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Datadog",
+      "ticker": "DDOG",
+      "type": "매도",
+      "price": 333970.27,
       "shares": 1,
-      "amount": 303515,
-      "pnl": 37437,
+      "amount": 333302,
+      "pnl": -10478,
       "reason": "비중 조절"
     },
     {
@@ -747,17 +774,6 @@
     },
     {
       "date": "2026-08-07",
-      "name": "Sandisk",
-      "ticker": "SNDK",
-      "type": "매도",
-      "price": 1862217.52,
-      "shares": 3,
-      "amount": 5575479,
-      "pnl": 569942,
-      "reason": "Buy신호 이탈"
-    },
-    {
-      "date": "2026-08-07",
       "name": "Intel",
       "ticker": "INTC",
       "type": "매도",
@@ -765,6 +781,17 @@
       "shares": 45,
       "amount": 6536380,
       "pnl": 864055,
+      "reason": "Buy신호 이탈"
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Monster Beverage",
+      "ticker": "MNST",
+      "type": "매도",
+      "price": 66698.76,
+      "shares": 94,
+      "amount": 6257144,
+      "pnl": -411858,
       "reason": "Buy신호 이탈"
     },
     {
@@ -780,36 +807,14 @@
     },
     {
       "date": "2026-08-03",
-      "name": "Sandisk",
-      "ticker": "SNDK",
-      "type": "매수",
-      "price": 1665182.18,
-      "shares": 3,
-      "amount": 5005538,
-      "pnl": null,
-      "reason": "여유현금 신규매수"
-    },
-    {
-      "date": "2026-08-03",
       "name": "Applied Materials",
       "ticker": "AMAT",
       "type": "매수",
       "price": 715448.23,
-      "shares": 9,
-      "amount": 6451912,
+      "shares": 8,
+      "amount": 5735033,
       "pnl": null,
       "reason": "여유현금 신규매수"
-    },
-    {
-      "date": "2026-08-03",
-      "name": "Monster Beverage",
-      "ticker": "MNST",
-      "type": "매도",
-      "price": 139765.39,
-      "shares": 47,
-      "amount": 6555835,
-      "pnl": -113167,
-      "reason": "손절(-10%)"
     },
     {
       "date": "2026-08-03",
@@ -882,8 +887,8 @@
       "name": "Monster Beverage",
       "ticker": "MNST",
       "type": "매수",
-      "price": 141610.44,
-      "shares": 47,
+      "price": 70805.22,
+      "shares": 94,
       "amount": 6669002,
       "pnl": null,
       "reason": "여유현금 신규매수"
