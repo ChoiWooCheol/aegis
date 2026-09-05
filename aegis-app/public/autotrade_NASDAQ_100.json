@@ -4,15 +4,15 @@
   "initial": 100000000,
   "asOf": "2026-09-04",
   "startedAt": "2026-06-05",
-  "equity": 75232483,
+  "equity": 76063821,
   "cash": 723442,
   "cashPct": 1.0,
-  "stockValue": 74509041,
-  "returnPct": -24.77,
+  "stockValue": 75340379,
+  "returnPct": -23.94,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.78,
+    "sharpe": -1.7,
     "mdd": -37.1,
     "trades": 90,
     "buys": 49,
@@ -25,120 +25,120 @@
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2014877.02,
-      "price": 2313022.64,
-      "value": 6939068,
-      "weightPct": 9.2,
-      "plPct": 14.8
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron Technology",
-      "shares": 5,
-      "avgCost": 1146217.86,
-      "price": 1353169.05,
-      "value": 6765845,
-      "weightPct": 9.0,
-      "plPct": 18.1
+      "price": 2358413.46,
+      "value": 7075240,
+      "weightPct": 9.3,
+      "plPct": 17.0
     },
     {
       "ticker": "STX",
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1068294.43,
-      "price": 1125701.15,
-      "value": 6754207,
-      "weightPct": 9.0,
-      "plPct": 5.4
+      "price": 1151122.67,
+      "value": 6906736,
+      "weightPct": 9.1,
+      "plPct": 7.8
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "shares": 5,
+      "avgCost": 1146217.86,
+      "price": 1377896.32,
+      "value": 6889482,
+      "weightPct": 9.1,
+      "plPct": 20.2
     },
     {
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "shares": 23,
       "avgCost": 266077.99,
-      "price": 287970.22,
-      "value": 6623315,
-      "weightPct": 8.8,
-      "plPct": 8.2
+      "price": 288837.89,
+      "value": 6643271,
+      "weightPct": 8.7,
+      "plPct": 8.6
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 30,
       "avgCost": 211485.1,
-      "price": 211646.92,
-      "value": 6349408,
+      "price": 211837.03,
+      "value": 6355111,
       "weightPct": 8.4,
-      "plPct": 0.1
+      "plPct": 0.2
     },
     {
       "ticker": "ABNB",
       "name": "Airbnb",
       "shares": 25,
       "avgCost": 260792.99,
-      "price": 246171.57,
-      "value": 6154289,
-      "weightPct": 8.2,
-      "plPct": -5.6
-    },
-    {
-      "ticker": "DXCM",
-      "name": "Dexcom",
-      "shares": 50,
-      "avgCost": 123845.78,
-      "price": 119024.46,
-      "value": 5951223,
-      "weightPct": 7.9,
-      "plPct": -3.9
-    },
-    {
-      "ticker": "VRTX",
-      "name": "Vertex Pharmaceuticals",
-      "shares": 8,
-      "avgCost": 760858.7,
-      "price": 736500.88,
-      "value": 5892007,
-      "weightPct": 7.8,
-      "plPct": -3.2
+      "price": 246603.3,
+      "value": 6165083,
+      "weightPct": 8.1,
+      "plPct": -5.4
     },
     {
       "ticker": "LITE",
       "name": "Lumentum",
       "shares": 5,
       "avgCost": 1234398.94,
-      "price": 1177164.84,
-      "value": 5885824,
+      "price": 1194461.88,
+      "value": 5972309,
+      "weightPct": 7.9,
+      "plPct": -3.2
+    },
+    {
+      "ticker": "DXCM",
+      "name": "Dexcom",
+      "shares": 50,
+      "avgCost": 123845.78,
+      "price": 119140.54,
+      "value": 5957027,
       "weightPct": 7.8,
-      "plPct": -4.6
+      "plPct": -3.8
     },
     {
       "ticker": "AMGN",
       "name": "Amgen",
       "shares": 10,
       "avgCost": 613259.77,
-      "price": 588488.12,
-      "value": 5884881,
+      "price": 592625.94,
+      "value": 5926259,
       "weightPct": 7.8,
-      "plPct": -4.0
+      "plPct": -3.4
+    },
+    {
+      "ticker": "VRTX",
+      "name": "Vertex Pharmaceuticals",
+      "shares": 8,
+      "avgCost": 760858.7,
+      "price": 740216.52,
+      "value": 5921732,
+      "weightPct": 7.8,
+      "plPct": -2.7
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 9,
       "avgCost": 669760.25,
-      "price": 636166.58,
-      "value": 5725499,
-      "weightPct": 7.6,
-      "plPct": -5.0
+      "price": 647303.18,
+      "value": 5825729,
+      "weightPct": 7.7,
+      "plPct": -3.4
     },
     {
       "ticker": "WDC",
       "name": "Western Digital",
       "shares": 9,
       "avgCost": 665109.91,
-      "price": 620386.02,
-      "value": 5583474,
-      "weightPct": 7.4,
-      "plPct": -6.7
+      "price": 633599.96,
+      "value": 5702400,
+      "weightPct": 7.5,
+      "plPct": -4.7
     }
   ],
   "equityHistory": [
@@ -459,7 +459,7 @@
     },
     {
       "date": "2026-09-04",
-      "equity": 75232483,
+      "equity": 76063821,
       "cash": 723442
     }
   ],
