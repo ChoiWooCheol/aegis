@@ -2,22 +2,22 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-09-08",
+  "asOf": "2026-09-09",
   "startedAt": "2026-06-05",
-  "equity": 76213548,
-  "cash": 338602,
+  "equity": 76151487,
+  "cash": 301178,
   "cashPct": 0.4,
-  "stockValue": 75874946,
-  "returnPct": -23.79,
+  "stockValue": 75850309,
+  "returnPct": -23.85,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.67,
+    "sharpe": -1.66,
     "mdd": -37.1,
-    "trades": 97,
-    "buys": 53,
-    "sells": 44,
-    "winRate": 14
+    "trades": 101,
+    "buys": 55,
+    "sells": 46,
+    "winRate": 13
   },
   "positions": [
     {
@@ -25,120 +25,120 @@
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1068294.43,
-      "price": 1234412.94,
-      "value": 7406478,
-      "weightPct": 9.7,
-      "plPct": 15.5
+      "price": 1203812.59,
+      "value": 7222876,
+      "weightPct": 9.5,
+      "plPct": 12.7
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2014877.02,
-      "price": 2380590.25,
-      "value": 7141771,
-      "weightPct": 9.4,
-      "plPct": 18.2
+      "price": 2353191.94,
+      "value": 7059576,
+      "weightPct": 9.3,
+      "plPct": 16.8
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1146217.86,
-      "price": 1354943.89,
-      "value": 6774719,
-      "weightPct": 8.9,
-      "plPct": 18.2
+      "price": 1377765.86,
+      "value": 6888829,
+      "weightPct": 9.0,
+      "plPct": 20.2
     },
     {
       "ticker": "LITE",
       "name": "Lumentum",
       "shares": 5,
       "avgCost": 1234398.94,
-      "price": 1318316.54,
-      "value": 6591583,
-      "weightPct": 8.6,
-      "plPct": 6.8
+      "price": 1344128.15,
+      "value": 6720641,
+      "weightPct": 8.8,
+      "plPct": 8.9
     },
     {
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "shares": 23,
       "avgCost": 266077.99,
-      "price": 280787.36,
-      "value": 6458109,
-      "weightPct": 8.5,
-      "plPct": 5.5
+      "price": 278534.26,
+      "value": 6406288,
+      "weightPct": 8.4,
+      "plPct": 4.7
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "shares": 45,
+      "avgCost": 138012.67,
+      "price": 142271.07,
+      "value": 6402198,
+      "weightPct": 8.4,
+      "plPct": 3.1
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 30,
       "avgCost": 211485.1,
-      "price": 210845.35,
-      "value": 6325361,
+      "price": 209910.77,
+      "value": 6297323,
       "weightPct": 8.3,
-      "plPct": -0.3
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "shares": 14,
-      "avgCost": 440205.74,
-      "price": 451793.23,
-      "value": 6325105,
-      "weightPct": 8.3,
-      "plPct": 2.6
+      "plPct": -0.7
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 9,
       "avgCost": 669760.25,
-      "price": 678558.41,
-      "value": 6107026,
-      "weightPct": 8.0,
-      "plPct": 1.3
+      "price": 696206.71,
+      "value": 6265860,
+      "weightPct": 8.2,
+      "plPct": 3.9
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "shares": 14,
+      "avgCost": 440993.44,
+      "price": 447553.81,
+      "value": 6265753,
+      "weightPct": 8.2,
+      "plPct": 1.5
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research",
       "shares": 14,
-      "avgCost": 421983.1,
-      "price": 429744.39,
-      "value": 6016422,
-      "weightPct": 7.9,
-      "plPct": 1.8
+      "avgCost": 423384.38,
+      "price": 421790.47,
+      "value": 5905067,
+      "weightPct": 7.8,
+      "plPct": -0.4
     },
     {
-      "ticker": "ABNB",
-      "name": "Airbnb",
-      "shares": 25,
-      "avgCost": 260792.99,
-      "price": 233457.48,
-      "value": 5836437,
-      "weightPct": 7.7,
-      "plPct": -10.5
-    },
-    {
-      "ticker": "AMGN",
-      "name": "Amgen",
-      "shares": 11,
-      "avgCost": 607463.54,
-      "price": 529842.63,
-      "value": 5828269,
-      "weightPct": 7.6,
-      "plPct": -12.8
+      "ticker": "REGN",
+      "name": "Regeneron Pharmaceuticals",
+      "shares": 5,
+      "avgCost": 1078803.24,
+      "price": 1080494.02,
+      "value": 5402470,
+      "weightPct": 7.1,
+      "plPct": 0.2
     },
     {
       "ticker": "AMAT",
       "name": "Applied Materials",
       "shares": 8,
-      "avgCost": 624017.86,
-      "price": 632958.51,
-      "value": 5063668,
+      "avgCost": 624690.2,
+      "price": 626678.49,
+      "value": 5013428,
       "weightPct": 6.6,
-      "plPct": 1.4
+      "plPct": 0.3
     }
   ],
   "equityHistory": [
@@ -149,334 +149,383 @@
     },
     {
       "date": "2026-06-08",
-      "equity": 100471157,
-      "cash": 5812854
+      "equity": 100471221,
+      "cash": 5815283
     },
     {
       "date": "2026-06-09",
-      "equity": 97373463,
-      "cash": 5812854
+      "equity": 97373607,
+      "cash": 5815283
     },
     {
       "date": "2026-06-10",
-      "equity": 95338355,
-      "cash": 4253498
+      "equity": 95338625,
+      "cash": 4255928
     },
     {
       "date": "2026-06-11",
-      "equity": 103282877,
-      "cash": 3159448
+      "equity": 103283119,
+      "cash": 3159690
     },
     {
       "date": "2026-06-12",
-      "equity": 105544163,
-      "cash": 3159448
+      "equity": 105544404,
+      "cash": 3159690
     },
     {
       "date": "2026-06-15",
-      "equity": 109646505,
-      "cash": 3159448
+      "equity": 109646746,
+      "cash": 3159690
     },
     {
       "date": "2026-06-16",
-      "equity": 104478781,
-      "cash": 3159448
+      "equity": 104479022,
+      "cash": 3159690
     },
     {
       "date": "2026-06-17",
-      "equity": 105046896,
-      "cash": 3159448
+      "equity": 105047138,
+      "cash": 3159690
     },
     {
       "date": "2026-06-18",
-      "equity": 111103171,
-      "cash": 3159448
+      "equity": 111103413,
+      "cash": 3159690
     },
     {
       "date": "2026-06-22",
-      "equity": 115122858,
-      "cash": 3159448
+      "equity": 115123100,
+      "cash": 3159690
     },
     {
       "date": "2026-06-23",
-      "equity": 107303591,
-      "cash": 3159448
+      "equity": 107303833,
+      "cash": 3159690
     },
     {
       "date": "2026-06-24",
-      "equity": 106479557,
-      "cash": 3159448
+      "equity": 106479799,
+      "cash": 3159690
     },
     {
       "date": "2026-06-25",
-      "equity": 113634859,
-      "cash": 3159448
+      "equity": 113635100,
+      "cash": 3159690
     },
     {
       "date": "2026-06-26",
-      "equity": 108109968,
-      "cash": 3159448
+      "equity": 108110210,
+      "cash": 3159690
     },
     {
       "date": "2026-06-29",
-      "equity": 113193451,
-      "cash": 941473
+      "equity": 113193471,
+      "cash": 944382
     },
     {
       "date": "2026-06-30",
-      "equity": 118274009,
-      "cash": 941473
+      "equity": 118274074,
+      "cash": 944382
     },
     {
       "date": "2026-07-01",
-      "equity": 109977093,
-      "cash": 941473
+      "equity": 109977326,
+      "cash": 944382
     },
     {
       "date": "2026-07-02",
-      "equity": 101667818,
-      "cash": 941473
+      "equity": 101668311,
+      "cash": 944382
     },
     {
       "date": "2026-07-06",
-      "equity": 102086520,
-      "cash": 65951
+      "equity": 102086876,
+      "cash": 68861
     },
     {
       "date": "2026-07-07",
-      "equity": 96350804,
-      "cash": 65951
+      "equity": 96351364,
+      "cash": 68861
     },
     {
       "date": "2026-07-08",
-      "equity": 96827255,
-      "cash": 211801
+      "equity": 96827860,
+      "cash": 212407
     },
     {
       "date": "2026-07-09",
-      "equity": 99644591,
-      "cash": 539849
+      "equity": 99645263,
+      "cash": 542752
     },
     {
       "date": "2026-07-10",
-      "equity": 99365248,
-      "cash": 539849
+      "equity": 99365899,
+      "cash": 542752
     },
     {
       "date": "2026-07-13",
-      "equity": 95012562,
-      "cash": 539849
+      "equity": 95013328,
+      "cash": 542752
     },
     {
       "date": "2026-07-14",
-      "equity": 98510376,
-      "cash": 200091
+      "equity": 98511113,
+      "cash": 202994
     },
     {
       "date": "2026-07-15",
-      "equity": 93957400,
-      "cash": 200091
+      "equity": 93958340,
+      "cash": 202994
     },
     {
       "date": "2026-07-16",
-      "equity": 89761869,
-      "cash": 186483
+      "equity": 89762919,
+      "cash": 187533
     },
     {
       "date": "2026-07-17",
-      "equity": 88860726,
-      "cash": 543328
+      "equity": 88861680,
+      "cash": 546094
     },
     {
       "date": "2026-07-20",
-      "equity": 89138111,
-      "cash": 543328
+      "equity": 89139015,
+      "cash": 546094
     },
     {
       "date": "2026-07-21",
-      "equity": 91777974,
-      "cash": 543328
+      "equity": 91778663,
+      "cash": 546094
     },
     {
       "date": "2026-07-22",
-      "equity": 91227993,
-      "cash": 543328
+      "equity": 91228644,
+      "cash": 546094
     },
     {
       "date": "2026-07-23",
-      "equity": 90371689,
-      "cash": 543328
+      "equity": 90372340,
+      "cash": 546094
     },
     {
       "date": "2026-07-24",
-      "equity": 87444262,
-      "cash": 920484
+      "equity": 87445061,
+      "cash": 923250
     },
     {
       "date": "2026-07-27",
-      "equity": 84578870,
-      "cash": 920484
+      "equity": 84579772,
+      "cash": 923250
     },
     {
       "date": "2026-07-28",
-      "equity": 80782274,
-      "cash": 1866651
+      "equity": 80783297,
+      "cash": 1869417
     },
     {
       "date": "2026-07-29",
-      "equity": 78761397,
-      "cash": 121482
+      "equity": 78762439,
+      "cash": 124248
     },
     {
       "date": "2026-07-30",
-      "equity": 82990406,
-      "cash": 217011
+      "equity": 82991197,
+      "cash": 219777
     },
     {
       "date": "2026-07-31",
-      "equity": 81729304,
-      "cash": 217011
+      "equity": 81730082,
+      "cash": 219777
     },
     {
       "date": "2026-08-03",
-      "equity": 83420779,
-      "cash": 243485
+      "equity": 83421602,
+      "cash": 246251
     },
     {
       "date": "2026-08-04",
-      "equity": 87082484,
-      "cash": 243485
+      "equity": 87083238,
+      "cash": 246251
     },
     {
       "date": "2026-08-05",
-      "equity": 85629298,
-      "cash": 243485
+      "equity": 85630160,
+      "cash": 246251
     },
     {
       "date": "2026-08-06",
-      "equity": 82283888,
-      "cash": 243485
+      "equity": 82285006,
+      "cash": 246251
     },
     {
       "date": "2026-08-07",
-      "equity": 82748966,
-      "cash": 1056774
+      "equity": 82749993,
+      "cash": 1071107
     },
     {
       "date": "2026-08-10",
-      "equity": 82784674,
-      "cash": 1056774
+      "equity": 82785866,
+      "cash": 1071107
     },
     {
       "date": "2026-08-11",
-      "equity": 83225375,
-      "cash": 1056774
+      "equity": 83226627,
+      "cash": 1071107
     },
     {
       "date": "2026-08-12",
-      "equity": 84634374,
-      "cash": 1056774
+      "equity": 84635858,
+      "cash": 1071107
     },
     {
       "date": "2026-08-13",
-      "equity": 85764591,
-      "cash": 1056774
+      "equity": 85766206,
+      "cash": 1071107
     },
     {
       "date": "2026-08-14",
-      "equity": 85418845,
-      "cash": 581958
+      "equity": 85420437,
+      "cash": 596290
     },
     {
       "date": "2026-08-17",
-      "equity": 86028416,
-      "cash": 581958
+      "equity": 86030544,
+      "cash": 596290
     },
     {
       "date": "2026-08-18",
-      "equity": 82796382,
-      "cash": 581958
+      "equity": 82798458,
+      "cash": 596290
     },
     {
       "date": "2026-08-19",
-      "equity": 79418374,
-      "cash": 581958
+      "equity": 79420547,
+      "cash": 596290
     },
     {
       "date": "2026-08-20",
-      "equity": 77852453,
-      "cash": 581958
+      "equity": 77855125,
+      "cash": 596290
     },
     {
       "date": "2026-08-21",
-      "equity": 78338848,
-      "cash": 832150
+      "equity": 78340851,
+      "cash": 835998
     },
     {
       "date": "2026-08-24",
-      "equity": 75608854,
-      "cash": 832150
+      "equity": 75610961,
+      "cash": 835998
     },
     {
       "date": "2026-08-25",
-      "equity": 76057089,
-      "cash": 799689
+      "equity": 76059139,
+      "cash": 803538
     },
     {
       "date": "2026-08-26",
-      "equity": 76789165,
-      "cash": 1138096
+      "equity": 76791142,
+      "cash": 1141944
     },
     {
       "date": "2026-08-27",
-      "equity": 79373417,
-      "cash": 1138096
+      "equity": 79375419,
+      "cash": 1141944
     },
     {
       "date": "2026-08-28",
-      "equity": 77576384,
-      "cash": 1138096
+      "equity": 77578401,
+      "cash": 1141944
     },
     {
       "date": "2026-08-31",
-      "equity": 78522244,
-      "cash": 685744
+      "equity": 78524300,
+      "cash": 689592
     },
     {
       "date": "2026-09-01",
-      "equity": 75688645,
-      "cash": 685744
+      "equity": 75690715,
+      "cash": 689592
     },
     {
       "date": "2026-09-02",
-      "equity": 74902022,
-      "cash": 484280
+      "equity": 74904090,
+      "cash": 488128
     },
     {
       "date": "2026-09-03",
-      "equity": 74376150,
-      "cash": 723442
+      "equity": 74378266,
+      "cash": 727290
     },
     {
       "date": "2026-09-04",
-      "equity": 76063821,
-      "cash": 723442
+      "equity": 76065840,
+      "cash": 727290
     },
     {
       "date": "2026-09-08",
-      "equity": 76213548,
-      "cash": 338602
+      "equity": 76020349,
+      "cash": 357563
+    },
+    {
+      "date": "2026-09-09",
+      "equity": 76151487,
+      "cash": 301178
     }
   ],
   "tradeLog": [
+    {
+      "date": "2026-09-09",
+      "name": "Regeneron Pharmaceuticals",
+      "ticker": "REGN",
+      "type": "매수",
+      "price": 1076649.94,
+      "shares": 5,
+      "amount": 5394016,
+      "pnl": null,
+      "reason": "여유현금 신규매수"
+    },
+    {
+      "date": "2026-09-09",
+      "name": "Intel",
+      "ticker": "INTC",
+      "type": "매수",
+      "price": 137737.2,
+      "shares": 45,
+      "amount": 6210570,
+      "pnl": null,
+      "reason": "여유현금 신규매수"
+    },
+    {
+      "date": "2026-09-09",
+      "name": "Amgen",
+      "ticker": "AMGN",
+      "type": "매도",
+      "price": 525312.71,
+      "shares": 11,
+      "amount": 5766883,
+      "pnl": -916199,
+      "reason": "손절(-10%)"
+    },
+    {
+      "date": "2026-09-09",
+      "name": "Airbnb",
+      "ticker": "ABNB",
+      "type": "매도",
+      "price": 231716.2,
+      "shares": 25,
+      "amount": 5781319,
+      "pnl": -738506,
+      "reason": "손절(-10%)"
+    },
     {
       "date": "2026-09-08",
       "name": "Applied Materials",
       "ticker": "AMAT",
       "type": "매수",
-      "price": 622772.32,
+      "price": 623443.31,
       "shares": 8,
-      "amount": 4992143,
+      "amount": 4997522,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
@@ -485,9 +534,9 @@
       "name": "Lam Research",
       "ticker": "LRCX",
       "type": "매수",
-      "price": 421140.82,
+      "price": 422539.3,
       "shares": 14,
-      "amount": 5907763,
+      "amount": 5927381,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
@@ -496,9 +545,9 @@
       "name": "Amgen",
       "ticker": "AMGN",
       "type": "매수",
-      "price": 548404.42,
+      "price": 549385.74,
       "shares": 1,
-      "amount": 549501,
+      "amount": 550485,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
@@ -507,9 +556,9 @@
       "name": "Palo Alto Networks",
       "ticker": "PANW",
       "type": "매수",
-      "price": 439327.08,
+      "price": 440113.22,
       "shares": 14,
-      "amount": 6162880,
+      "amount": 6173908,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
@@ -518,10 +567,10 @@
       "name": "Vertex Pharmaceuticals",
       "ticker": "VRTX",
       "type": "매도",
-      "price": 708519.98,
+      "price": 711608.41,
       "shares": 8,
-      "amount": 5656824,
-      "pnl": -430046,
+      "amount": 5681482,
+      "pnl": -405388,
       "reason": "Buy신호 이탈"
     },
     {
@@ -529,10 +578,10 @@
       "name": "Dexcom",
       "ticker": "DXCM",
       "type": "매도",
-      "price": 116131.91,
+      "price": 116339.72,
       "shares": 50,
-      "amount": 5794982,
-      "pnl": -397307,
+      "amount": 5805352,
+      "pnl": -386937,
       "reason": "Buy신호 이탈"
     },
     {
@@ -540,10 +589,10 @@
       "name": "Western Digital",
       "ticker": "WDC",
       "type": "매도",
-      "price": 643023.99,
+      "price": 644927.02,
       "shares": 9,
-      "amount": 5775642,
-      "pnl": -210348,
+      "amount": 5792735,
+      "pnl": -191334,
       "reason": "Buy신호 이탈"
     },
     {
@@ -694,9 +743,9 @@
       "name": "Western Digital",
       "ticker": "WDC",
       "type": "매수",
-      "price": 663782.35,
+      "price": 663569.34,
       "shares": 9,
-      "amount": 5985989,
+      "amount": 5984068,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -705,10 +754,10 @@
       "name": "Ross Stores",
       "ticker": "ROST",
       "type": "매도",
-      "price": 339144.16,
+      "price": 338489.95,
       "shares": 19,
-      "amount": 6430852,
-      "pnl": -429567,
+      "amount": 6418447,
+      "pnl": -428738,
       "reason": "손절(-10%)"
     },
     {
@@ -749,9 +798,9 @@
       "name": "Ross Stores",
       "ticker": "ROST",
       "type": "매수",
-      "price": 360353.94,
+      "price": 359658.82,
       "shares": 19,
-      "amount": 6860418,
+      "amount": 6847185,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
@@ -881,10 +930,10 @@
       "name": "Western Digital",
       "ticker": "WDC",
       "type": "매도",
-      "price": 650631.17,
+      "price": 650422.38,
       "shares": 8,
-      "amount": 5194639,
-      "pnl": -153264,
+      "amount": 5192972,
+      "pnl": -153215,
       "reason": "Buy신호 이탈"
     },
     {
@@ -1090,9 +1139,9 @@
       "name": "Western Digital",
       "ticker": "WDC",
       "type": "매수",
-      "price": 667153.6,
+      "price": 666939.51,
       "shares": 8,
-      "amount": 5347903,
+      "amount": 5346187,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -1156,10 +1205,10 @@
       "name": "Western Digital",
       "ticker": "WDC",
       "type": "매도",
-      "price": 723303.78,
+      "price": 723071.66,
       "shares": 8,
-      "amount": 5774857,
-      "pnl": -1385037,
+      "amount": 5773004,
+      "pnl": -1384593,
       "reason": "손절(-10%)"
     },
     {
@@ -1255,9 +1304,9 @@
       "name": "Western Digital",
       "ticker": "WDC",
       "type": "매수",
-      "price": 893200.38,
+      "price": 892913.76,
       "shares": 8,
-      "amount": 7159894,
+      "amount": 7157597,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
@@ -1299,10 +1348,10 @@
       "name": "Western Digital",
       "ticker": "WDC",
       "type": "매도",
-      "price": 799446.35,
+      "price": 799189.83,
       "shares": 9,
-      "amount": 7180627,
-      "pnl": -1134002,
+      "amount": 7178323,
+      "pnl": -1133639,
       "reason": "손절(-10%)"
     },
     {
@@ -1343,9 +1392,9 @@
       "name": "Western Digital",
       "ticker": "WDC",
       "type": "매수",
-      "price": 922003.72,
+      "price": 921707.88,
       "shares": 9,
-      "amount": 8314630,
+      "amount": 8311962,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -1376,10 +1425,10 @@
       "name": "Western Digital",
       "ticker": "WDC",
       "type": "매도",
-      "price": 759124.15,
+      "price": 758880.53,
       "shares": 9,
-      "amount": 6818453,
-      "pnl": -754373,
+      "amount": 6816265,
+      "pnl": -754132,
       "reason": "손절(-10%)"
     },
     {
@@ -1497,9 +1546,9 @@
       "name": "Western Digital",
       "ticker": "WDC",
       "type": "매수",
-      "price": 839745.66,
+      "price": 839476.23,
       "shares": 9,
-      "amount": 7572826,
+      "amount": 7570397,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
