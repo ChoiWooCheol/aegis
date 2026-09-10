@@ -2,17 +2,17 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-09-09",
+  "asOf": "2026-09-10",
   "startedAt": "2026-06-05",
-  "equity": 76151487,
-  "cash": 301178,
+  "equity": 74710240,
+  "cash": 321294,
   "cashPct": 0.4,
-  "stockValue": 75850309,
-  "returnPct": -23.85,
+  "stockValue": 74388946,
+  "returnPct": -25.29,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.66,
+    "sharpe": -1.78,
     "mdd": -37.1,
     "trades": 101,
     "buys": 55,
@@ -25,120 +25,120 @@
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1068294.43,
-      "price": 1203812.59,
-      "value": 7222876,
-      "weightPct": 9.5,
-      "plPct": 12.7
+      "price": 1171238.24,
+      "value": 7027429,
+      "weightPct": 9.4,
+      "plPct": 9.6
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2014877.02,
-      "price": 2353191.94,
-      "value": 7059576,
+      "price": 2304003.47,
+      "value": 6912010,
       "weightPct": 9.3,
-      "plPct": 16.8
+      "plPct": 14.3
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1146217.86,
-      "price": 1377765.86,
-      "value": 6888829,
-      "weightPct": 9.0,
-      "plPct": 20.2
-    },
-    {
-      "ticker": "LITE",
-      "name": "Lumentum",
-      "shares": 5,
-      "avgCost": 1234398.94,
-      "price": 1344128.15,
-      "value": 6720641,
-      "weightPct": 8.8,
-      "plPct": 8.9
+      "price": 1324671.92,
+      "value": 6623360,
+      "weightPct": 8.9,
+      "plPct": 15.6
     },
     {
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "shares": 23,
       "avgCost": 266077.99,
-      "price": 278534.26,
-      "value": 6406288,
-      "weightPct": 8.4,
-      "plPct": 4.7
-    },
-    {
-      "ticker": "INTC",
-      "name": "Intel",
-      "shares": 45,
-      "avgCost": 138012.67,
-      "price": 142271.07,
-      "value": 6402198,
-      "weightPct": 8.4,
-      "plPct": 3.1
+      "price": 280908.48,
+      "value": 6460895,
+      "weightPct": 8.6,
+      "plPct": 5.6
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 30,
       "avgCost": 211485.1,
-      "price": 209910.77,
-      "value": 6297323,
-      "weightPct": 8.3,
-      "plPct": -0.7
-    },
-    {
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "shares": 9,
-      "avgCost": 669760.25,
-      "price": 696206.71,
-      "value": 6265860,
-      "weightPct": 8.2,
-      "plPct": 3.9
+      "price": 214232.81,
+      "value": 6426984,
+      "weightPct": 8.6,
+      "plPct": 1.3
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "shares": 14,
       "avgCost": 440993.44,
-      "price": 447553.81,
-      "value": 6265753,
+      "price": 454168.18,
+      "value": 6358355,
+      "weightPct": 8.5,
+      "plPct": 3.0
+    },
+    {
+      "ticker": "LITE",
+      "name": "Lumentum",
+      "shares": 5,
+      "avgCost": 1234398.94,
+      "price": 1269856.75,
+      "value": 6349284,
+      "weightPct": 8.5,
+      "plPct": 2.9
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "shares": 9,
+      "avgCost": 669760.25,
+      "price": 681905.96,
+      "value": 6137154,
       "weightPct": 8.2,
-      "plPct": 1.5
+      "plPct": 1.8
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "shares": 45,
+      "avgCost": 137811.93,
+      "price": 136249.1,
+      "value": 6131210,
+      "weightPct": 8.2,
+      "plPct": -1.1
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research",
       "shares": 14,
       "avgCost": 423384.38,
-      "price": 421790.47,
-      "value": 5905067,
-      "weightPct": 7.8,
-      "plPct": -0.4
+      "price": 404468.06,
+      "value": 5662553,
+      "weightPct": 7.6,
+      "plPct": -4.5
     },
     {
       "ticker": "REGN",
       "name": "Regeneron Pharmaceuticals",
       "shares": 5,
-      "avgCost": 1078803.24,
-      "price": 1080494.02,
-      "value": 5402470,
-      "weightPct": 7.1,
-      "plPct": 0.2
+      "avgCost": 1078650.16,
+      "price": 1074398.84,
+      "value": 5371994,
+      "weightPct": 7.2,
+      "plPct": -0.4
     },
     {
       "ticker": "AMAT",
       "name": "Applied Materials",
       "shares": 8,
       "avgCost": 624690.2,
-      "price": 626678.49,
-      "value": 5013428,
+      "price": 615964.86,
+      "value": 4927719,
       "weightPct": 6.6,
-      "plPct": 0.3
+      "plPct": -1.4
     }
   ],
   "equityHistory": [
@@ -469,8 +469,13 @@
     },
     {
       "date": "2026-09-09",
-      "equity": 76151487,
-      "cash": 301178
+      "equity": 76067933,
+      "cash": 321294
+    },
+    {
+      "date": "2026-09-10",
+      "equity": 74710240,
+      "cash": 321294
     }
   ],
   "tradeLog": [
@@ -479,9 +484,9 @@
       "name": "Regeneron Pharmaceuticals",
       "ticker": "REGN",
       "type": "매수",
-      "price": 1076649.94,
+      "price": 1076497.17,
       "shares": 5,
-      "amount": 5394016,
+      "amount": 5393251,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -490,9 +495,9 @@
       "name": "Intel",
       "ticker": "INTC",
       "type": "매수",
-      "price": 137737.2,
+      "price": 137536.86,
       "shares": 45,
-      "amount": 6210570,
+      "amount": 6201537,
       "pnl": null,
       "reason": "여유현금 신규매수"
     },
@@ -501,10 +506,10 @@
       "name": "Amgen",
       "ticker": "AMGN",
       "type": "매도",
-      "price": 525312.71,
+      "price": 526403.27,
       "shares": 11,
-      "amount": 5766883,
-      "pnl": -916199,
+      "amount": 5778855,
+      "pnl": -904227,
       "reason": "손절(-10%)"
     },
     {
@@ -512,10 +517,10 @@
       "name": "Airbnb",
       "ticker": "ABNB",
       "type": "매도",
-      "price": 231716.2,
+      "price": 231649.85,
       "shares": 25,
-      "amount": 5781319,
-      "pnl": -738506,
+      "amount": 5779664,
+      "pnl": -740161,
       "reason": "손절(-10%)"
     },
     {

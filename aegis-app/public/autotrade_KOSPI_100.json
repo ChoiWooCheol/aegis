@@ -2,17 +2,17 @@
   "market": "KOSPI_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-09-09",
+  "asOf": "2026-09-10",
   "startedAt": "2026-06-05",
-  "equity": 77528452,
+  "equity": 76670352,
   "cash": 3344552,
-  "cashPct": 4.3,
-  "stockValue": 74183900,
-  "returnPct": -22.47,
+  "cashPct": 4.4,
+  "stockValue": 73325800,
+  "returnPct": -23.33,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.05,
+    "sharpe": -1.1,
     "mdd": -46.6,
     "trades": 125,
     "buys": 68,
@@ -25,120 +25,120 @@
       "name": "삼성E&A",
       "shares": 138,
       "avgCost": 45991.8,
-      "price": 50800.0,
-      "value": 7010400,
-      "weightPct": 9.0,
-      "plPct": 10.5
-    },
-    {
-      "ticker": "010950.KS",
-      "name": "S-Oil",
-      "shares": 41,
-      "avgCost": 135399.75,
-      "price": 165900.0,
-      "value": 6801900,
-      "weightPct": 8.8,
-      "plPct": 22.5
-    },
-    {
-      "ticker": "010120.KS",
-      "name": "LS ELECTRIC",
-      "shares": 31,
-      "avgCost": 201402.0,
-      "price": 211500.0,
-      "value": 6556500,
-      "weightPct": 8.5,
-      "plPct": 5.0
+      "price": 50400.0,
+      "value": 6955200,
+      "weightPct": 9.1,
+      "plPct": 9.6
     },
     {
       "ticker": "005935.KS",
       "name": "삼성전자우",
       "shares": 32,
       "avgCost": 183275.19,
-      "price": 197500.0,
-      "value": 6320000,
-      "weightPct": 8.2,
-      "plPct": 7.8
+      "price": 203000.0,
+      "value": 6496000,
+      "weightPct": 8.5,
+      "plPct": 10.8
     },
     {
-      "ticker": "006400.KS",
-      "name": "삼성SDI",
-      "shares": 11,
-      "avgCost": 555108.0,
-      "price": 574000.0,
-      "value": 6314000,
-      "weightPct": 8.1,
-      "plPct": 3.4
+      "ticker": "010120.KS",
+      "name": "LS ELECTRIC",
+      "shares": 31,
+      "avgCost": 201402.0,
+      "price": 206000.0,
+      "value": 6386000,
+      "weightPct": 8.3,
+      "plPct": 2.3
     },
     {
-      "ticker": "078930.KS",
-      "name": "GS",
-      "shares": 51,
-      "avgCost": 96392.4,
-      "price": 122100.0,
-      "value": 6227100,
-      "weightPct": 8.0,
-      "plPct": 26.7
+      "ticker": "010950.KS",
+      "name": "S-Oil",
+      "shares": 41,
+      "avgCost": 135399.75,
+      "price": 154900.0,
+      "value": 6350900,
+      "weightPct": 8.3,
+      "plPct": 14.4
     },
     {
       "ticker": "086790.KS",
       "name": "하나금융지주",
       "shares": 46,
       "avgCost": 137374.2,
-      "price": 134000.0,
-      "value": 6164000,
+      "price": 135300.0,
+      "value": 6223800,
+      "weightPct": 8.1,
+      "plPct": -1.5
+    },
+    {
+      "ticker": "006400.KS",
+      "name": "삼성SDI",
+      "shares": 11,
+      "avgCost": 555108.0,
+      "price": 561000.0,
+      "value": 6171000,
       "weightPct": 8.0,
-      "plPct": -2.5
+      "plPct": 1.1
     },
     {
       "ticker": "034730.KS",
       "name": "SK",
       "shares": 10,
       "avgCost": 539612.33,
-      "price": 602000.0,
-      "value": 6020000,
+      "price": 612000.0,
+      "value": 6120000,
+      "weightPct": 8.0,
+      "plPct": 13.4
+    },
+    {
+      "ticker": "078930.KS",
+      "name": "GS",
+      "shares": 51,
+      "avgCost": 96392.4,
+      "price": 117900.0,
+      "value": 6012900,
       "weightPct": 7.8,
-      "plPct": 11.6
+      "plPct": 22.3
     },
     {
       "ticker": "278470.KS",
       "name": "에이피알",
       "shares": 16,
       "avgCost": 396792.0,
-      "price": 368500.0,
-      "value": 5896000,
-      "weightPct": 7.6,
-      "plPct": -7.1
+      "price": 361000.0,
+      "value": 5776000,
+      "weightPct": 7.5,
+      "plPct": -9.0
     },
     {
       "ticker": "402340.KS",
       "name": "SK스퀘어",
       "shares": 5,
       "avgCost": 1107210.0,
-      "price": 1138000.0,
-      "value": 5690000,
-      "weightPct": 7.3,
-      "plPct": 2.8
+      "price": 1135000.0,
+      "value": 5675000,
+      "weightPct": 7.4,
+      "plPct": 2.5
     },
     {
       "ticker": "009150.KS",
       "name": "삼성전기",
       "shares": 4,
       "avgCost": 1223442.0,
-      "price": 1404000.0,
-      "value": 5616000,
-      "weightPct": 7.2,
-      "plPct": 14.8
+      "price": 1400000.0,
+      "value": 5600000,
+      "weightPct": 7.3,
+      "plPct": 14.4
     },
     {
       "ticker": "000660.KS",
       "name": "SK하이닉스",
       "shares": 3,
       "avgCost": 1740474.0,
-      "price": 1856000.0,
-      "value": 5568000,
-      "weightPct": 7.2,
-      "plPct": 6.6
+      "price": 1853000.0,
+      "value": 5559000,
+      "weightPct": 7.3,
+      "plPct": 6.5
     }
   ],
   "equityHistory": [
@@ -475,6 +475,11 @@
     {
       "date": "2026-09-09",
       "equity": 77528452,
+      "cash": 3344552
+    },
+    {
+      "date": "2026-09-10",
+      "equity": 76670352,
       "cash": 3344552
     }
   ],
