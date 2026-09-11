@@ -2,18 +2,18 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-09-10",
+  "asOf": "2026-09-11",
   "startedAt": "2026-06-05",
-  "equity": 74710240,
+  "equity": 73415573,
   "cash": 321294,
   "cashPct": 0.4,
-  "stockValue": 74388946,
-  "returnPct": -25.29,
+  "stockValue": 73094279,
+  "returnPct": -26.58,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.78,
-    "mdd": -37.1,
+    "sharpe": -1.88,
+    "mdd": -37.9,
     "trades": 101,
     "buys": 55,
     "sells": 46,
@@ -25,120 +25,120 @@
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1068294.43,
-      "price": 1171238.24,
-      "value": 7027429,
-      "weightPct": 9.4,
-      "plPct": 9.6
+      "price": 1113559.49,
+      "value": 6681357,
+      "weightPct": 9.1,
+      "plPct": 4.2
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2014877.02,
-      "price": 2304003.47,
-      "value": 6912010,
-      "weightPct": 9.3,
-      "plPct": 14.3
+      "price": 2188065.01,
+      "value": 6564195,
+      "weightPct": 8.9,
+      "plPct": 8.6
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1146217.86,
-      "price": 1324671.92,
-      "value": 6623360,
+      "price": 1309652.15,
+      "value": 6548261,
       "weightPct": 8.9,
-      "plPct": 15.6
+      "plPct": 14.3
     },
     {
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "shares": 23,
       "avgCost": 266077.99,
-      "price": 280908.48,
-      "value": 6460895,
+      "price": 275762.53,
+      "value": 6342538,
       "weightPct": 8.6,
-      "plPct": 5.6
+      "plPct": 3.6
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 30,
       "avgCost": 211485.1,
-      "price": 214232.81,
-      "value": 6426984,
-      "weightPct": 8.6,
-      "plPct": 1.3
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "shares": 14,
-      "avgCost": 440993.44,
-      "price": 454168.18,
-      "value": 6358355,
+      "price": 209045.25,
+      "value": 6271358,
       "weightPct": 8.5,
-      "plPct": 3.0
+      "plPct": -1.2
     },
     {
       "ticker": "LITE",
       "name": "Lumentum",
       "shares": 5,
       "avgCost": 1234398.94,
-      "price": 1269856.75,
-      "value": 6349284,
+      "price": 1249938.29,
+      "value": 6249691,
       "weightPct": 8.5,
-      "plPct": 2.9
+      "plPct": 1.3
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 9,
       "avgCost": 669760.25,
-      "price": 681905.96,
-      "value": 6137154,
-      "weightPct": 8.2,
-      "plPct": 1.8
+      "price": 692023.19,
+      "value": 6228209,
+      "weightPct": 8.5,
+      "plPct": 3.3
     },
     {
       "ticker": "INTC",
       "name": "Intel",
       "shares": 45,
       "avgCost": 137811.93,
-      "price": 136249.1,
-      "value": 6131210,
-      "weightPct": 8.2,
-      "plPct": -1.1
+      "price": 138141.01,
+      "value": 6216346,
+      "weightPct": 8.5,
+      "plPct": 0.2
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "shares": 14,
+      "avgCost": 440993.44,
+      "price": 440018.6,
+      "value": 6160260,
+      "weightPct": 8.4,
+      "plPct": -0.2
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research",
       "shares": 14,
       "avgCost": 423384.38,
-      "price": 404468.06,
-      "value": 5662553,
-      "weightPct": 7.6,
-      "plPct": -4.5
+      "price": 403095.88,
+      "value": 5643342,
+      "weightPct": 7.7,
+      "plPct": -4.8
     },
     {
       "ticker": "REGN",
       "name": "Regeneron Pharmaceuticals",
       "shares": 5,
       "avgCost": 1078650.16,
-      "price": 1074398.84,
-      "value": 5371994,
+      "price": 1052991.97,
+      "value": 5264960,
       "weightPct": 7.2,
-      "plPct": -0.4
+      "plPct": -2.4
     },
     {
       "ticker": "AMAT",
       "name": "Applied Materials",
       "shares": 8,
       "avgCost": 624690.2,
-      "price": 615964.86,
-      "value": 4927719,
-      "weightPct": 6.6,
-      "plPct": -1.4
+      "price": 615470.26,
+      "value": 4923762,
+      "weightPct": 6.7,
+      "plPct": -1.5
     }
   ],
   "equityHistory": [
@@ -474,7 +474,12 @@
     },
     {
       "date": "2026-09-10",
-      "equity": 74710240,
+      "equity": 73898993,
+      "cash": 321294
+    },
+    {
+      "date": "2026-09-11",
+      "equity": 73415573,
       "cash": 321294
     }
   ],
