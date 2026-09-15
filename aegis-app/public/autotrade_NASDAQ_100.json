@@ -2,21 +2,21 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-09-14",
+  "asOf": "2026-09-15",
   "startedAt": "2026-06-05",
-  "equity": 73120656,
-  "cash": 321294,
-  "cashPct": 0.4,
-  "stockValue": 72799362,
-  "returnPct": -26.88,
+  "equity": 74035492,
+  "cash": 81067,
+  "cashPct": 0.1,
+  "stockValue": 73954425,
+  "returnPct": -25.96,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.9,
-    "mdd": -38.2,
-    "trades": 101,
-    "buys": 55,
-    "sells": 46,
+    "sharpe": -1.79,
+    "mdd": -38.3,
+    "trades": 103,
+    "buys": 56,
+    "sells": 47,
     "winRate": 13
   },
   "positions": [
@@ -25,120 +25,120 @@
       "name": "CrowdStrike",
       "shares": 23,
       "avgCost": 266077.99,
-      "price": 317063.93,
-      "value": 7292471,
-      "weightPct": 10.0,
-      "plPct": 19.2
+      "price": 330314.8,
+      "value": 7597240,
+      "weightPct": 10.3,
+      "plPct": 24.1
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "shares": 14,
       "avgCost": 440993.44,
-      "price": 503708.41,
-      "value": 7051918,
-      "weightPct": 9.6,
-      "plPct": 14.2
+      "price": 514355.87,
+      "value": 7200982,
+      "weightPct": 9.7,
+      "plPct": 16.6
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 30,
       "avgCost": 211485.1,
-      "price": 229237.56,
-      "value": 6877127,
-      "weightPct": 9.4,
-      "plPct": 8.4
-    },
-    {
-      "ticker": "STX",
-      "name": "Seagate Technology",
-      "shares": 6,
-      "avgCost": 1068294.43,
-      "price": 1085100.02,
-      "value": 6510600,
-      "weightPct": 8.9,
-      "plPct": 1.6
-    },
-    {
-      "ticker": "SNDK",
-      "name": "Sandisk",
-      "shares": 3,
-      "avgCost": 2014877.02,
-      "price": 2090577.12,
-      "value": 6271731,
-      "weightPct": 8.6,
-      "plPct": 3.8
+      "price": 235909.93,
+      "value": 7077298,
+      "weightPct": 9.6,
+      "plPct": 11.5
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1146217.86,
-      "price": 1244696.2,
-      "value": 6223481,
+      "price": 1261188.29,
+      "value": 6305941,
       "weightPct": 8.5,
-      "plPct": 8.6
+      "plPct": 10.0
+    },
+    {
+      "ticker": "STX",
+      "name": "Seagate Technology",
+      "shares": 6,
+      "avgCost": 1068294.43,
+      "price": 1045933.25,
+      "value": 6275600,
+      "weightPct": 8.5,
+      "plPct": -2.1
+    },
+    {
+      "ticker": "SNDK",
+      "name": "Sandisk",
+      "shares": 3,
+      "avgCost": 2014877.02,
+      "price": 2090204.34,
+      "value": 6270613,
+      "weightPct": 8.5,
+      "plPct": 3.7
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 9,
       "avgCost": 669760.25,
-      "price": 664638.09,
-      "value": 5981743,
-      "weightPct": 8.2,
-      "plPct": -0.8
+      "price": 687504.12,
+      "value": 6187537,
+      "weightPct": 8.4,
+      "plPct": 2.6
     },
     {
       "ticker": "INTC",
       "name": "Intel",
       "shares": 45,
       "avgCost": 137811.93,
-      "price": 130917.85,
-      "value": 5891303,
+      "price": 132655.91,
+      "value": 5969516,
       "weightPct": 8.1,
-      "plPct": -5.0
+      "plPct": -3.7
     },
     {
       "ticker": "LITE",
       "name": "Lumentum",
       "shares": 5,
       "avgCost": 1234398.94,
-      "price": 1124810.52,
-      "value": 5624053,
+      "price": 1144559.42,
+      "value": 5722797,
       "weightPct": 7.7,
-      "plPct": -8.9
+      "plPct": -7.3
+    },
+    {
+      "ticker": "ABNB",
+      "name": "Airbnb",
+      "shares": 24,
+      "avgCost": 230647.98,
+      "price": 229056.76,
+      "value": 5497362,
+      "weightPct": 7.4,
+      "plPct": -0.7
     },
     {
       "ticker": "REGN",
       "name": "Regeneron Pharmaceuticals",
       "shares": 5,
       "avgCost": 1078650.16,
-      "price": 1069191.6,
-      "value": 5345958,
-      "weightPct": 7.3,
-      "plPct": -0.9
-    },
-    {
-      "ticker": "LRCX",
-      "name": "Lam Research",
-      "shares": 14,
-      "avgCost": 423384.38,
-      "price": 368399.23,
-      "value": 5157589,
+      "price": 1052997.6,
+      "value": 5264988,
       "weightPct": 7.1,
-      "plPct": -13.0
+      "plPct": -2.4
     },
     {
       "ticker": "AMAT",
       "name": "Applied Materials",
       "shares": 8,
       "avgCost": 624690.2,
-      "price": 571423.6,
-      "value": 4571389,
-      "weightPct": 6.3,
-      "plPct": -8.5
+      "price": 573068.63,
+      "value": 4584549,
+      "weightPct": 6.2,
+      "plPct": -8.3
     }
   ],
   "equityHistory": [
@@ -484,11 +484,38 @@
     },
     {
       "date": "2026-09-14",
-      "equity": 73120656,
+      "equity": 72991489,
       "cash": 321294
+    },
+    {
+      "date": "2026-09-15",
+      "equity": 74035492,
+      "cash": 81067
     }
   ],
   "tradeLog": [
+    {
+      "date": "2026-09-15",
+      "name": "Airbnb",
+      "ticker": "ABNB",
+      "type": "매수",
+      "price": 230187.61,
+      "shares": 24,
+      "amount": 5535552,
+      "pnl": null,
+      "reason": "여유현금 신규매수"
+    },
+    {
+      "date": "2026-09-15",
+      "name": "Lam Research",
+      "ticker": "LRCX",
+      "type": "매도",
+      "price": 378995.51,
+      "shares": 14,
+      "amount": 5295325,
+      "pnl": -632056,
+      "reason": "손절(-10%)"
+    },
     {
       "date": "2026-09-09",
       "name": "Regeneron Pharmaceuticals",
