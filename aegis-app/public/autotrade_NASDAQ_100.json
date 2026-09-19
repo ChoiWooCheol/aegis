@@ -4,15 +4,15 @@
   "initial": 100000000,
   "asOf": "2026-09-18",
   "startedAt": "2026-06-05",
-  "equity": 78881558,
+  "equity": 79153519,
   "cash": 94737,
   "cashPct": 0.1,
-  "stockValue": 78786821,
-  "returnPct": -21.12,
+  "stockValue": 79058782,
+  "returnPct": -20.85,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.3,
+    "sharpe": -1.28,
     "mdd": -38.3,
     "trades": 103,
     "buys": 56,
@@ -25,120 +25,120 @@
       "name": "CrowdStrike",
       "shares": 23,
       "avgCost": 266077.99,
-      "price": 332395.58,
-      "value": 7645098,
-      "weightPct": 9.7,
-      "plPct": 24.9
+      "price": 327845.3,
+      "value": 7540442,
+      "weightPct": 9.5,
+      "plPct": 23.2
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2014877.02,
-      "price": 2414009.04,
-      "value": 7242027,
-      "weightPct": 9.2,
-      "plPct": 19.8
+      "price": 2471869.42,
+      "value": 7415608,
+      "weightPct": 9.4,
+      "plPct": 22.7
     },
     {
       "ticker": "STX",
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1068294.43,
-      "price": 1187794.07,
-      "value": 7126764,
+      "price": 1184726.56,
+      "value": 7108359,
       "weightPct": 9.0,
-      "plPct": 11.2
-    },
-    {
-      "ticker": "PANW",
-      "name": "Palo Alto Networks",
-      "shares": 14,
-      "avgCost": 440993.44,
-      "price": 502684.15,
-      "value": 7037578,
-      "weightPct": 8.9,
-      "plPct": 14.0
+      "plPct": 10.9
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 30,
       "avgCost": 211485.1,
-      "price": 234542.52,
-      "value": 7036276,
+      "price": 234299.38,
+      "value": 7028981,
       "weightPct": 8.9,
-      "plPct": 10.9
+      "plPct": 10.8
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "shares": 14,
+      "avgCost": 440993.44,
+      "price": 501569.51,
+      "value": 7021973,
+      "weightPct": 8.9,
+      "plPct": 13.7
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1146217.86,
-      "price": 1398554.05,
-      "value": 6992770,
+      "price": 1401326.59,
+      "value": 7006633,
       "weightPct": 8.9,
-      "plPct": 22.0
+      "plPct": 22.3
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 9,
       "avgCost": 669760.25,
-      "price": 754691.29,
-      "value": 6792222,
-      "weightPct": 8.6,
-      "plPct": 12.7
+      "price": 772288.51,
+      "value": 6950597,
+      "weightPct": 8.8,
+      "plPct": 15.3
     },
     {
       "ticker": "INTC",
       "name": "Intel",
       "shares": 45,
       "avgCost": 137811.93,
-      "price": 148140.87,
-      "value": 6666339,
+      "price": 149816.96,
+      "value": 6741763,
       "weightPct": 8.5,
-      "plPct": 7.5
+      "plPct": 8.7
     },
     {
       "ticker": "LITE",
       "name": "Lumentum",
       "shares": 5,
       "avgCost": 1234398.94,
-      "price": 1275415.06,
-      "value": 6377075,
+      "price": 1284218.26,
+      "value": 6421091,
       "weightPct": 8.1,
-      "plPct": 3.3
+      "plPct": 4.0
     },
     {
       "ticker": "ABNB",
       "name": "Airbnb",
       "shares": 24,
       "avgCost": 227694.37,
-      "price": 231591.34,
-      "value": 5558192,
+      "price": 229305.48,
+      "value": 5503332,
       "weightPct": 7.0,
-      "plPct": 1.7
+      "plPct": 0.7
     },
     {
       "ticker": "REGN",
       "name": "Regeneron Pharmaceuticals",
       "shares": 5,
       "avgCost": 1078650.16,
-      "price": 1094132.28,
-      "value": 5470661,
-      "weightPct": 6.9,
-      "plPct": 1.4
+      "price": 1082724.11,
+      "value": 5413621,
+      "weightPct": 6.8,
+      "plPct": 0.4
     },
     {
       "ticker": "AMAT",
       "name": "Applied Materials",
       "shares": 8,
       "avgCost": 624690.2,
-      "price": 605227.24,
-      "value": 4841818,
-      "weightPct": 6.1,
-      "plPct": -3.1
+      "price": 613297.68,
+      "value": 4906381,
+      "weightPct": 6.2,
+      "plPct": -1.8
     }
   ],
   "equityHistory": [
@@ -504,7 +504,7 @@
     },
     {
       "date": "2026-09-18",
-      "equity": 78881558,
+      "equity": 79153519,
       "cash": 94737
     }
   ],
