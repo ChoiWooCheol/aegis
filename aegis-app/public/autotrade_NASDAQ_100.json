@@ -4,15 +4,15 @@
   "initial": 100000000,
   "asOf": "2026-09-25",
   "startedAt": "2026-06-05",
-  "equity": 81593669,
+  "equity": 82295524,
   "cash": 270510,
   "cashPct": 0.3,
-  "stockValue": 81323159,
-  "returnPct": -18.41,
+  "stockValue": 82025014,
+  "returnPct": -17.7,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.02,
+    "sharpe": -0.96,
     "mdd": -38.3,
     "trades": 105,
     "buys": 57,
@@ -25,120 +25,120 @@
       "name": "CrowdStrike",
       "shares": 23,
       "avgCost": 266077.99,
-      "price": 341802.57,
-      "value": 7861459,
+      "price": 344752.48,
+      "value": 7929307,
       "weightPct": 9.6,
-      "plPct": 28.5
+      "plPct": 29.6
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 9,
       "avgCost": 669760.25,
-      "price": 854919.89,
-      "value": 7694279,
+      "price": 862298.23,
+      "value": 7760684,
       "weightPct": 9.4,
-      "plPct": 27.6
+      "plPct": 28.7
     },
     {
       "ticker": "INTC",
       "name": "Intel",
       "shares": 45,
       "avgCost": 137811.93,
-      "price": 166746.18,
-      "value": 7503578,
+      "price": 168185.28,
+      "value": 7568338,
       "weightPct": 9.2,
-      "plPct": 21.0
+      "plPct": 22.0
     },
     {
       "ticker": "STX",
       "name": "Seagate Technology",
       "shares": 6,
       "avgCost": 1067438.8,
-      "price": 1242909.81,
-      "value": 7457459,
+      "price": 1253636.68,
+      "value": 7521820,
       "weightPct": 9.1,
-      "plPct": 16.4
+      "plPct": 17.4
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1146217.86,
-      "price": 1467203.78,
-      "value": 7336019,
+      "price": 1479866.41,
+      "value": 7399332,
       "weightPct": 9.0,
-      "plPct": 28.0
+      "plPct": 29.1
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2014877.02,
-      "price": 2410092.47,
-      "value": 7230277,
+      "price": 2430892.65,
+      "value": 7292678,
       "weightPct": 8.9,
-      "plPct": 19.6
+      "plPct": 20.6
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "shares": 14,
       "avgCost": 440993.44,
-      "price": 508020.03,
-      "value": 7112280,
+      "price": 512404.47,
+      "value": 7173663,
       "weightPct": 8.7,
-      "plPct": 15.2
+      "plPct": 16.2
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 30,
       "avgCost": 211485.1,
-      "price": 235152.8,
-      "value": 7054584,
+      "price": 237182.27,
+      "value": 7115468,
       "weightPct": 8.6,
-      "plPct": 11.2
+      "plPct": 12.2
     },
     {
       "ticker": "LITE",
       "name": "Lumentum",
       "shares": 5,
       "avgCost": 1234398.94,
-      "price": 1276557.3,
-      "value": 6382787,
+      "price": 1287574.56,
+      "value": 6437873,
       "weightPct": 7.8,
-      "plPct": 3.4
+      "plPct": 4.3
     },
     {
       "ticker": "REGN",
       "name": "Regeneron Pharmaceuticals",
       "shares": 5,
       "avgCost": 1078650.16,
-      "price": 1068314.3,
-      "value": 5341572,
+      "price": 1077534.33,
+      "value": 5387672,
       "weightPct": 6.5,
-      "plPct": -1.0
+      "plPct": -0.1
     },
     {
       "ticker": "AMAT",
       "name": "Applied Materials",
       "shares": 8,
       "avgCost": 624690.2,
-      "price": 657495.12,
-      "value": 5259961,
+      "price": 663169.59,
+      "value": 5305357,
       "weightPct": 6.4,
-      "plPct": 5.3
+      "plPct": 6.2
     },
     {
       "ticker": "DDOG",
       "name": "Datadog",
       "shares": 14,
       "avgCost": 340760.17,
-      "price": 363493.13,
-      "value": 5088904,
+      "price": 366630.24,
+      "value": 5132823,
       "weightPct": 6.2,
-      "plPct": 6.7
+      "plPct": 7.6
     }
   ],
   "equityHistory": [
@@ -529,7 +529,7 @@
     },
     {
       "date": "2026-09-25",
-      "equity": 81593669,
+      "equity": 82295524,
       "cash": 270510
     }
   ],
