@@ -2,17 +2,17 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-10-07",
+  "asOf": "2026-10-08",
   "startedAt": "2026-06-05",
-  "equity": 81783301,
-  "cash": 155533,
+  "equity": 79905304,
+  "cash": 137797,
   "cashPct": 0.2,
-  "stockValue": 81627768,
-  "returnPct": -18.22,
+  "stockValue": 79767507,
+  "returnPct": -20.09,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -0.95,
+    "sharpe": -1.07,
     "mdd": -38.3,
     "trades": 116,
     "buys": 61,
@@ -25,120 +25,120 @@
       "name": "Lumentum",
       "shares": 5,
       "avgCost": 1234398.94,
-      "price": 1487978.18,
-      "value": 7439891,
-      "weightPct": 9.1,
-      "plPct": 20.5
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron Technology",
-      "shares": 5,
-      "avgCost": 1146217.86,
-      "price": 1457082.22,
-      "value": 7285411,
-      "weightPct": 8.9,
-      "plPct": 27.1
+      "price": 1407808.44,
+      "value": 7039042,
+      "weightPct": 8.8,
+      "plPct": 14.0
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "shares": 13,
       "avgCost": 440993.44,
-      "price": 543151.51,
-      "value": 7060970,
-      "weightPct": 8.6,
-      "plPct": 23.2
+      "price": 535010.18,
+      "value": 6955132,
+      "weightPct": 8.7,
+      "plPct": 21.3
     },
     {
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "shares": 8,
-      "avgCost": 669760.25,
-      "price": 864955.06,
-      "value": 6919640,
-      "weightPct": 8.5,
-      "plPct": 29.1
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "shares": 5,
+      "avgCost": 1146217.86,
+      "price": 1390677.37,
+      "value": 6953387,
+      "weightPct": 8.7,
+      "plPct": 21.3
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 27,
       "avgCost": 211485.1,
-      "price": 253489.45,
-      "value": 6844215,
-      "weightPct": 8.4,
-      "plPct": 19.9
+      "price": 253878.12,
+      "value": 6854709,
+      "weightPct": 8.6,
+      "plPct": 20.0
     },
     {
-      "ticker": "INTC",
-      "name": "Intel",
-      "shares": 45,
-      "avgCost": 137811.93,
-      "price": 151493.7,
-      "value": 6817216,
-      "weightPct": 8.3,
-      "plPct": 9.9
-    },
-    {
-      "ticker": "SNDK",
-      "name": "Sandisk",
-      "shares": 3,
-      "avgCost": 2014877.02,
-      "price": 2266539.66,
-      "value": 6799619,
-      "weightPct": 8.3,
-      "plPct": 12.5
-    },
-    {
-      "ticker": "CSCO",
-      "name": "Cisco",
-      "shares": 43,
-      "avgCost": 156667.81,
-      "price": 157212.21,
-      "value": 6760125,
-      "weightPct": 8.3,
-      "plPct": 0.3
+      "ticker": "ABNB",
+      "name": "Airbnb",
+      "shares": 31,
+      "avgCost": 213726.61,
+      "price": 219146.07,
+      "value": 6793528,
+      "weightPct": 8.5,
+      "plPct": 2.5
     },
     {
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "shares": 19,
       "avgCost": 266077.99,
-      "price": 355485.21,
-      "value": 6754219,
-      "weightPct": 8.3,
-      "plPct": 33.6
+      "price": 353106.73,
+      "value": 6709028,
+      "weightPct": 8.4,
+      "plPct": 32.7
     },
     {
-      "ticker": "ABNB",
-      "name": "Airbnb",
-      "shares": 31,
-      "avgCost": 213645.25,
-      "price": 215120.52,
-      "value": 6668736,
-      "weightPct": 8.2,
-      "plPct": 0.7
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "shares": 8,
+      "avgCost": 669760.25,
+      "price": 833300.17,
+      "value": 6666401,
+      "weightPct": 8.3,
+      "plPct": 24.4
+    },
+    {
+      "ticker": "CSCO",
+      "name": "Cisco",
+      "shares": 43,
+      "avgCost": 157157.05,
+      "price": 154246.72,
+      "value": 6632609,
+      "weightPct": 8.3,
+      "plPct": -1.9
     },
     {
       "ticker": "DDOG",
       "name": "Datadog",
       "shares": 18,
-      "avgCost": 348144.55,
-      "price": 363386.66,
-      "value": 6540960,
-      "weightPct": 8.0,
-      "plPct": 4.4
+      "avgCost": 348176.2,
+      "price": 367592.93,
+      "value": 6616673,
+      "weightPct": 8.3,
+      "plPct": 5.6
+    },
+    {
+      "ticker": "SNDK",
+      "name": "Sandisk",
+      "shares": 3,
+      "avgCost": 2014877.02,
+      "price": 2160796.66,
+      "value": 6482390,
+      "weightPct": 8.1,
+      "plPct": 7.2
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "shares": 45,
+      "avgCost": 137811.93,
+      "price": 143761.33,
+      "value": 6469260,
+      "weightPct": 8.1,
+      "plPct": 4.3
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research",
       "shares": 13,
-      "avgCost": 432168.31,
-      "price": 441289.68,
-      "value": 5736766,
+      "avgCost": 432339.61,
+      "price": 430411.32,
+      "value": 5595347,
       "weightPct": 7.0,
-      "plPct": 2.1
+      "plPct": -0.4
     }
   ],
   "equityHistory": [
@@ -159,7 +159,7 @@
     },
     {
       "date": "2026-06-10",
-      "equity": 95341990,
+      "equity": 95341991,
       "cash": 4313521
     },
     {
@@ -174,7 +174,7 @@
     },
     {
       "date": "2026-06-15",
-      "equity": 109645965,
+      "equity": 109645964,
       "cash": 3217284
     },
     {
@@ -194,7 +194,7 @@
     },
     {
       "date": "2026-06-22",
-      "equity": 115120808,
+      "equity": 115120807,
       "cash": 3217284
     },
     {
@@ -569,8 +569,13 @@
     },
     {
       "date": "2026-10-07",
-      "equity": 81783301,
-      "cash": 155533
+      "equity": 81796651,
+      "cash": 137797
+    },
+    {
+      "date": "2026-10-08",
+      "equity": 79905304,
+      "cash": 137797
     }
   ],
   "tradeLog": [
@@ -579,9 +584,9 @@
       "name": "Lam Research",
       "ticker": "LRCX",
       "type": "매수",
-      "price": 431305.7,
+      "price": 431476.66,
       "shares": 13,
-      "amount": 5618188,
+      "amount": 5620415,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
@@ -590,9 +595,9 @@
       "name": "Airbnb",
       "ticker": "ABNB",
       "type": "매수",
-      "price": 213218.81,
+      "price": 213300.01,
       "shares": 31,
-      "amount": 6623003,
+      "amount": 6625525,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
@@ -601,9 +606,9 @@
       "name": "Cisco",
       "ticker": "CSCO",
       "type": "매수",
-      "price": 156355.1,
+      "price": 156843.36,
       "shares": 43,
-      "amount": 6736716,
+      "amount": 6757753,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
@@ -612,9 +617,9 @@
       "name": "Datadog",
       "ticker": "DDOG",
       "type": "매수",
-      "price": 373243.41,
+      "price": 373385.55,
       "shares": 4,
-      "amount": 1495960,
+      "amount": 1496529,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
@@ -623,10 +628,10 @@
       "name": "Fortinet",
       "ticker": "FTNT",
       "type": "매도",
-      "price": 255859.89,
+      "price": 256252.07,
       "shares": 3,
-      "amount": 766045,
-      "pnl": 131589,
+      "amount": 767219,
+      "pnl": 132763,
       "reason": "비중 조절"
     },
     {
@@ -634,10 +639,10 @@
       "name": "Palo Alto Networks",
       "ticker": "PANW",
       "type": "매도",
-      "price": 553651.07,
+      "price": 553861.91,
       "shares": 1,
-      "amount": 552544,
-      "pnl": 111550,
+      "amount": 552754,
+      "pnl": 111761,
       "reason": "비중 조절"
     },
     {
@@ -645,10 +650,10 @@
       "name": "CrowdStrike",
       "ticker": "CRWD",
       "type": "매도",
-      "price": 370832.77,
+      "price": 370840.01,
       "shares": 4,
-      "amount": 1480364,
-      "pnl": 416052,
+      "amount": 1480393,
+      "pnl": 416081,
       "reason": "비중 조절"
     },
     {
@@ -656,10 +661,10 @@
       "name": "Advanced Micro Devices",
       "ticker": "AMD",
       "type": "매도",
-      "price": 849596.82,
+      "price": 850426.78,
       "shares": 1,
-      "amount": 847898,
-      "pnl": 178137,
+      "amount": 848726,
+      "pnl": 178966,
       "reason": "비중 조절"
     },
     {
@@ -667,10 +672,10 @@
       "name": "Regeneron Pharmaceuticals",
       "ticker": "REGN",
       "type": "매도",
-      "price": 988418.67,
+      "price": 988795.08,
       "shares": 5,
-      "amount": 4932209,
-      "pnl": -461042,
+      "amount": 4934087,
+      "pnl": -459163,
       "reason": "Buy신호 이탈"
     },
     {
@@ -678,10 +683,10 @@
       "name": "Applied Materials",
       "ticker": "AMAT",
       "type": "매도",
-      "price": 692261.33,
+      "price": 692524.96,
       "shares": 8,
-      "amount": 5527014,
-      "pnl": 529493,
+      "amount": 5529119,
+      "pnl": 531598,
       "reason": "Buy신호 이탈"
     },
     {
@@ -689,10 +694,10 @@
       "name": "Seagate Technology",
       "ticker": "STX",
       "type": "매도",
-      "price": 1050291.11,
+      "price": 1050691.09,
       "shares": 6,
-      "amount": 6289143,
-      "pnl": -115490,
+      "amount": 6291538,
+      "pnl": -113095,
       "reason": "Buy신호 이탈"
     },
     {
