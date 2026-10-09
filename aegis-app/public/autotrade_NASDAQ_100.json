@@ -2,17 +2,17 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-10-08",
+  "asOf": "2026-10-09",
   "startedAt": "2026-06-05",
-  "equity": 79905304,
+  "equity": 81353462,
   "cash": 137797,
   "cashPct": 0.2,
-  "stockValue": 79767507,
-  "returnPct": -20.09,
+  "stockValue": 81215665,
+  "returnPct": -18.65,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.07,
+    "sharpe": -0.96,
     "mdd": -38.3,
     "trades": 116,
     "buys": 61,
@@ -25,120 +25,120 @@
       "name": "Lumentum",
       "shares": 5,
       "avgCost": 1234398.94,
-      "price": 1407808.44,
-      "value": 7039042,
-      "weightPct": 8.8,
-      "plPct": 14.0
+      "price": 1479488.72,
+      "value": 7397444,
+      "weightPct": 9.1,
+      "plPct": 19.9
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "shares": 13,
       "avgCost": 440993.44,
-      "price": 535010.18,
-      "value": 6955132,
-      "weightPct": 8.7,
-      "plPct": 21.3
-    },
-    {
-      "ticker": "MU",
-      "name": "Micron Technology",
-      "shares": 5,
-      "avgCost": 1146217.86,
-      "price": 1390677.37,
-      "value": 6953387,
-      "weightPct": 8.7,
-      "plPct": 21.3
-    },
-    {
-      "ticker": "FTNT",
-      "name": "Fortinet",
-      "shares": 27,
-      "avgCost": 211485.1,
-      "price": 253878.12,
-      "value": 6854709,
-      "weightPct": 8.6,
-      "plPct": 20.0
-    },
-    {
-      "ticker": "ABNB",
-      "name": "Airbnb",
-      "shares": 31,
-      "avgCost": 213726.61,
-      "price": 219146.07,
-      "value": 6793528,
-      "weightPct": 8.5,
-      "plPct": 2.5
-    },
-    {
-      "ticker": "CRWD",
-      "name": "CrowdStrike",
-      "shares": 19,
-      "avgCost": 266077.99,
-      "price": 353106.73,
-      "value": 6709028,
-      "weightPct": 8.4,
-      "plPct": 32.7
-    },
-    {
-      "ticker": "AMD",
-      "name": "Advanced Micro Devices",
-      "shares": 8,
-      "avgCost": 669760.25,
-      "price": 833300.17,
-      "value": 6666401,
-      "weightPct": 8.3,
-      "plPct": 24.4
-    },
-    {
-      "ticker": "CSCO",
-      "name": "Cisco",
-      "shares": 43,
-      "avgCost": 157157.05,
-      "price": 154246.72,
-      "value": 6632609,
-      "weightPct": 8.3,
-      "plPct": -1.9
+      "price": 561542.11,
+      "value": 7300047,
+      "weightPct": 9.0,
+      "plPct": 27.3
     },
     {
       "ticker": "DDOG",
       "name": "Datadog",
       "shares": 18,
       "avgCost": 348176.2,
-      "price": 367592.93,
-      "value": 6616673,
-      "weightPct": 8.3,
-      "plPct": 5.6
+      "price": 393232.35,
+      "value": 7078182,
+      "weightPct": 8.7,
+      "plPct": 12.9
+    },
+    {
+      "ticker": "FTNT",
+      "name": "Fortinet",
+      "shares": 27,
+      "avgCost": 211485.1,
+      "price": 261140.28,
+      "value": 7050788,
+      "weightPct": 8.7,
+      "plPct": 23.5
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "shares": 19,
+      "avgCost": 266077.99,
+      "price": 368801.15,
+      "value": 7007222,
+      "weightPct": 8.6,
+      "plPct": 38.6
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "shares": 5,
+      "avgCost": 1146217.86,
+      "price": 1379786.13,
+      "value": 6898931,
+      "weightPct": 8.5,
+      "plPct": 20.4
+    },
+    {
+      "ticker": "ABNB",
+      "name": "Airbnb",
+      "shares": 31,
+      "avgCost": 213726.61,
+      "price": 222415.08,
+      "value": 6894867,
+      "weightPct": 8.5,
+      "plPct": 4.1
+    },
+    {
+      "ticker": "CSCO",
+      "name": "Cisco",
+      "shares": 43,
+      "avgCost": 157157.05,
+      "price": 158749.15,
+      "value": 6826214,
+      "weightPct": 8.4,
+      "plPct": 1.0
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "shares": 8,
+      "avgCost": 669760.25,
+      "price": 815401.27,
+      "value": 6523210,
+      "weightPct": 8.0,
+      "plPct": 21.7
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2014877.02,
-      "price": 2160796.66,
-      "value": 6482390,
-      "weightPct": 8.1,
-      "plPct": 7.2
+      "price": 2121062.4,
+      "value": 6363187,
+      "weightPct": 7.8,
+      "plPct": 5.3
     },
     {
       "ticker": "INTC",
       "name": "Intel",
       "shares": 45,
       "avgCost": 137811.93,
-      "price": 143761.33,
-      "value": 6469260,
-      "weightPct": 8.1,
-      "plPct": 4.3
+      "price": 140392.23,
+      "value": 6317650,
+      "weightPct": 7.8,
+      "plPct": 1.9
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research",
       "shares": 13,
       "avgCost": 432339.61,
-      "price": 430411.32,
-      "value": 5595347,
-      "weightPct": 7.0,
-      "plPct": -0.4
+      "price": 427532.56,
+      "value": 5557923,
+      "weightPct": 6.8,
+      "plPct": -1.1
     }
   ],
   "equityHistory": [
@@ -159,7 +159,7 @@
     },
     {
       "date": "2026-06-10",
-      "equity": 95341991,
+      "equity": 95341990,
       "cash": 4313521
     },
     {
@@ -174,7 +174,7 @@
     },
     {
       "date": "2026-06-15",
-      "equity": 109645964,
+      "equity": 109645965,
       "cash": 3217284
     },
     {
@@ -189,12 +189,12 @@
     },
     {
       "date": "2026-06-18",
-      "equity": 111102386,
+      "equity": 111102385,
       "cash": 3217284
     },
     {
       "date": "2026-06-22",
-      "equity": 115120807,
+      "equity": 115120808,
       "cash": 3217284
     },
     {
@@ -209,12 +209,12 @@
     },
     {
       "date": "2026-06-25",
-      "equity": 113634398,
+      "equity": 113634399,
       "cash": 3217284
     },
     {
       "date": "2026-06-26",
-      "equity": 108113081,
+      "equity": 108113082,
       "cash": 3217284
     },
     {
@@ -224,7 +224,7 @@
     },
     {
       "date": "2026-06-30",
-      "equity": 118274224,
+      "equity": 118274223,
       "cash": 992983
     },
     {
@@ -574,7 +574,12 @@
     },
     {
       "date": "2026-10-08",
-      "equity": 79905304,
+      "equity": 79698535,
+      "cash": 137797
+    },
+    {
+      "date": "2026-10-09",
+      "equity": 81353462,
       "cash": 137797
     }
   ],
