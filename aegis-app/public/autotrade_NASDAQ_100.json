@@ -4,15 +4,15 @@
   "initial": 100000000,
   "asOf": "2026-10-09",
   "startedAt": "2026-06-05",
-  "equity": 81353462,
+  "equity": 81480047,
   "cash": 137797,
   "cashPct": 0.2,
-  "stockValue": 81215665,
-  "returnPct": -18.65,
+  "stockValue": 81342250,
+  "returnPct": -18.52,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -0.96,
+    "sharpe": -0.95,
     "mdd": -38.3,
     "trades": 116,
     "buys": 61,
@@ -25,120 +25,120 @@
       "name": "Lumentum",
       "shares": 5,
       "avgCost": 1234398.94,
-      "price": 1479488.72,
-      "value": 7397444,
+      "price": 1481794.69,
+      "value": 7408973,
       "weightPct": 9.1,
-      "plPct": 19.9
+      "plPct": 20.0
     },
     {
       "ticker": "PANW",
       "name": "Palo Alto Networks",
       "shares": 13,
       "avgCost": 440993.44,
-      "price": 561542.11,
-      "value": 7300047,
+      "price": 562417.35,
+      "value": 7311426,
       "weightPct": 9.0,
-      "plPct": 27.3
+      "plPct": 27.5
     },
     {
       "ticker": "DDOG",
       "name": "Datadog",
       "shares": 18,
       "avgCost": 348176.2,
-      "price": 393232.35,
-      "value": 7078182,
+      "price": 393845.26,
+      "value": 7089215,
       "weightPct": 8.7,
-      "plPct": 12.9
+      "plPct": 13.1
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 27,
       "avgCost": 211485.1,
-      "price": 261140.28,
-      "value": 7050788,
+      "price": 261547.3,
+      "value": 7061777,
       "weightPct": 8.7,
-      "plPct": 23.5
+      "plPct": 23.7
     },
     {
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "shares": 19,
       "avgCost": 266077.99,
-      "price": 368801.15,
-      "value": 7007222,
+      "price": 369375.98,
+      "value": 7018144,
       "weightPct": 8.6,
-      "plPct": 38.6
+      "plPct": 38.8
     },
     {
       "ticker": "MU",
       "name": "Micron Technology",
       "shares": 5,
       "avgCost": 1146217.86,
-      "price": 1379786.13,
-      "value": 6898931,
+      "price": 1381936.7,
+      "value": 6909683,
       "weightPct": 8.5,
-      "plPct": 20.4
+      "plPct": 20.6
     },
     {
       "ticker": "ABNB",
       "name": "Airbnb",
       "shares": 31,
       "avgCost": 213726.61,
-      "price": 222415.08,
-      "value": 6894867,
+      "price": 222761.74,
+      "value": 6905614,
       "weightPct": 8.5,
-      "plPct": 4.1
+      "plPct": 4.2
     },
     {
       "ticker": "CSCO",
       "name": "Cisco",
       "shares": 43,
       "avgCost": 157157.05,
-      "price": 158749.15,
-      "value": 6826214,
+      "price": 158996.58,
+      "value": 6836853,
       "weightPct": 8.4,
-      "plPct": 1.0
+      "plPct": 1.2
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 8,
       "avgCost": 669760.25,
-      "price": 815401.27,
-      "value": 6523210,
+      "price": 816672.18,
+      "value": 6533377,
       "weightPct": 8.0,
-      "plPct": 21.7
+      "plPct": 21.9
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2014877.02,
-      "price": 2121062.4,
-      "value": 6363187,
+      "price": 2124368.35,
+      "value": 6373105,
       "weightPct": 7.8,
-      "plPct": 5.3
+      "plPct": 5.4
     },
     {
       "ticker": "INTC",
       "name": "Intel",
       "shares": 45,
       "avgCost": 137811.93,
-      "price": 140392.23,
-      "value": 6317650,
+      "price": 140611.05,
+      "value": 6327497,
       "weightPct": 7.8,
-      "plPct": 1.9
+      "plPct": 2.0
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research",
       "shares": 13,
       "avgCost": 432339.61,
-      "price": 427532.56,
-      "value": 5557923,
+      "price": 428198.92,
+      "value": 5566586,
       "weightPct": 6.8,
-      "plPct": -1.1
+      "plPct": -1.0
     }
   ],
   "equityHistory": [
@@ -154,7 +154,7 @@
     },
     {
       "date": "2026-06-09",
-      "equity": 97375712,
+      "equity": 97375711,
       "cash": 5872877
     },
     {
@@ -164,58 +164,58 @@
     },
     {
       "date": "2026-06-11",
-      "equity": 103283527,
-      "cash": 3217284
+      "equity": 103283526,
+      "cash": 3217283
     },
     {
       "date": "2026-06-12",
-      "equity": 105544797,
-      "cash": 3217284
+      "equity": 105544796,
+      "cash": 3217283
     },
     {
       "date": "2026-06-15",
-      "equity": 109645965,
-      "cash": 3217284
+      "equity": 109645964,
+      "cash": 3217283
     },
     {
       "date": "2026-06-16",
       "equity": 104479682,
-      "cash": 3217284
+      "cash": 3217283
     },
     {
       "date": "2026-06-17",
       "equity": 105048400,
-      "cash": 3217284
+      "cash": 3217283
     },
     {
       "date": "2026-06-18",
-      "equity": 111102385,
-      "cash": 3217284
+      "equity": 111102384,
+      "cash": 3217283
     },
     {
       "date": "2026-06-22",
-      "equity": 115120808,
-      "cash": 3217284
+      "equity": 115120806,
+      "cash": 3217283
     },
     {
       "date": "2026-06-23",
       "equity": 107303519,
-      "cash": 3217284
+      "cash": 3217283
     },
     {
       "date": "2026-06-24",
       "equity": 106480152,
-      "cash": 3217284
+      "cash": 3217283
     },
     {
       "date": "2026-06-25",
-      "equity": 113634399,
-      "cash": 3217284
+      "equity": 113634398,
+      "cash": 3217283
     },
     {
       "date": "2026-06-26",
-      "equity": 108113082,
-      "cash": 3217284
+      "equity": 108113081,
+      "cash": 3217283
     },
     {
       "date": "2026-06-29",
@@ -579,7 +579,7 @@
     },
     {
       "date": "2026-10-09",
-      "equity": 81353462,
+      "equity": 81480047,
       "cash": 137797
     }
   ],
@@ -1678,9 +1678,9 @@
       "name": "Monolithic Power Systems",
       "ticker": "MPWR",
       "type": "매도",
-      "price": 2033286.99,
+      "price": 2033287.18,
       "shares": 3,
-      "amount": 6087661,
+      "amount": 6087662,
       "pnl": -1178477,
       "reason": "손절(-10%)"
     },
@@ -1755,9 +1755,9 @@
       "name": "Monolithic Power Systems",
       "ticker": "MPWR",
       "type": "매수",
-      "price": 2417211.62,
+      "price": 2417211.81,
       "shares": 3,
-      "amount": 7266138,
+      "amount": 7266139,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
