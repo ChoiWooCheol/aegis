@@ -2,17 +2,17 @@
   "market": "NASDAQ_100",
   "currency": "원",
   "initial": 100000000,
-  "asOf": "2026-10-12",
+  "asOf": "2026-10-13",
   "startedAt": "2026-06-05",
-  "equity": 78540061,
+  "equity": 77857322,
   "cash": 137797,
   "cashPct": 0.2,
-  "stockValue": 78402264,
-  "returnPct": -21.46,
+  "stockValue": 77719525,
+  "returnPct": -22.14,
   "positionsCount": 12,
   "rule": "모멘텀 상위 12종목 균등보유 + 현금버퍼 · 월간 리밸런스",
   "stats": {
-    "sharpe": -1.14,
+    "sharpe": -1.19,
     "mdd": -38.3,
     "trades": 116,
     "buys": 61,
@@ -25,120 +25,120 @@
       "name": "Palo Alto Networks",
       "shares": 13,
       "avgCost": 440993.44,
-      "price": 542339.63,
-      "value": 7050415,
-      "weightPct": 9.0,
-      "plPct": 23.0
+      "price": 532071.81,
+      "value": 6916934,
+      "weightPct": 8.9,
+      "plPct": 20.7
     },
     {
       "ticker": "FTNT",
       "name": "Fortinet",
       "shares": 27,
       "avgCost": 211485.1,
-      "price": 259116.49,
-      "value": 6996145,
+      "price": 255643.19,
+      "value": 6902366,
       "weightPct": 8.9,
-      "plPct": 22.5
-    },
-    {
-      "ticker": "DDOG",
-      "name": "Datadog",
-      "shares": 18,
-      "avgCost": 348176.2,
-      "price": 385827.61,
-      "value": 6944897,
-      "weightPct": 8.8,
-      "plPct": 10.8
+      "plPct": 20.9
     },
     {
       "ticker": "ABNB",
       "name": "Airbnb",
       "shares": 31,
       "avgCost": 213726.61,
-      "price": 219578.86,
-      "value": 6806945,
-      "weightPct": 8.7,
-      "plPct": 2.7
+      "price": 221898.73,
+      "value": 6878861,
+      "weightPct": 8.8,
+      "plPct": 3.8
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "shares": 18,
+      "avgCost": 348176.2,
+      "price": 379712.43,
+      "value": 6834824,
+      "weightPct": 8.8,
+      "plPct": 9.1
     },
     {
       "ticker": "CRWD",
       "name": "CrowdStrike",
       "shares": 19,
       "avgCost": 266077.99,
-      "price": 353219.81,
-      "value": 6711176,
+      "price": 350055.35,
+      "value": 6651052,
       "weightPct": 8.5,
-      "plPct": 32.8
-    },
-    {
-      "ticker": "LITE",
-      "name": "Lumentum",
-      "shares": 5,
-      "avgCost": 1234398.94,
-      "price": 1336825.63,
-      "value": 6684128,
-      "weightPct": 8.5,
-      "plPct": 8.3
+      "plPct": 31.6
     },
     {
       "ticker": "CSCO",
       "name": "Cisco",
       "shares": 43,
       "avgCost": 157157.05,
-      "price": 154900.46,
-      "value": 6660720,
+      "price": 154208.76,
+      "value": 6630977,
       "weightPct": 8.5,
-      "plPct": -1.4
+      "plPct": -1.9
     },
     {
-      "ticker": "MU",
-      "name": "Micron Technology",
+      "ticker": "LITE",
+      "name": "Lumentum",
       "shares": 5,
-      "avgCost": 1146217.86,
-      "price": 1328270.79,
-      "value": 6641354,
+      "avgCost": 1234398.94,
+      "price": 1324035.03,
+      "value": 6620175,
       "weightPct": 8.5,
-      "plPct": 15.9
+      "plPct": 7.3
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "shares": 8,
       "avgCost": 669760.25,
-      "price": 798058.36,
-      "value": 6384467,
-      "weightPct": 8.1,
-      "plPct": 19.2
+      "price": 811488.96,
+      "value": 6491912,
+      "weightPct": 8.3,
+      "plPct": 21.2
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "shares": 5,
+      "avgCost": 1146217.86,
+      "price": 1277398.52,
+      "value": 6386993,
+      "weightPct": 8.2,
+      "plPct": 11.4
     },
     {
       "ticker": "INTC",
       "name": "Intel",
       "shares": 45,
       "avgCost": 137811.93,
-      "price": 136112.03,
-      "value": 6125042,
-      "weightPct": 7.8,
-      "plPct": -1.2
+      "price": 137778.76,
+      "value": 6200044,
+      "weightPct": 8.0,
+      "plPct": -0.0
     },
     {
       "ticker": "SNDK",
       "name": "Sandisk",
       "shares": 3,
       "avgCost": 2014877.02,
-      "price": 1997469.24,
-      "value": 5992408,
-      "weightPct": 7.6,
-      "plPct": -0.9
+      "price": 1986514.85,
+      "value": 5959545,
+      "weightPct": 7.7,
+      "plPct": -1.4
     },
     {
       "ticker": "LRCX",
       "name": "Lam Research",
       "shares": 13,
       "avgCost": 432339.61,
-      "price": 415735.98,
-      "value": 5404568,
-      "weightPct": 6.9,
-      "plPct": -3.8
+      "price": 403526.53,
+      "value": 5245845,
+      "weightPct": 6.7,
+      "plPct": -6.7
     }
   ],
   "equityHistory": [
@@ -154,7 +154,7 @@
     },
     {
       "date": "2026-06-09",
-      "equity": 97375712,
+      "equity": 97375711,
       "cash": 5872877
     },
     {
@@ -164,58 +164,58 @@
     },
     {
       "date": "2026-06-11",
-      "equity": 103283527,
-      "cash": 3217284
+      "equity": 103283526,
+      "cash": 3217283
     },
     {
       "date": "2026-06-12",
-      "equity": 105544797,
-      "cash": 3217284
+      "equity": 105544796,
+      "cash": 3217283
     },
     {
       "date": "2026-06-15",
       "equity": 109645965,
-      "cash": 3217284
+      "cash": 3217283
     },
     {
       "date": "2026-06-16",
       "equity": 104479682,
-      "cash": 3217284
+      "cash": 3217283
     },
     {
       "date": "2026-06-17",
       "equity": 105048400,
-      "cash": 3217284
+      "cash": 3217283
     },
     {
       "date": "2026-06-18",
-      "equity": 111102386,
-      "cash": 3217284
+      "equity": 111102385,
+      "cash": 3217283
     },
     {
       "date": "2026-06-22",
-      "equity": 115120808,
-      "cash": 3217284
+      "equity": 115120807,
+      "cash": 3217283
     },
     {
       "date": "2026-06-23",
       "equity": 107303519,
-      "cash": 3217284
+      "cash": 3217283
     },
     {
       "date": "2026-06-24",
       "equity": 106480152,
-      "cash": 3217284
+      "cash": 3217283
     },
     {
       "date": "2026-06-25",
-      "equity": 113634398,
-      "cash": 3217284
+      "equity": 113634397,
+      "cash": 3217283
     },
     {
       "date": "2026-06-26",
       "equity": 108113081,
-      "cash": 3217284
+      "cash": 3217283
     },
     {
       "date": "2026-06-29",
@@ -584,7 +584,12 @@
     },
     {
       "date": "2026-10-12",
-      "equity": 78540061,
+      "equity": 78414545,
+      "cash": 137797
+    },
+    {
+      "date": "2026-10-13",
+      "equity": 77857322,
       "cash": 137797
     }
   ],
@@ -1683,9 +1688,9 @@
       "name": "Monolithic Power Systems",
       "ticker": "MPWR",
       "type": "매도",
-      "price": 2033286.99,
+      "price": 2033287.18,
       "shares": 3,
-      "amount": 6087661,
+      "amount": 6087662,
       "pnl": -1178477,
       "reason": "손절(-10%)"
     },
@@ -1760,9 +1765,9 @@
       "name": "Monolithic Power Systems",
       "ticker": "MPWR",
       "type": "매수",
-      "price": 2417211.62,
+      "price": 2417211.81,
       "shares": 3,
-      "amount": 7266138,
+      "amount": 7266139,
       "pnl": null,
       "reason": "Buy신호 진입/추가"
     },
